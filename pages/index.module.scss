@@ -1,0 +1,67 @@
+.hero {
+    height: 100vh;
+    max-width: 1800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+
+    background-color: #ff4754;
+    color: whitesmoke;
+
+    > .body {
+        flex-grow: 1;
+    }
+
+    .heroText {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .primary {
+        max-width: 560px;
+
+        h2 {
+            font-size: 2.2em;
+            font-weight: 700;
+        }
+
+        h3 {
+            font-size: 1.2em;
+            font-weight: 400;
+            margin: 0;
+        }
+    }
+
+    .heroFix {
+        min-height: 128px;
+    }
+
+    .link {
+        display: block;
+        margin-top: 4em;
+
+        color: white;
+        text-decoration: none;
+
+        span {
+            font-weight: 400;
+            border-bottom: 2px solid white;
+        }
+    }
+}
+
+// will be moved to its own component
+.nav {
+    width: 100%;
+    min-height: 128px;
+    padding: 40px;
+
+    flex: 0 1;
+
+    display: flex;
+
+    .logo {
+        height: 48px;
+    }
+}
