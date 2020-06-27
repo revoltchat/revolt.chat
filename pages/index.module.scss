@@ -1,5 +1,5 @@
 .hero {
-    height: 100vh;
+    min-height: 100vh;
     max-width: 1800px;
     margin: 0 auto;
     display: flex;
@@ -22,13 +22,13 @@
         max-width: 560px;
 
         h2 {
-            font-size: 2.2em;
+            font-size: 34px;
             font-weight: 700;
         }
 
         h3 {
-            font-size: 1.2em;
-            font-weight: 400;
+            font-size: 34px;
+            font-weight: 300;
             margin: 0;
         }
     }
@@ -49,6 +49,45 @@
             border-bottom: 2px solid white;
         }
     }
+
+    .heroImage {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .container {
+            background: url('/concept_outer.svg');
+            background-repeat: no-repeat;
+
+            animation-name: outer;
+            animation-timing-function: cubic-bezier(0.445, 0.05, 0.55, 0.95);
+            animation-iteration-count: infinite;
+            animation-duration: 5s;
+
+            img {
+                position: relative;
+                left: -15px;
+                top: 10px;
+
+                animation-name: inner;
+                animation-timing-function: cubic-bezier(0.445, 0.05, 0.55, 0.95);
+                animation-iteration-count: infinite;
+                animation-duration: 5s;
+            }
+        }
+    }
+}
+
+@keyframes outer {
+    0% { transform: translateY(0px) };
+    50% { transform: translateY(14px) };
+    100% { transform: translateY(0px) };
+}
+
+@keyframes inner {
+    0% { transform: translateY(0px) };
+    50% { transform: translateY(4px) };
+    100% { transform: translateY(0px) };
 }
 
 // will be moved to its own component
@@ -62,6 +101,16 @@
     display: flex;
 
     .logo {
-        height: 48px;
+        height: 38px;
+    }
+}
+
+@media (max-width: 1240px) {
+    .hero > .body {
+        flex-direction: column-reverse;
+    }
+    
+    .heroImage {
+        margin-bottom: 2em;
     }
 }

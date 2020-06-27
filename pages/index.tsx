@@ -21,13 +21,13 @@ export default function Home() {
                         <div className={classNames(flex.column, styles.heroText)}>
                             <div className={styles.primary}>
                                 <h2>Don't bother with chat apps that don't respect your privacy.</h2>
-                                <h3>Communication is critical.</h3>
-                                <h3>Privacy is essential.</h3>
-                                <a className={styles.link} href="https://discord.gg/epCDgeK"><h2><span>Join Discord server for updates.</span></h2></a>
+                                <h3>Communication is critical.<br/>Privacy is essential.</h3>
                             </div>
                         </div>
                         <div className={classNames(flex.column, styles.heroImage)}>
-                            
+                            <div className={styles.container}>
+                                <img src="/concept_inner.svg" />
+                            </div>
                         </div>
                     </div>
                     <div className={styles.heroFix}></div>
