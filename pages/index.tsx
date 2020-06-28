@@ -1,4 +1,4 @@
-import Head from 'next/head'
+import Head from 'next/head';
 import classNames from 'classnames';
 
 import styles from './index.module.scss';
@@ -34,5 +34,5 @@ export default function Home() {
                 </div>
             </main>
         </div>
-    )
+    );
 }
