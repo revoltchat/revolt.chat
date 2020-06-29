@@ -50,7 +50,7 @@ export default function Home() {
                                     <form className={styles.signup} onSubmit={submit}>
                                         <input
                                             type="email"
-                                            placeholder="Enter enter your email."
+                                            placeholder="Please enter your email."
                                             value={email}
                                             onChange={e => setEmail(e.currentTarget.value)}
                                         />
