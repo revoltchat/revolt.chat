@@ -17,7 +17,7 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
 
         try {
             await axios.post(process.env.WEBHOOK_URL, {
-                "content": req.body.email
+                "content": req.body.email + " [from " + req.connection.remoteAddress + "]"
             })
             
             res.status(200).json({ success: true });

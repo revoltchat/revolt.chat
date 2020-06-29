@@ -49,6 +49,7 @@ export default function Home() {
                                     sent ? <h4>Thanks! We'll keep you up to date.</h4> :
                                     <form className={styles.signup} onSubmit={submit}>
                                         <input
+                                            type="email"
                                             placeholder="Enter enter your email."
                                             value={email}
                                             onChange={e => setEmail(e.currentTarget.value)}
