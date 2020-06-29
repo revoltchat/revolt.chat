@@ -16,6 +16,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        padding: 1rem;
     }
     
     .primary {
@@ -30,6 +31,31 @@
             font-size: 34px;
             font-weight: 300;
             margin: 0;
+        }
+    }
+
+    h4 {
+        padding: 5px 0;
+    }
+
+    .signup {
+        display: flex;
+        margin-top: 2em;
+        border-radius: 4px;
+
+        background: rgba(0, 0, 0, 0.2);
+
+        input {
+            flex-grow: 1;
+            padding: 10px;
+        }
+
+        button {
+            flex: 0 1;
+
+            padding: 10px;
+            background: rgba(0, 0, 0, 0.1);
+            white-space: nowrap;
         }
     }
 
@@ -112,5 +138,21 @@
     
     .heroImage {
         margin-bottom: 2em;
+    }
+}
+
+@media (max-width: 720px) {
+    .heroImage {
+        transform: scale(0.8);
+    }
+
+    .nav {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 640px) {
+    .heroImage {
+        transform: scale(0.7);
     }
 }
