@@ -16,6 +16,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        padding: 1rem;
     }
     
     .primary {
@@ -137,5 +138,21 @@
     
     .heroImage {
         margin-bottom: 2em;
+    }
+}
+
+@media (max-width: 720px) {
+    .heroImage {
+        transform: scale(0.8);
+    }
+
+    .nav {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 640px) {
+    .heroImage {
+        transform: scale(0.7);
     }
 }
