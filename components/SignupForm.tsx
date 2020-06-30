@@ -39,7 +39,7 @@ export default function SignupForm() {
             if (response.status === 200) {
                 setStatus(Status.Sent);
                 setReferral(response.data.referral);
-                Cookies.set("referral", response.data.referral);
+                Cookies.set("referral", response.data.referral, { expires: 365 });
             } else if (response.status === 400) setStatus(Status.InvalidEmail);
             else setStatus(Status.ServerError);
         }).catch(() => setStatus(Status.ServerError));
