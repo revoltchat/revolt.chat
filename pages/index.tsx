@@ -3,21 +3,9 @@ import classNames from 'classnames';
 
 import styles from './index.module.scss';
 import flex from '../components/util/flex.module.scss';
-
-import { useState, FormEvent } from 'react';
-import axios from 'axios';
+import SignupForm from '../components/SignupForm';
 
 export default function Home() {
-    let [ sent, setSent ] = useState(false);
-    let [ email, setEmail ] = useState('');
-
-    function submit(e: FormEvent<HTMLFormElement>) {
-        e.preventDefault();
-        setSent(true);
-
-        axios.post('/api/send', { email });
-    }
-
     return (
         <div>
             <Head>
@@ -45,18 +33,7 @@ export default function Home() {
                             <div className={styles.primary}>
                                 <h2>Don't bother with chat apps that don't respect your privacy.</h2>
                                 <h3>Communication is critical.<br/>Privacy is essential.</h3>
-                                {
-                                    sent ? <h4>Thanks! We'll keep you up to date.</h4> :
-                                    <form className={styles.signup} onSubmit={submit}>
-                                        <input
-                                            type="email"
-                                            placeholder="Please enter your email."
-                                            value={email}
-                                            onChange={e => setEmail(e.currentTarget.value)}
-                                        />
-                                        <button>Join waiting list.</button>
-                                    </form>
-                                }
+                                <SignupForm />
                             </div>
                         </div>
                         <div className={classNames(flex.column, styles.heroImage)}>

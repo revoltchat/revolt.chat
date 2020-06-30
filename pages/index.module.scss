@@ -34,35 +34,6 @@
         }
     }
 
-    h4 {
-        padding: 5px 0;
-    }
-
-    .signup {
-        display: flex;
-        margin-top: 2em;
-        border-radius: 4px;
-
-        background: rgba(0, 0, 0, 0.2);
-
-        input {
-            flex-grow: 1;
-            padding: 10px;
-
-            color: white;
-        }
-
-        button {
-            flex: 0 1;
-
-            padding: 10px;
-            background: rgba(0, 0, 0, 0.1);
-            white-space: nowrap;
-
-            color: white;
-        }
-    }
-
     .heroFix {
         min-height: 128px;
     }
