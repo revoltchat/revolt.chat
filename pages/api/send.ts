@@ -17,7 +17,7 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
         }
 
         let referrer = '';
-        if (typeof req.body.referrer === 'string' && req.body.referrer.length >= 7 && req.body.referrer.length <= 14)
+        if (typeof req.body.referrer === 'string' && req.body.referrer.length >= 3 && req.body.referrer.length <= 30)
             referrer = req.body.referrer;
 
         let referral = shortid.generate();

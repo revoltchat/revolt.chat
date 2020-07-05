@@ -46,26 +46,30 @@ export default function SignupForm() {
     }
 
     if (status === Status.Sending || status === Status.Sent) {
-        if (status === Status.Sending) return <div className={styles.form}><h4>Loading</h4></div>;
+        if (status === Status.Sending) return <div className={styles.form}><h4>Loading...</h4></div>;
         else return (
             <div className={styles.form}>
-                <h4>Thanks! We'll keep you up to date.</h4>
+                <h1>Thanks! We'll keep you up to date.</h1>
                 <h4>Your referral link is <a href={`https://revolt.chat/?ref=${referral}`}>https://revolt.chat/?ref={referral}</a></h4>
             </div>
         );
     } else return (
         <div className={styles.form}>
+            <div className={styles.text}>
+                <h1>Sign up for the waiting list!</h1>
+                <p>Be the first amongst others to get access to Revolt.</p>
+            </div>
             <form className={styles.signup} onSubmit={submit}>
                 <input
                     type="email"
-                    placeholder="Please enter your email."
+                    placeholder="Enter your email"
                     value={email}
                     onChange={e => setEmail(e.currentTarget.value)}
                 />
-                <button>Join waiting list.</button>
+                <button>Join Waiting List</button>
             </form>
             { status === Status.ServerError && <h4>An error has occured, please try again later.</h4> }
-            { status === Status.InvalidEmail && <h4>Please provide a valid email</h4> }
+            { status === Status.InvalidEmail && <h4>Please provide a valid email.</h4> }
         </div>
     );
 }
