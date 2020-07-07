@@ -33,7 +33,7 @@ export default function Home() {
                     </p>
                     <SignupForm />
                 </header>
-                <section>
+                {/*<section>
                     <div>
                         <div className={styles.description}>
                             <div>
@@ -109,7 +109,7 @@ export default function Home() {
                         </div>
                         <img className={styles.image} src="/uvid.svg" />
                     </div>
-                </section>
+                </section>*/}
             </main>
         </div>
     );
