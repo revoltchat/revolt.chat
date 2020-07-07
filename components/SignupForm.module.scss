@@ -1,18 +1,22 @@
 .text {
     text-align: center;
     color: white;
+
     h1 {
         margin: 0;
         margin-bottom: 8px;
     }
+
     p {
         margin: 0;
         margin-bottom: 20px;
         color: rgba(255,255,255,0.8);
     }
 }
+
 .form {
     text-align: center;
+
     h1 {
         padding: 0;
         margin: 0;
@@ -27,8 +31,7 @@
     }
 
     a {
-        color: #101823;
-        font-style: italic;
+        color: white;
     }
 
     .signup {
@@ -48,29 +51,6 @@
 
         input::placeholder {
             color: rgba(255,255,255,0.69);
-        }
-
-        button {
-            flex: 0 1;
-            border-radius: 10px;
-            padding: 10px;
-            background: rgba(16, 24, 35, 1);
-            white-space: nowrap;
-            font-weight: 600;
-            cursor: pointer;
-            color: rgba(255,255,255,0.9);
-            transition: transform 0.2s cubic-bezier(0.4, 0.0, 0.2, 1), box-shadow 0.2s cubic-bezier(0.4, 0.0, 0.2, 1), background 0.2s cubic-bezier(0.4, 0.0, 0.2, 1), color 0.2s cubic-bezier(0.4, 0.0, 0.2, 1);
-        }
-        button:hover {
-            background: rgba(16, 24, 35, 0.8);
-            transform: translateY(-3px);
-            box-shadow: 0 3px 0px 0px #0A0E15;
-        }
-        button:active {
-            box-shadow: none;
-            background: #0A0E15;
-            transform: translateY(0px);
-            color: rgba(255,255,255,0.7);
         }
     }
 }

@@ -20,17 +20,29 @@ export default function Home() {
                 <meta property="og:image:width" content="1280" />
                 <meta property="og:image:height" content="720" />
             </Head>
-        
             <main>
-                
                 <header>
-                    <img className={styles.logo} src="/logo.svg" />
-                    <h1 className="tagline">
-                        Don't bother with chat apps that don't respect your privacy.
-                    </h1>
-                    <p className="description">
-                        Communication is critical.<br />Privacy is essential.
-                    </p>
+                    <div className={styles.nav}>
+                        <img className={styles.logo} src="/logo.svg" />
+                        <a href="https://app.revolt.chat"><button>Open App</button></a>
+                    </div>
+                    <div className={styles.columns}>
+                        <div className={styles.column}>
+                            <div>
+                                <h1 className="tagline">
+                                    Don't bother with chat apps that don't respect your privacy.
+                                </h1>
+                                <p className="description">
+                                    Communication is critical.<br />Privacy is essential.
+                                </p>
+                            </div>
+                        </div>
+                        <div className={styles.column}>
+                            <div className={styles.concept}>
+                                <img src="/concept_inner.svg" />
+                            </div>
+                        </div>
+                    </div>
                     <SignupForm />
                 </header>
                 {/*<section>

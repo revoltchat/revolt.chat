@@ -1,0 +1,102 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <title></title>
+        <style>
+            body {
+                font-family: "Open Sans", Helvetica, sans-serif;
+            }
+
+            a {
+                color: #178AFE;
+                text-decoration: none;
+            }
+
+            a:hover { text-decoration: underline; }
+            a:active { color: #1465B7; }
+
+            span {
+                margin: 5px 0;
+            }
+
+            hr {
+                border: 1px solid #C4C4C4;
+            }
+
+            #emailContainer { box-shadow: 0 1px 5px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); }
+
+            #emailBody { font-weight: 600; padding: 0 10px; }
+            #emailBody .bodyHeader { font-weight: 700; }
+            #emailBody { color: #535353; }
+
+            #emailBody .button {
+                background-color: #FF4654;
+                color: #FFFFFF;
+                padding: 16px 50px;
+                border-radius: 5px;
+                user-select: none;
+                text-decoration: none;
+                font-weight: 800;
+            }
+            #emailBody .button:hover { background-color: #D4313E;}
+            #emailBody .button:active { background-color: #AB2933;}
+
+            #emailFooter { font-weight: 600; font-size: 14px; }
+            #emailFooter #noreply { color: #929292; }
+        </style>
+    </head>
+    <body>
+        <table border="0" cellpadding="0" cellspacing="0" height="100%" width="100%" id="bodyTable">
+            <tr>
+                <td align="center" valign="top">
+                    <table border="0" cellpadding="0" cellspacing="0" width="600" id="emailContainer">
+                        <tr>
+                            <td align="center" valign="top">
+                                <table border="0" cellpadding="0" cellspacing="0" width="100%" id="emailHeader">
+                                    <tr>
+                                        <td align="center" valign="top">
+                                            <img src="https://revolt.chat/header.png" width="100%">
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="center" valign="top">
+                                <table border="0" cellpadding="10" cellspacing="0" width="100%" id="emailBody">
+                                    <tr>
+                                        <td valign="top">
+                                            <h2 class="bodyHeader">Welcome aboard.</h2>
+                                            <p>You'll be notified of any development updates.</p>
+                                            <p>We just need to verify your email so that we can send you emails in the future.</p>
+                                            <br><br>
+                                            <center><a class="button" href="https://revolt.chat/api/verify?id={{id}}">Verify email</a></center>
+                                            <br><br>
+                                            <p>Want to spread the word?</p>
+                                            <p>Your referral link is <a href="https://revolt.chat/?ref={{ref}}">https://revolt.chat/?ref={{ref}}</a></p>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="center" valign="top">
+                                <table border="0" cellpadding="10" cellspacing="0" width="100%" id="emailFooter">
+                                    <tr>
+                                        <td align="center" valign="top">
+                                            <hr>
+                                            <p>Need help with something? Contact the <a href="https://insrt.uk">web admin</a> or hit us up on <a href="https://twitter.com/revoltchat">Twitter</a>.</p>
+                                            <p><a href="https://revolt.chat/api/remove?id={{id}}">Remove me from the mailing list.</a></p>
+                                            <p id="noreply">Sent by Revolt • Do not reply to this email.</p>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+    </body>
+</head>

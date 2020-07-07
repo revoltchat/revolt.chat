@@ -2,8 +2,9 @@ import { NextApiRequest, NextApiResponse } from 'next';
 import nc from 'next-connect';
 
 import axios from 'axios';
-import shortid from 'shortid';
 import { ulid } from 'ulid';
+import shortid from 'shortid';
+import { readFileSync } from 'fs';
 
 import databaseMiddleware from '../../components/middleware/database';
 
@@ -11,6 +12,8 @@ const emailRegex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+")
 
 const handler = nc<NextApiRequest, NextApiResponse>();
 handler.use(databaseMiddleware);
+
+const verificationEmail = readFileSync('email/verify.html').toString();
 
 handler.post(async (req: NextApiRequest, res: NextApiResponse) => {
     try {
@@ -36,12 +39,15 @@ handler.post(async (req: NextApiRequest, res: NextApiResponse) => {
             if (typeof req.body.referrer === 'string')
                 referrer = await coll.findOne({ referral: req.body.referrer });
             
+            let _id = ulid();
             let referral = shortid.generate();
+            let source_ip = req.headers['cf-connecting-ip'] ?? req.headers['x-forwarded-for'] ?? req.socket.remoteAddress;
             await coll.insertOne({
-                _id: ulid(),
+                _id,
                 email, referral,
-                verified: true,
-                referrer_id: referrer !== null ? referrer._id : null
+                verified: false,
+                referrer_id: referrer !== null ? referrer._id : null,
+                source_ip
             });
 
             let fields = [];
@@ -52,15 +58,15 @@ handler.post(async (req: NextApiRequest, res: NextApiResponse) => {
                 });
             }
 
-            let footerText = `${req.headers['cf-connecting-ip'] ?? req.headers['x-forwarded-for'] ?? req.socket.remoteAddress}`;
+            let footerText = `${source_ip}`;
             if (req.headers['cf-ray']) footerText += ` | ${req.headers['cf-ray']}`;
 
             axios.post(process.env.WEBHOOK_URL, {
                 embeds: [
                     {
-                        title: "New waiting list user",
+                        title: "New user added!",
                         description: email,
-                        color: 0x00FF00,
+                        color: 0x31BF7E,
                         fields,
                         timestamp: new Date().toISOString(),
                         footer: {
@@ -68,6 +74,13 @@ handler.post(async (req: NextApiRequest, res: NextApiResponse) => {
                         }
                     }
                 ]
+            }).then(() => {}).catch((err) => console.warn(err));
+
+            axios.post(process.env.PORTAL_URL, {
+                target: email,
+                subject: 'REVOLT - Verify your email.',
+                body: `Verify your email at https://revolt.chat/api/verify?id=${_id}`,
+                html: verificationEmail.replace(/{{id}}/g, _id).replace(/{{ref}}/g, referral)
             }).then(() => {}).catch((err) => console.warn(err));
 
             res.status(200).json({ success: true, referral: referral, verified: true });
