@@ -6,14 +6,14 @@ import databaseMiddleware from '../../components/middleware/database';
 const handler = nc<NextApiRequest, NextApiResponse>();
 handler.use(databaseMiddleware);
 
-handler.post(async (req: NextApiRequest, res: NextApiResponse) => {
+handler.get(async (req: NextApiRequest, res: NextApiResponse) => {
     try {
-        if (req.body.id === undefined) {
+        if (req.query.id === undefined) {
             res.status(400).json({ success: false, error: "No id provided." });
             return;
         }
 
-        const id = req.body.id;
+        const id = req.query.id;
 
         const coll = (req as any).db.collection('users');
         let result = await coll.findOne({ id });
