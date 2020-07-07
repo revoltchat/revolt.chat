@@ -13,10 +13,10 @@ handler.get(async (req: NextApiRequest, res: NextApiResponse) => {
             return;
         }
 
-        const id = req.query.id;
+        const _id = req.query.id;
 
         const coll = (req as any).db.collection('users');
-        let result = await coll.findOne({ id });
+        let result = await coll.findOne({ _id });
         
         if (result) {
             if (result.verified) {
@@ -25,7 +25,7 @@ handler.get(async (req: NextApiRequest, res: NextApiResponse) => {
             }
 
             await coll.updateOne(
-                { id },
+                { _id },
                 {
                     $set: {
                         verified: true
