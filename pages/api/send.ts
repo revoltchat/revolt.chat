@@ -42,8 +42,30 @@ handler.post(async (req: NextApiRequest, res: NextApiResponse) => {
                 referrer_id: referrer !== null ? referrer._id : null
             });
 
+            let fields = [];
+            if (referrer !== null) {
+                fields.push({
+                    name: "Referrer",
+                    value: referrer.email
+                });
+            }
+
+            let footerText = `${req.headers['cf-connecting-ip'] ?? req.headers['x-forwarded-for'] ?? req.socket.remoteAddress}`;
+            if (req.headers['cf-ray']) footerText += ` | ${req.headers['cf-ray']}`;
+
             axios.post(process.env.WEBHOOK_URL, {
-                "content": req.body.email + ":" + referral
+                embeds: [
+                    {
+                        title: "New waiting list user",
+                        description: req.body.email,
+                        color: 0x00FF00,
+                        fields,
+                        timestamp: new Date().toISOString(),
+                        footer: {
+                            "text": footerText
+                        }
+                    }
+                ]
             }).then(() => {}).catch((err) => console.warn(err));
 
             res.status(200).json({ success: true, referral: referral, verified: true });
