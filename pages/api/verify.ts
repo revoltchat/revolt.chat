@@ -21,7 +21,7 @@ handler.get(async (req: NextApiRequest, res: NextApiResponse) => {
         
         if (result) {
             if (result.verified) {
-                res.send('Already verified! :)');
+                res.writeHead(303, { Location: '/' });
                 return;
             }
 
@@ -45,7 +45,7 @@ handler.get(async (req: NextApiRequest, res: NextApiResponse) => {
                 ]
             }).then(() => {}).catch((err) => console.warn(err));
 
-            res.send('Verified your email! Thanks :)');
+            res.writeHead(303, { Location: '/' });
         } else {
             res.send('Unknown ID. :(');
         }
