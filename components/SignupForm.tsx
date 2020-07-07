@@ -9,6 +9,7 @@ enum Status {
     NotSent = 1,
     Sending,
     Sent,
+    SentVerified,
     ServerError,
     InvalidEmail,
 }
@@ -21,7 +22,7 @@ export default function SignupForm() {
 
     useEffect(() => {
         if (Cookies.get("referral") !== undefined) {
-            setStatus(Status.Sent);
+            setStatus(Status.SentVerified);
             setReferral(Cookies.get("referral"));
         }
     }, []);
@@ -37,7 +38,8 @@ export default function SignupForm() {
 
         axios.post('/api/send', { email, referrer: router.query.ref }).then((response) => {
             if (response.status === 200) {
-                setStatus(Status.Sent);
+                if (response.data.verified) setStatus(Status.SentVerified);
+                else setStatus(Status.Sent);
                 setReferral(response.data.referral);
                 Cookies.set("referral", response.data.referral, { expires: 365 });
             } else if (response.status === 400) setStatus(Status.InvalidEmail);
@@ -45,12 +47,16 @@ export default function SignupForm() {
         }).catch(() => setStatus(Status.ServerError));
     }
 
-    if (status === Status.Sending || status === Status.Sent) {
+    if (status === Status.Sending || status === Status.Sent || status === Status.SentVerified) {
         if (status === Status.Sending) return <div className={styles.form}><h4>Loading...</h4></div>;
         else return (
             <div className={styles.form}>
                 <h1>Thanks! We'll keep you up to date.</h1>
-                <h4>Your referral link is <a href={`https://revolt.chat/?ref=${referral}`}>https://revolt.chat/?ref={referral}</a></h4>
+                { status === Status.SentVerified ? (
+                    <h4>Your referral link is <a href={`https://revolt.chat/?ref=${referral}`}>https://revolt.chat/?ref={referral}</a></h4>
+                ) : (
+                    <h4>Please check your inbox to verify your email</h4>
+                )}
             </div>
         );
     } else return (

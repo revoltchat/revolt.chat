@@ -24,8 +24,10 @@ handler.post(async (req: NextApiRequest, res: NextApiResponse) => {
             return;
         }
 
+        const email = req.body.email.toLowerCase();
+
         const coll = (req as any).db.collection('users');
-        let result = await coll.findOne({ email: req.body.email });
+        let result = await coll.findOne({ email });
         
         if (result !== null) {
             res.status(200).json({ success: true, referral: result.referral, verified: result.verified });
@@ -37,8 +39,8 @@ handler.post(async (req: NextApiRequest, res: NextApiResponse) => {
             let referral = shortid.generate();
             await coll.insertOne({
                 _id: ulid(),
-                email: req.body.email,
-                referral, verified: true,
+                email, referral,
+                verified: true,
                 referrer_id: referrer !== null ? referrer._id : null
             });
 
@@ -57,7 +59,7 @@ handler.post(async (req: NextApiRequest, res: NextApiResponse) => {
                 embeds: [
                     {
                         title: "New waiting list user",
-                        description: req.body.email,
+                        description: email,
                         color: 0x00FF00,
                         fields,
                         timestamp: new Date().toISOString(),
