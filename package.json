@@ -17,7 +17,8 @@
     "react": "16.13.1",
     "react-dom": "16.13.1",
     "sass": "^1.26.9",
-    "shortid": "^2.2.15"
+    "shortid": "^2.2.15",
+    "ulid": "^2.3.0"
   },
   "devDependencies": {
     "@types/node": "^14.0.14",
