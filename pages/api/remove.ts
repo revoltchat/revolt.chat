@@ -2,6 +2,7 @@ import { NextApiRequest, NextApiResponse } from 'next';
 import nc from 'next-connect';
 
 import databaseMiddleware from '../../components/middleware/database';
+import Axios from 'axios';
 
 const handler = nc<NextApiRequest, NextApiResponse>();
 handler.use(databaseMiddleware);
@@ -28,7 +29,18 @@ handler.get(async (req: NextApiRequest, res: NextApiResponse) => {
                 }
             );
 
-            res.send('Removed your email from the mailing list.\nThis id will stay in the database to not orphan any referral entries.\nIf you would like to reinstate your waiting list position, please forward this email to an admin.');
+            Axios.post(process.env.WEBHOOK_URL, {
+                embeds: [
+                    {
+                        title: "User removed from mailing list.",
+                        description: _id,
+                        color: 0xF84848,
+                        timestamp: new Date().toISOString()
+                    }
+                ]
+            }).then(() => {}).catch((err) => console.warn(err));
+
+            res.send('Removed your email from the mailing list.\nThis id will stay in the database to not orphan any referral entries.\n\nIf you would like to reinstate your waiting list position, please forward any email from us to an admin.\nThe email must contain your ID.');
         } else {
             res.send('Unknown ID.');
         }

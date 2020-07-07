@@ -2,6 +2,7 @@ import { NextApiRequest, NextApiResponse } from 'next';
 import nc from 'next-connect';
 
 import databaseMiddleware from '../../components/middleware/database';
+import Axios from 'axios';
 
 const handler = nc<NextApiRequest, NextApiResponse>();
 handler.use(databaseMiddleware);
@@ -32,6 +33,17 @@ handler.get(async (req: NextApiRequest, res: NextApiResponse) => {
                     }
                 }
             );
+
+            Axios.post(process.env.WEBHOOK_URL, {
+                embeds: [
+                    {
+                        title: "User verified their email.",
+                        description: _id,
+                        color: 0x977EFF,
+                        timestamp: new Date().toISOString()
+                    }
+                ]
+            }).then(() => {}).catch((err) => console.warn(err));
 
             res.send('Verified your email! Thanks :)');
         } else {
