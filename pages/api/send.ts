@@ -57,11 +57,16 @@ handler.post(async (req: NextApiRequest, res: NextApiResponse) => {
             let referral = shortid.generate();
             let source_ip = req.headers['cf-connecting-ip'] ?? req.headers['x-forwarded-for'] ?? req.socket.remoteAddress;
 
-            let fields = [];
+            let fields = [{
+                name: "ID",
+                value: _id,
+                inline: true
+            }];
             if (referrer !== null) {
                 fields.push({
                     name: "Referrer",
-                    value: referrer.email
+                    value: referrer.email,
+                    inline: true
                 });
             }
 
