@@ -48,7 +48,7 @@ export default function SignupForm() {
     }
 
     if (status === Status.Sending || status === Status.Sent || status === Status.SentVerified) {
-        if (status === Status.Sending) return <div className={styles.form}><h4>Loading...</h4></div>;
+        if (status === Status.Sending) return <div className={styles.form}><h4>Loading... This might take a second.</h4></div>;
         else return (
             <div className={styles.form}>
                 <h1>Thanks! We'll keep you up to date.</h1>

@@ -21,7 +21,7 @@ handler.get(async (req: NextApiRequest, res: NextApiResponse) => {
         
         if (result) {
             if (result.verified) {
-                res.writeHead(303, { Location: '/' });
+                res.writeHead(303, { Location: '/' }).end();
                 return;
             }
 
@@ -45,7 +45,7 @@ handler.get(async (req: NextApiRequest, res: NextApiResponse) => {
                 ]
             }).then(() => {}).catch((err) => console.warn(err));
 
-            res.writeHead(303, { Location: '/' });
+            res.writeHead(303, { Location: '/' }).end();
         } else {
             res.send('Unknown ID. :(');
         }

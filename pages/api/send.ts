@@ -5,6 +5,7 @@ import axios from 'axios';
 import { ulid } from 'ulid';
 import shortid from 'shortid';
 import { readFileSync } from 'fs';
+import nodemailer from 'nodemailer';
 
 import databaseMiddleware from '../../components/middleware/database';
 
@@ -14,6 +15,19 @@ const handler = nc<NextApiRequest, NextApiResponse>();
 handler.use(databaseMiddleware);
 
 const verificationEmail = readFileSync('email/verify.html').toString();
+
+let transporter = nodemailer.createTransport({
+    host: "mail.fatalerrorcoded.eu",
+    port: 587,
+    secure: false,
+    auth: {
+        user: process.env.SMTP_USERNAME,
+        pass: process.env.SMTP_PASSWORD
+    },
+    tls: {
+        rejectUnauthorized: false
+    }
+});
 
 handler.post(async (req: NextApiRequest, res: NextApiResponse) => {
     try {
@@ -42,13 +56,6 @@ handler.post(async (req: NextApiRequest, res: NextApiResponse) => {
             let _id = ulid();
             let referral = shortid.generate();
             let source_ip = req.headers['cf-connecting-ip'] ?? req.headers['x-forwarded-for'] ?? req.socket.remoteAddress;
-            await coll.insertOne({
-                _id,
-                email, referral,
-                verified: false,
-                referrer_id: referrer !== null ? referrer._id : null,
-                source_ip
-            });
 
             let fields = [];
             if (referrer !== null) {
@@ -76,14 +83,23 @@ handler.post(async (req: NextApiRequest, res: NextApiResponse) => {
                 ]
             }).then(() => {}).catch((err) => console.warn(err));
 
-            axios.post(process.env.PORTAL_URL, {
-                target: email,
-                subject: 'REVOLT - Verify your email.',
-                body: `Verify your email at https://revolt.chat/api/verify?id=${_id}`,
-                html: verificationEmail.replace(/{{id}}/g, _id).replace(/{{ref}}/g, referral)
-            }).then(() => {}).catch((err) => console.warn(err));
+            await transporter.sendMail({
+                from: '"REVOLT" <noreply@revolt.chat>',
+                to: email,
+                subject: "Verify your email.",
+                text: `Thanks for signing up!\nWe just need to verify your email and you'll be good to go.\nhttps://revolt.chat/api/verify?id=${_id}\n\nSent by Revolt • Do not reply to this email.`,
+                html: verificationEmail.replace(/{{id}}/g, _id),
+            });
 
-            res.status(200).json({ success: true, referral: referral, verified: true });
+            await coll.insertOne({
+                _id,
+                email, referral,
+                verified: false,
+                referrer_id: referrer !== null ? referrer._id : null,
+                source_ip
+            });
+
+            res.status(200).json({ success: true, referral: referral, verified: false });
         }
     } catch (err) {
         console.error(err);
