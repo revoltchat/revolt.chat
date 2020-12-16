@@ -58,9 +58,9 @@ export default function Home() {
                         <div className={styles.description}>
                             <div>
                                 <p>
-                                    Discord server: <a href="#">discord.gg/abcdefg</a><br/>
-                                    Matrix channel: <a href="#">#revolt-chat:clustor.net</a> <br/>
-                                    Email the lead developer: <a href="#">me@insrt.uk</a>
+                                    Discord server: <a href="https://discord.gg/AWFZeCc">discord.gg/AWFZeCc</a><br/>
+                                    Matrix channel: <a href="https://matrix.to/#/!ZRsAZFoabQbTvEmERw:clustor.net?via=clustor.net">#revolt-chat:clustor.net</a> <br/>
+                                    Email the lead developer: <a href="mailto:me@insrt.uk">me@insrt.uk</a>
                                 </p>
                             </div>
                         </div>
