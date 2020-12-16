@@ -45,6 +45,42 @@ export default function Home() {
                     </div>
                     <SignupForm />
                 </header>
+                <section>
+                    <div>
+                        <div className={styles.description}>
+                            <div>
+                                <h1>Interested in more?</h1>
+                                <p>
+                                    You can contact us through any of these mediums, do get in touch if you want to learn more or are interested in helping out.
+                                </p>
+                            </div>
+                        </div>
+                        <div className={styles.description}>
+                            <div>
+                                <p>
+                                    Discord server: <a href="#">discord.gg/abcdefg</a><br/>
+                                    Matrix channel: <a href="#">#revolt-chat:clustor.net</a> <br/>
+                                    Email the lead developer: <a href="#">me@insrt.uk</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section>
+                    <div data-reverse="true">
+                        <img className={styles.image} src="/code.png" style={{ borderRadius: '12px' }} />
+                        <div className={styles.description}>
+                            <div>
+                                <h1>Open source.</h1>
+                                <p>
+                                    You can feel free to browse all of <a href="https://gitlab.insrt.uk/revolt">our platform's source code online</a>, we plan to allow users to have completely unrestricted options (to a reasonable extent!) when it comes to what clients and software they use with Revolt. <br/>
+                                    <br/>
+                                    Currently the majority of the code is unlicensed but we are planning to release it with a suitable license towards the end of development so anyone can feel free to contribute, fork, and extend as they wish.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
                 {/*<section>
                     <div>
                         <div className={styles.description}>
