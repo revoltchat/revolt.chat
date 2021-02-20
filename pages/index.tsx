@@ -1,8 +1,6 @@
 import Head from 'next/head';
 import styles from './index.module.scss';
 
-import SignupForm from '../components/SignupForm';
-
 export default function Home() {
     return (
         <div>
@@ -43,7 +41,9 @@ export default function Home() {
                             </div>
                         </div>
                     </div>
-                    <SignupForm />
+                    <h1 className={styles.signup}>
+                        Sign up for the Revolt beta <a href="https://docs.google.com/forms/d/e/1FAIpQLSfFqBG5_0F6-2h_-aljV_i3v-QRLhYYm1_1-zSC77ZMx0LX_w/viewform">here</a>
+                    </h1>
                 </header>
                 <section>
                     <div>
