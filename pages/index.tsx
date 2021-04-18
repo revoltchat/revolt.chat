@@ -11,15 +11,19 @@ export default function Home() {
             <Head>
                 <title>Revolt</title>
                 <link rel="icon" href="/favicon.ico" />
-                <meta name="viewport" content="width=device-width, initial-scale=0.9, user-scalable=0"></meta>
+                <meta name="viewport" content="width=device-width, initial-scale=0.9, user-scalable=0" />
 
                 <meta property="og:title" content="Revolt" />
-                <meta property="og:image" content="/embed.png" />
+                <meta property="og:image" content="/embed.png?2021" />
                 <meta property="og:url" content="https://revolt.chat" />
                 <meta property="og:description" content="Don't bother with chat apps that don't respect your privacy. Revolt is a brand new chat platform designed around you." />
 
-                <meta property="twitter:card" content="summary_large_image"></meta>
-                <meta property="twitter:image" content="/embed.png"></meta>
+                <meta property="twitter:title" content="Revolt" />
+                <meta property="twitter:site" content="@revoltchat" />
+                <meta property="twitter:image" content="/embed.png" />
+                <meta property="twitter:card" content="summary_large_image" />
+                <meta property="twitter:image:alt" content='Image of REVOLT app alongside logo with subtext "Communication is critical. Privacy is essential."' />
+                <meta property="twitter:description" content="Don't bother with chat apps that don't respect your privacy. Revolt is a brand new chat platform designed around you." />
 
                 <meta property="og:image:type" content="image/png" />
                 <meta property="og:image:width" content="1280" />
@@ -27,6 +31,8 @@ export default function Home() {
 
                 <link rel="preconnect" href="https://fonts.gstatic.com" />
                 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600&display=swap" rel="stylesheet" />
+
+                <script async defer data-domain='revolt.chat' src='https://plausible.insrt.uk/js/plausible.js' />
 
                 {   // Firefox only: Scroll snapping.
                     // Doesn't work properly with Chromium.
