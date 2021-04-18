@@ -1,3 +1,5 @@
+@import 'elements.scss';
+
 * {
     -moz-osx-font-smoothing: grayscale;
 	-webkit-font-smoothing: antialiased;
@@ -11,8 +13,8 @@ svg {
 html, body {
     margin: 0;
     color: white;
-    background-color: #101823;
-    font-family: 'Open Sans', sans-serif;
+    background-color: var(--background);
+    font-family: 'Inter', sans-serif;
 }
 
 html {
@@ -21,4 +23,9 @@ html {
 
 *, *:before, *:after {
     box-sizing: inherit;
+}
+
+:root {
+    --background: #101823;
+    --accent: #ff4654;
 }

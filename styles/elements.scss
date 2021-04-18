@@ -1,0 +1,15 @@
+.button {
+    gap: 0.5rem;
+    display: flex;
+    align-items: center;
+
+    border-radius: 90px;
+    background: white;
+    color: var(--accent);
+    padding: 0.5rem 1rem;
+
+    &.red {
+        color: white;
+        background: var(--accent);
+    }
+}
