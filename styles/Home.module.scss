@@ -1,7 +1,6 @@
 .hero {
     height: 100vh;
     display: flex;
-    overflow: hidden;
     flex-direction: column;
 }
 
@@ -24,7 +23,7 @@
         }
 
         h1 {
-            margin: 6px 0 40px;
+            margin: 8px 0 40px;
             font-size: 64px;
             line-height: 70px;
             color: var(--accent);
@@ -51,14 +50,20 @@
             width: 100%;
         }
     }
+
+    .mobileGraphic {
+        display: none;
+    }
 }
 
 .section {
     gap: 4rem;
     margin: auto;
     display: flex;
-    padding: 4rem 4rem 8rem;
     overflow: hidden;
+    align-items: center;
+    padding: 4rem 4rem 8rem;
+    scroll-snap-align: center;
     max-width: var(--max-width);
     
     .image, .content {
@@ -96,5 +101,72 @@
         .content {
             align-items: flex-end;
         }
+    }
+}
+
+@media only screen and (max-width: 1280px) {
+    .section {
+        gap: 2em; 
+        padding: 0 20px;
+    }
+
+    .content {
+        margin-bottom: 50px;
+    }
+
+    .overview {
+        .left {
+            p {
+                font-size: 16px;
+            }
+
+            h1 {
+                font-size: 36px;
+                line-height: 40px;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .overview {
+        padding: 0 20px;
+        margin-bottom: 100px;
+        flex-direction: column;
+
+        .mobileGraphic {
+            flex: 1;
+            display: flex;
+            justify-content: flex-end;
+
+            img {
+                width: 100%;
+            }
+        }
+
+        .graphic {
+            display: none;
+        }
+
+        .left {
+            flex: 1;
+            
+            .tagline {
+                margin: 0;
+            }
+        }
+    }
+
+    .section {
+        margin-bottom: 4rem;
+        flex-direction: column-reverse;
+
+        .content {
+            align-items: center !important;
+        }
+    }
+
+    .section[data-reverse="true"] {
+        flex-direction: column;
     }
 }

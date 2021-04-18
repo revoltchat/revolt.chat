@@ -1,16 +1,40 @@
 .button {
     gap: 0.5rem;
-    height: 55px;
+    height: 52px;
+    border: 3px solid transparent;
     display: flex;
-    font-size: 20px;
+    font-size: 18px;
     align-items: center;
     border-radius: 90px;
-    background: white;
     color: var(--accent);
     padding: 0.5rem 1.5rem;
+    justify-content: center;
+    background-color: white;
+    transition: background-color ease-in-out .07s;
+
+    &:hover {background-color: #EFEFEF; text-decoration: none;}
+    &:active {background-color: #D9D9D9;}
 
     &.red {
         color: white;
-        background: var(--accent);
+        background-color: var(--accent);
+        //border: 3px solid white;
+        &:hover {background-color: #FF5961;}
+        &:active {background-color: #CC474E;}
+    }
+    
+    &.border {
+        border: 3px solid white;
+    }
+}
+
+@media only screen and (max-width: 1280px) {
+    .button {
+        height: 45px;
+        display: flex;
+        font-size: 16px;
+        align-items: center;
+        border-radius: 90px;
+        padding: 0.5rem 1.5rem;
     }
 }

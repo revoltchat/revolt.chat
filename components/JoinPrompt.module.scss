@@ -8,6 +8,7 @@
     padding: 4rem;
     overflow: hidden;
     align-items: center;
+    scroll-snap-align: center;
     max-width: var(--max-width);
 
     .info {
@@ -31,5 +32,21 @@
 
     .actions {
         display: flex;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .prompt {
+        flex-direction: column;
+        padding: 4rem 20px;
+
+        .actions {
+            flex-direction: column;
+            width: 100%;
+        }
+    }
+
+    .info {
+        margin-bottom: 20px;
     }
 }

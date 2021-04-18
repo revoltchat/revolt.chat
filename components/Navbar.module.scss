@@ -1,7 +1,8 @@
 .navbar {
-    padding:  60px 80px;
     display: flex;
+    padding: 60px 80px;
     align-items: center;
+    scroll-snap-align: start;
     justify-content: space-between;
 
     img {
@@ -10,8 +11,14 @@
 
     .actions {
         gap: 1.2rem;
-        font-size: 18px;
         display: flex;
+        font-size: 18px;
         align-items: center;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .navbar {
+        padding: 40px 20px;
     }
 }

@@ -15,14 +15,27 @@ svg {
 html, body {
     margin: 0;
     color: white;
-    background-color: var(--background);
     font-family: 'Inter', sans-serif;
+    background-color: var(--background);
 }
 
 html {
     scrollbar-width: thin;
     box-sizing: border-box;
     scrollbar-color: var(--accent) var(--scrollbar);
+}
+
+a {
+    text-decoration: none;
+    color: white;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+svg, img {
+    pointer-events: none;
 }
 
 ::-webkit-scrollbar {
@@ -43,7 +56,7 @@ html {
 }
 
 :root {
-    --max-width: 1500px;
+    --max-width: 1450px;
     --scrollbar: hsl(0, 52%, 14%);
     --background: #101823;
     --accent: #ff4654;

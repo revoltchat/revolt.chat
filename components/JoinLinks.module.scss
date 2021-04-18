@@ -2,3 +2,14 @@
     gap: 1.2rem;
     display: flex;
 }
+
+@media only screen and (max-width: 768px) {
+    .actions {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .button {
+        justify-content: center;
+    }
+}

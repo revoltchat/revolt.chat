@@ -4,10 +4,11 @@
     padding: 4rem;
     overflow: hidden;
     align-items: center;
+    scroll-snap-align: end;
     max-width: var(--max-width);
 
     .branding {
-        gap: 2rem;
+        gap: 5rem;
         flex-grow: 1;
         display: flex;
         align-items: center;
@@ -17,7 +18,6 @@
         }
 
         .socials {
-            margin-left: 50px;
             display: flex;
             gap: 2rem;
 
@@ -51,6 +51,33 @@
                 color: var(--accent);
                 font-weight: 600;
                 padding-bottom: 2px;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .footer .branding {
+        align-items: center;
+        flex-direction: column;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    .footer {
+        gap: 4rem;
+        flex-direction: column;
+
+        .branding {
+            gap: 2rem;
+        }
+
+        .links {
+            flex-wrap: wrap;
+            justify-content: center;
+
+            .column {
+                flex: 1;
             }
         }
     }

@@ -1,11 +1,12 @@
 import { Gitlab, Reddit, Twitter } from '@styled-icons/simple-icons';
+import { URLs } from '../urls';
 import styles from './Footer.module.scss';
 
 export function Footer() {
     return (
         <div className={styles.footer}>
             <div className={styles.branding}>
-                <img src="/logo.svg" />
+                <img src="/logo.svg" draggable={false} />
                 <div className={styles.socials}>
                     <a href="https://gitlab.insrt.uk/revolt">
                         <Gitlab size={24} />
@@ -21,25 +22,26 @@ export function Footer() {
             <div className={styles.links}>
                 <div className={styles.column}>
                     <b>App</b>
-                    <a>Download</a>
+                    <a href={URLs.App}>Open App</a>
+                    <a href={URLs.Roadmap}>Roadmap</a>
+                    {/*<a>Download</a>
                     <a>Features</a>
-                    <a>Branding</a>
+                    <a>Branding</a>*/}
                 </div>
                 <div className={styles.column}>
                     <b>Developers</b>
-                    <a>Contribute</a>
-                    <a>Documentation</a>
-                    <a>Help translate</a>
+                    <a href={URLs.SourceCode}>Contribute</a>
+                    <a href={URLs.Developers}>Documentation</a>
+                    <a href={URLs.Translate}>Help translate</a>
                 </div>
                 <div className={styles.column}>
                     <b>Company</b>
-                    <a>About Us</a>
-                    <a>Blog</a>
+                    <a href={URLs.AboutUs}>About Us</a>
                 </div>
                 <div className={styles.column}>
                     <b>Legal</b>
-                    <a>Terms of Service</a>
-                    <a>Privacy Policy</a>
+                    <a href={URLs.TermsOfService}>Terms of Service</a>
+                    <a href={URLs.PrivacyPolicy}>Privacy Policy</a>
                 </div>
             </div>
         </div>

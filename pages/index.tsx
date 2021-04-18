@@ -1,4 +1,3 @@
-import { Edit, ExternalLink } from '@styled-icons/feather';
 import Head from 'next/head';
 import { Footer } from '../components/Footer';
 import { JoinLinks } from '../components/JoinLinks';
@@ -10,14 +9,14 @@ export default function Home() {
     return (
         <div>
             <Head>
-                <title>REVOLT</title>
+                <title>Revolt</title>
                 <link rel="icon" href="/favicon.ico" />
                 <meta name="viewport" content="width=device-width, initial-scale=0.9, user-scalable=0"></meta>
 
-                <meta property="og:title" content="REVOLT" />
+                <meta property="og:title" content="Revolt" />
                 <meta property="og:image" content="/embed.png" />
                 <meta property="og:url" content="https://revolt.chat" />
-                <meta property="og:description" content="Don't bother with chat apps that don't respect your privacy. REVOLT is a brand new chat platform designed around you." />
+                <meta property="og:description" content="Don't bother with chat apps that don't respect your privacy. Revolt is a brand new chat platform designed around you." />
 
                 <meta property="twitter:card" content="summary_large_image"></meta>
                 <meta property="twitter:image" content="/embed.png"></meta>
@@ -27,12 +26,21 @@ export default function Home() {
                 <meta property="og:image:height" content="720" />
 
                 <link rel="preconnect" href="https://fonts.gstatic.com" />
-                <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700&display=swap" rel="stylesheet" /> 
+                <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600&display=swap" rel="stylesheet" />
+
+                {   // Firefox only: Scroll snapping.
+                    // Doesn't work properly with Chromium.
+                    typeof window !== 'undefined' &&
+                    typeof (window as any).InstallTrigger !== 'undefined' &&
+                    <style dangerouslySetInnerHTML={{ __html: `html { scroll-snap-type: y mandatory; }` }} /> }
             </Head>
             <main>
                 <section className={styles.hero}>
                     <Navbar />
                     <div className={styles.overview}>
+                        <div className={styles.mobileGraphic}>
+                            <img src="/client_fullsize.svg" draggable={false} />
+                        </div>
                         <div className={styles.left}>
                             <div className={styles.tagline}>
                                 <p>Don't bother with other chat apps when</p>
@@ -41,13 +49,13 @@ export default function Home() {
                             </div>
                         </div>
                         <div className={styles.graphic}>
-                            <img src="/client_vector.svg" />
+                            <img src="/client_vector.svg" draggable={false} />
                         </div>
                     </div>
                 </section>
                 <section className={styles.section} data-reverse="true">
                     <div className={styles.image}>
-                        <img src="/temp_abc.jpg" />
+                        <img src="/appearance.jpg" draggable={false} style={{ borderRadius: '8px' }} />
                     </div>
                     <div className={styles.content}>
                         <div>
@@ -64,12 +72,12 @@ export default function Home() {
                         </div>
                     </div>
                     <div className={styles.image}>
-                        <img src="/temp_abc.jpg" />
+                        <img src="/opensource.svg" draggable={false} />
                     </div>
                 </section>
                 <section className={styles.section} data-reverse="true">
                     <div className={styles.image}>
-                        <img src="/temp_abc.jpg" />
+                        <img src="/everywhere.svg" draggable={false} />
                     </div>
                     <div className={styles.content}>
                         <div>
@@ -86,7 +94,7 @@ export default function Home() {
                         </div>
                     </div>
                     <div className={styles.image}>
-                        <img src="/temp_abc.jpg" />
+                        <img src="/privacy.svg" draggable={false} />
                     </div>
                 </section>
                 <JoinPrompt />

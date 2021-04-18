@@ -9,7 +9,7 @@ export function JoinPrompt() {
                     <h1>Ready to try Revolt?</h1>
                     <p>We use PWA technologies so that you can get a native app-like experience without having to download it to your device.</p>
                 </div>
-                <JoinLinks />
+                <JoinLinks contrast />
             </div>
         </div>
     )
