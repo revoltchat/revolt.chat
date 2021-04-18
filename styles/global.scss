@@ -4,6 +4,8 @@
     -moz-osx-font-smoothing: grayscale;
 	-webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility !important;
+    user-select: none;
+    font-weight: 500;
 }
 
 svg {
@@ -18,7 +20,22 @@ html, body {
 }
 
 html {
+    scrollbar-width: thin;
     box-sizing: border-box;
+    scrollbar-color: var(--accent) var(--scrollbar);
+}
+
+::-webkit-scrollbar {
+    width: 3px;
+    height: 3px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--scrollbar);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--accent);
 }
 
 *, *:before, *:after {
@@ -26,6 +43,8 @@ html {
 }
 
 :root {
+    --max-width: 1500px;
+    --scrollbar: hsl(0, 52%, 14%);
     --background: #101823;
     --accent: #ff4654;
 }

@@ -1,0 +1,57 @@
+.footer {
+    margin: auto;
+    display: flex;
+    padding: 4rem;
+    overflow: hidden;
+    align-items: center;
+    max-width: var(--max-width);
+
+    .branding {
+        gap: 2rem;
+        flex-grow: 1;
+        display: flex;
+        align-items: center;
+
+        img, svg {
+            height: 24px;
+        }
+
+        .socials {
+            margin-left: 50px;
+            display: flex;
+            gap: 2rem;
+
+            a {
+                color: white;
+                transition: color ease-in-out .07s;
+                &:hover {
+                    color: var(--accent);
+                }
+            }
+
+            svg {
+                > &:hover {
+                    color: var(--accent);
+                }
+            }
+        }
+    }
+
+    .links {
+        gap: 3rem;
+        display: flex;
+
+        .column {
+            gap: .5rem;
+            display: flex;
+            flex-direction: column;
+
+            b {
+                font-size: 18px;
+                color: var(--accent);
+                font-weight: 600;
+                padding-bottom: 2px;
+            }
+        }
+    }
+}

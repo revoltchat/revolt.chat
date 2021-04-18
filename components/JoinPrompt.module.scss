@@ -1,0 +1,35 @@
+.container {
+    background: var(--accent);
+}
+
+.prompt {
+    margin: auto;
+    display: flex;
+    padding: 4rem;
+    overflow: hidden;
+    align-items: center;
+    max-width: var(--max-width);
+
+    .info {
+        flex-grow: 1;
+
+        h1, p {
+            margin: 0;
+        }
+
+        h1 {
+            font-size: 40px;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 18px;
+            max-width: 400px;
+        }
+    }
+
+    .actions {
+        display: flex;
+    }
+}

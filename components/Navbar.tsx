@@ -9,7 +9,7 @@ export function Navbar() {
                 <a>Blog</a>
                 <a>Developers</a>
                 <a>Download</a>
-                <a><Globe size={16} strokeWidth={2} /></a>
+                <a><Globe size={28} strokeWidth={2} /></a>
             </div>
         </div>
     )

@@ -1,6 +1,7 @@
 .hero {
     height: 100vh;
     display: flex;
+    overflow: hidden;
     flex-direction: column;
 }
 
@@ -8,24 +9,34 @@
     flex-grow: 1;
     display: flex;
     
-    .tagline {
+    .left {
         flex: 2;
         display: flex;
         align-items: center;
         justify-content: center;
+
+        .tagline {
+            margin-top: -80px;
+        }
 
         p, h1 {
             margin: 0;
         }
 
         h1 {
-            font-size: 2.5rem;
+            margin: 6px 0 40px;
+            font-size: 64px;
+            line-height: 70px;
             color: var(--accent);
+            font-weight: 600;
+            -webkit-text-stroke: 1.2px var(--accent);
         }
 
-        .actions {
-            gap: 1rem;
-            display: flex;
+        p {
+            font-size: 24px;
+        }
+
+        div {
             margin-top: 1rem;
         }
     }
@@ -38,6 +49,52 @@
 
         img {
             width: 100%;
+        }
+    }
+}
+
+.section {
+    gap: 4rem;
+    margin: auto;
+    display: flex;
+    padding: 4rem 4rem 8rem;
+    overflow: hidden;
+    max-width: var(--max-width);
+    
+    .image, .content {
+        flex: 1;
+    }
+
+    .image img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        p, h1 {
+            margin: 0;
+        }
+
+        h1 {
+            font-size: 40px;
+            margin-bottom: 20px;
+            line-height: 45px;
+            font-weight: 600;
+        }
+
+        p {
+            font-size: 18px;
+            max-width: 400px;
+        }
+    }
+
+    &[data-reverse="true"] {
+        .content {
+            align-items: flex-end;
         }
     }
 }

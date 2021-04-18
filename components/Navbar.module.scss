@@ -1,15 +1,16 @@
 .navbar {
-    padding: 2.5rem;
+    padding:  60px 80px;
     display: flex;
     align-items: center;
     justify-content: space-between;
 
     img {
-        height: 1em;
+        height: 25px;
     }
 
     .actions {
-        gap: 1rem;
+        gap: 1.2rem;
+        font-size: 18px;
         display: flex;
         align-items: center;
     }

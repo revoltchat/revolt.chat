@@ -1,12 +1,13 @@
 .button {
     gap: 0.5rem;
+    height: 55px;
     display: flex;
+    font-size: 20px;
     align-items: center;
-
     border-radius: 90px;
     background: white;
     color: var(--accent);
-    padding: 0.5rem 1rem;
+    padding: 0.5rem 1.5rem;
 
     &.red {
         color: white;
