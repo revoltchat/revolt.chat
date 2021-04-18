@@ -14,14 +14,14 @@ export default function Home() {
                 <meta name="viewport" content="width=device-width, initial-scale=0.9, user-scalable=0" />
 
                 <meta property="og:title" content="Revolt" />
-                <meta property="og:image" content="/embed.png?2021" />
                 <meta property="og:url" content="https://revolt.chat" />
+                <meta property="og:image" content="https://revolt.chat/embed.png" />
                 <meta property="og:description" content="Don't bother with chat apps that don't respect your privacy. Revolt is a brand new chat platform designed around you." />
 
                 <meta property="twitter:title" content="Revolt" />
                 <meta property="twitter:site" content="@revoltchat" />
-                <meta property="twitter:image" content="/embed.png" />
                 <meta property="twitter:card" content="summary_large_image" />
+                <meta property="twitter:image" content="https://revolt.chat/embed.png" />
                 <meta property="twitter:image:alt" content='Image of REVOLT app alongside logo with subtext "Communication is critical. Privacy is essential."' />
                 <meta property="twitter:description" content="Don't bother with chat apps that don't respect your privacy. Revolt is a brand new chat platform designed around you." />
 
