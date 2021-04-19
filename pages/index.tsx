@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import { Footer } from '../components/Footer';
 import { JoinLinks } from '../components/JoinLinks';
+import { ArrowRight } from '@styled-icons/feather';
 import { JoinPrompt } from '../components/JoinPrompt';
 import { Navbar } from '../components/Navbar';
 import styles from '../styles/Home.module.scss';
@@ -44,9 +45,6 @@ export default function Home() {
                 <section className={styles.hero}>
                     <Navbar />
                     <div className={styles.overview}>
-                        <div className={styles.mobileGraphic}>
-                            <img src="/client_fullsize.svg" draggable={false} />
-                        </div>
                         <div className={styles.left}>
                             <div className={styles.tagline}>
                                 <p>Don't bother with other chat apps when</p>
@@ -65,7 +63,7 @@ export default function Home() {
                     </div>
                     <div className={styles.content}>
                         <div>
-                            <h1>Simple,<br/>just how you like it.</h1>
+                            <h1>Familiar and simple,<br/>just how you like it.</h1>
                             <p>Revolt is built on the same technologies as other popular chat applications, so there won’t be any need to re-learn on how to use it. Also, you can customize it to your heart’s content.</p>
                         </div>
                     </div>
@@ -75,6 +73,7 @@ export default function Home() {
                         <div>
                             <h1>Open source<br />to the public</h1>
                             <p>We believe that there’s more to it than just code. By having the Revolt project open source means that we can create a transparent layer between us and the user.<br/><br/>Contribute, create your own bot or make your own version of the Revolt client.</p>
+                            <a className={styles.link} href="https://gitlab.insrt.uk/revolt" target="_blank"><ArrowRight size={24} strokeWidth={2}/>View project on GitLab</a>
                         </div>
                     </div>
                     <div className={styles.image}>

@@ -27,11 +27,11 @@
                 &:hover {
                     color: var(--accent);
                 }
-            }
 
-            svg {
-                > &:hover {
-                    color: var(--accent);
+                svg {
+                    > &:hover {
+                        color: var(--accent);
+                    }
                 }
             }
         }

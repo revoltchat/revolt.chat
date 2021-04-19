@@ -50,10 +50,6 @@
             width: 100%;
         }
     }
-
-    .mobileGraphic {
-        display: none;
-    }
 }
 
 .section {
@@ -134,16 +130,6 @@
         margin-bottom: 100px;
         flex-direction: column;
 
-        .mobileGraphic {
-            flex: 1;
-            display: flex;
-            justify-content: flex-end;
-
-            img {
-                width: 100%;
-            }
-        }
-
         .graphic {
             display: none;
         }
@@ -168,5 +154,16 @@
 
     .section[data-reverse="true"] {
         flex-direction: column;
+    }
+}
+
+.link {
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    padding-top: 20px;
+    
+    svg {
+        margin-right: 10px;
     }
 }
