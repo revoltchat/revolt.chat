@@ -18,23 +18,11 @@
     &.red {
         color: white;
         background-color: var(--accent);
-        //border: 3px solid white;
         &:hover {background-color: #FF5961;}
         &:active {background-color: #CC474E;}
     }
     
     &.border {
         border: 3px solid white;
-    }
-}
-
-@media only screen and (max-width: 1280px) {
-    .button {
-        height: 45px;
-        display: flex;
-        font-size: 16px;
-        align-items: center;
-        border-radius: 90px;
-        padding: 0.5rem 1.5rem;
     }
 }
