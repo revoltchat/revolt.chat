@@ -1,4 +1,5 @@
 export const URLs = {
+    Apply: 'https://revolt.chat/beta',
     App: 'https://app.revolt.chat',
     Roadmap: 'https://www.notion.so/Roadmap-d285602ba73543438bf1cdb0a4754514',
     Developers: 'https://developers.revolt.chat',
