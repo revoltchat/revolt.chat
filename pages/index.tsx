@@ -5,6 +5,7 @@ import { ArrowRight, HelpCircle } from '@styled-icons/feather';
 import { JoinPrompt } from '../components/JoinPrompt';
 import { Navbar } from '../components/Navbar';
 import styles from '../styles/Home.module.scss';
+import { URLs } from '../urls';
 
 export default function Home() {
     return (
@@ -42,7 +43,7 @@ export default function Home() {
                     <style dangerouslySetInnerHTML={{ __html: `html { scroll-snap-type: y mandatory; }` }} /> }
             </Head>
             <main>
-                <a className={styles.feedback} href="">
+                <a className={styles.feedback} href={URLs.Feedback} target="_blank">
                     <HelpCircle size={24} strokeWidth={2}/>Feedback
                 </a>
                 <section className={styles.hero}>

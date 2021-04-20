@@ -1,4 +1,5 @@
 import { Gitlab, Reddit, Twitter } from '@styled-icons/simple-icons';
+import Link from 'next/link';
 import { URLs } from '../urls';
 import styles from './Footer.module.scss';
 
@@ -36,12 +37,21 @@ export function Footer() {
                 </div>
                 <div className={styles.column}>
                     <b>Company</b>
-                    <a href={URLs.AboutUs}>About Us</a>
+                    <Link href="/about">
+                        <a>About Us</a>
+                    </Link>
                 </div>
                 <div className={styles.column}>
                     <b>Legal</b>
-                    <a href={URLs.TermsOfService}>Terms of Service</a>
-                    <a href={URLs.PrivacyPolicy}>Privacy Policy</a>
+                    <Link href="/terms">
+                        <a>Terms of Service</a>
+                    </Link>
+                    <Link href="/privacy">
+                        <a>Privacy Policy</a>
+                    </Link>
+                    <Link href="/aup">
+                        <a>Acceptable Usage</a>
+                    </Link>
                 </div>
             </div>
         </div>

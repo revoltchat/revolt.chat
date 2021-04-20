@@ -24,12 +24,11 @@
             a {
                 color: white;
                 transition: color ease-in-out .07s;
+
                 &:hover {
                     color: var(--accent);
-                }
 
-                svg {
-                    > &:hover {
+                    svg {
                         color: var(--accent);
                     }
                 }

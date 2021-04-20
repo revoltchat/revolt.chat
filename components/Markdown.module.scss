@@ -1,0 +1,25 @@
+.markdown {
+    * {
+        user-select: text;
+    }
+
+    font-weight: 500;
+
+    h1 {
+        color: var(--accent);
+        margin: 0;
+    }
+
+    h2, h3 {
+        margin-top: 2rem;
+    }
+
+    li {
+        padding: 2px 0;
+    }
+
+    blockquote {
+        opacity: 0.5;
+        margin-left: 24px;
+    }
+}
