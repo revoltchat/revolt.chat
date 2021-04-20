@@ -9,7 +9,28 @@
 
 <url>
   <loc>https://revolt.chat/</loc>
-  <lastmod>2021-04-18T16:00:00+00:00</lastmod>
+  <lastmod>2021-04-20T20:12:48+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://revolt.chat/about</loc>
+  <lastmod>2021-04-20T20:12:49+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://revolt.chat/terms</loc>
+  <lastmod>2021-04-20T20:12:49+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://revolt.chat/privacy</loc>
+  <lastmod>2021-04-20T20:12:49+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://revolt.chat/aup</loc>
+  <lastmod>2021-04-20T20:12:49+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 
 
