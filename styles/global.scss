@@ -28,9 +28,14 @@ html {
 a {
     text-decoration: none;
     color: white;
+    transition: opacity ease-in-out .07;
 
     &:hover {
         text-decoration: underline;
+    }
+
+    &:active {
+        opacity: .7;
     }
 }
 
