@@ -11,9 +11,10 @@
     justify-content: center;
     background-color: white;
     transition: background-color ease-in-out .07s;
+    
 
     &:hover {background-color: #EFEFEF; text-decoration: none;}
-    &:active {background-color: #D9D9D9;}
+    &:active {background-color: #D9D9D9; opacity: 1;}
 
     &.red {
         color: white;
