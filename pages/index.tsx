@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import { Footer } from '../components/Footer';
 import { JoinLinks } from '../components/JoinLinks';
-import { ArrowRight } from '@styled-icons/feather';
+import { ArrowRight, HelpCircle } from '@styled-icons/feather';
 import { JoinPrompt } from '../components/JoinPrompt';
 import { Navbar } from '../components/Navbar';
 import styles from '../styles/Home.module.scss';
@@ -42,6 +42,9 @@ export default function Home() {
                     <style dangerouslySetInnerHTML={{ __html: `html { scroll-snap-type: y mandatory; }` }} /> }
             </Head>
             <main>
+                <a className={styles.feedback} href="">
+                    <HelpCircle size={24} strokeWidth={2}/>Feedback
+                </a>
                 <section className={styles.hero}>
                     <Navbar />
                     <div className={styles.overview}>

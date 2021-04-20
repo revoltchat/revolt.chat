@@ -167,3 +167,35 @@
         margin-right: 10px;
     }
 }
+
+.feedback {
+    z-index: 50;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    right: 40px;
+    bottom: 40px;
+    padding: 16px 18px;
+    background: white;
+    color: black;
+    font-weight: 600;
+    border-radius: 60px;
+    transition: background-color ease-in-out .07s;
+
+    svg {
+        margin-right: 12px;
+    }
+
+    &:hover {
+        text-decoration: none;
+        background-color: #EFEFEF;
+    }
+
+    &:active {background-color: #D9D9D9;}
+}
+
+@media only screen and (max-width: 768px) {
+    .feedback {
+        right: 20px;
+    }
+}
