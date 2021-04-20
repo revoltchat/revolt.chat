@@ -1,7 +1,9 @@
 import MarkdownIt from "markdown-it";
 import styles from './Markdown.module.scss';
+import MarkdownItAnchor from "markdown-it-anchor";
 
-export const md: MarkdownIt = MarkdownIt({ breaks: true, linkify: true });
+export const md: MarkdownIt = MarkdownIt({ breaks: true, linkify: true })
+    .use(MarkdownItAnchor, { level: 3 });
 
 interface Props {
     content?: string;

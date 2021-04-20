@@ -22,4 +22,12 @@
         opacity: 0.5;
         margin-left: 24px;
     }
+
+    a {
+        text-decoration: underline;
+
+        &:hover {
+            opacity: 0.8;
+        }
+    }
 }
