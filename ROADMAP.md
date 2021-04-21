@@ -58,7 +58,7 @@ This update aims to refine how the CDN works.
 [ ]  Use combined environment file for docker deployment.
 [x]  Allow failed image / video uploads to be uploaded as a normal file.
 
-# 0.5: Servers
+## 0.5: Servers
 
 ### Features
 
