@@ -31,9 +31,6 @@ export default function Home() {
                 <meta property="og:image:width" content="1280" />
                 <meta property="og:image:height" content="720" />
 
-                <link rel="preconnect" href="https://fonts.gstatic.com" />
-                <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600&display=swap" rel="stylesheet" />
-
                 <script async defer data-domain='revolt.chat' src='https://plausible.insrt.uk/js/plausible.js' />
 
                 {   // Firefox only: Scroll snapping.
