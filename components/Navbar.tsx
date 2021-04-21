@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import { URLs } from '../urls';
 import styles from './Navbar.module.scss';
 import { Globe } from '@styled-icons/feather';
 
@@ -12,7 +11,9 @@ export function Navbar() {
                 </a>
             </Link>
             <div className={styles.actions}>
-                <a href={URLs.Roadmap} target="_blank">Roadmap</a>
+                <Link href="/roadmap">
+                    <a>Roadmap</a>
+                </Link>
                 {/* <a>Developers</a> */}
                 {/* <a>Download</a> */}
                 {/*<a><Globe size={28} strokeWidth={2} /></a>*/}

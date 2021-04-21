@@ -24,7 +24,9 @@ export function Footer() {
                 <div className={styles.column}>
                     <b>App</b>
                     <a href={URLs.App}>Open App</a>
-                    <a href={URLs.Roadmap}>Roadmap</a>
+                    <Link href="/roadmap">
+                        <a>Roadmap</a>
+                    </Link>
                     {/*<a>Download</a>
                     <a>Features</a>
                     <a>Branding</a>*/}

@@ -30,4 +30,41 @@
             opacity: 0.8;
         }
     }
+
+    input[type="checkbox"] {
+        opacity: 0;
+        margin-top: 12px;
+        pointer-events: none;
+        display: inline-block;
+    }
+
+    label {
+        pointer-events: none;
+    }
+
+    input[type="checkbox"] + label:before {
+        width: 32px;
+        height: 32px;
+        content: 'a';
+        line-height: 32px;
+        position: relative;
+        border-radius: 6px;
+        background: white;
+        display: inline-block;
+    }
+
+    input[type="checkbox"][checked="true"] + label:before {
+        content: '✓';
+        align-items: center;
+        display: inline-flex;
+        justify-content: center;
+        background: var(--accent);
+    }
+
+    input[type="checkbox"] + label {
+        top: -6px;
+        line-height: 20px;
+        padding-left: 6px;
+        position: relative;
+    }
 }

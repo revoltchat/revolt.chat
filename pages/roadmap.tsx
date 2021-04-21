@@ -8,7 +8,7 @@ export default function Home({ content }: { content: string }) {
     return (
         <div>
             <Head>
-                <title>About Revolt</title>
+                <title>Roadmap - Revolt</title>
                 <link rel="icon" href="/favicon.ico" />
                 <meta name="viewport" content="width=device-width, initial-scale=0.9, user-scalable=0" />
             </Head>
@@ -25,7 +25,7 @@ export default function Home({ content }: { content: string }) {
 
 export async function getStaticProps() {
     const { readFile } = require('fs/promises');
-    const file = await readFile('./legal/About.md');
+    const file = await readFile('./ROADMAP.md');
     const content = file.toString();
     
     return { props: { content } }

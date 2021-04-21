@@ -1,9 +1,11 @@
 import MarkdownIt from "markdown-it";
 import styles from './Markdown.module.scss';
 import MarkdownItAnchor from "markdown-it-anchor";
+import MarkdownItCheckbox from "markdown-it-checkbox";
 
 export const md: MarkdownIt = MarkdownIt({ breaks: true, linkify: true })
-    .use(MarkdownItAnchor, { level: 3 });
+    .use(MarkdownItAnchor, { level: 3 })
+    .use(MarkdownItCheckbox);
 
 interface Props {
     content?: string;
