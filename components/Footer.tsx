@@ -42,6 +42,7 @@ export function Footer() {
                     <Link href="/about">
                         <a>About Us</a>
                     </Link>
+                    <a href="mailto:hello@revolt.chat">Email</a>
                 </div>
                 <div className={styles.column}>
                     <b>Legal</b>
