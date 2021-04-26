@@ -3,3 +3,19 @@
     padding: 20px;
     max-width: 720px;
 }
+
+.title {
+    font-size: 3em;
+    color: var(--accent);
+}
+
+.inviteCode {
+    padding: 0.4rem;
+    user-select: all;
+    border-radius: 6px;
+    margin-left: 0.4rem;
+    background: white;
+    color: var(--accent);
+    display: inline-block;
+    font-family: "Inter", sans-serif;
+}

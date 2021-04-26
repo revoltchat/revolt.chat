@@ -1,0 +1,15 @@
+Hi,
+we're ready to accept you into the Revolt beta!
+
+Your unique invite code is <code>abc</code>.
+
+For more information on signing up, see https://revolt.chat/onboarding?code=abc.
+
+If you have any problems, feel free to reply to this email to open a support ticket.
+
+Thanks,
+Paul
+
+--
+Revolt
+Email: contact@revolt.chat - Web: https://revolt.chat

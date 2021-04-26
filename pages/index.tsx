@@ -33,11 +33,12 @@ export default function Home() {
 
                 <script async defer data-domain='revolt.chat' src='https://plausible.insrt.uk/js/plausible.js' />
 
-                {   // Firefox only: Scroll snapping.
+                {   // Disabled scroll snapping.
+                    /* // Firefox only: Scroll snapping.
                     // Doesn't work properly with Chromium.
                     typeof window !== 'undefined' &&
                     typeof (window as any).InstallTrigger !== 'undefined' &&
-                    <style dangerouslySetInnerHTML={{ __html: `html { scroll-snap-type: y mandatory; }` }} /> }
+                    <style dangerouslySetInnerHTML={{ __html: `html { scroll-snap-type: y mandatory; }` }} /> */ }
             </Head>
             <main>
                 <a className={styles.feedback} href={URLs.Feedback} target="_blank">
