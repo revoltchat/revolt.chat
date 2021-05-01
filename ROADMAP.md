@@ -1,4 +1,4 @@
-*Last updated: 21. April 2021*
+*Last updated: 01. May 2021*
 
 # Roadmap
 
@@ -6,15 +6,9 @@
 
 This update introduces voice support to REVOLT.
 
-Beta entry is now **closed** for this version as we have reached maximum capacity, if you do really want access, contact me directly through [https://insrt.uk](https://insrt.uk).
-
 ### Release Features
 
 [x]  Voice Chat
-[ ]  Deafening
-[ ]  Volume Sliders
-[ ]  Show Call Status Globally
-[ ]  Ringing
 
 ### General Features
 
@@ -34,7 +28,6 @@ Beta entry is now **closed** for this version as we have reached maximum capacit
 [x]  User selector design.
 [x]  Show participants on sidebar.
 [x]  Improve call design.
-[ ]  Use server configuration to determine endpoints for voso.
 
 ## 0.4.1: CDN Rework
 
@@ -50,15 +43,21 @@ This update aims to refine how the CDN works.
 [x]  Save file size to database, and display it in client.
 [x]  Improve image / video detection, hence allow more file types.
 [ ]  Ability to change group icons.
-[ ]  Ability to change user profile picture.
+[x]  Ability to change user profile picture.
 [ ]  Ability to change user profile background image.
 
 ### Improvements
 
-[ ]  Use combined environment file for docker deployment.
+[ ]  Deafening
+[ ]  Volume Sliders
+[ ]  Show Call Status Globally
+[ ]  Ringing
+[ ]  Use server configuration to determine endpoints for voso.
 [x]  Allow failed image / video uploads to be uploaded as a normal file.
 
 ## 0.5: Servers
+
+This update adds community and server features. It is expected to be completed around mid-June.
 
 ### Features
 
@@ -67,7 +66,17 @@ This update aims to refine how the CDN works.
 [ ]  Deleting server channels.
 [ ]  Ability to change server name.
 [ ]  Mini member pop out.
-[ ]  Bot support.
 [ ]  Permission editor.
 [ ]  Invites.
+
+## 0.5.1: Bot Support
+
+This update adds bot support.
+
+### Features
+
+[ ]  Bot support.
 [ ]  Webhooks for groups / guild channels.
+[ ]  Built-in bridges to other platforms.
+  [ ]  Discord bridge. (prototype has already been built)
+  [ ]  Matrix bridge.
