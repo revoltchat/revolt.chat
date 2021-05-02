@@ -1,4 +1,4 @@
-*Last updated: 01. May 2021*
+*Last updated: 02. May 2021*
 
 # Roadmap
 
@@ -42,9 +42,9 @@ This update aims to refine how the CDN works.
 [x]  Announce max file limit through server configuration.
 [x]  Save file size to database, and display it in client.
 [x]  Improve image / video detection, hence allow more file types.
-[ ]  Ability to change group icons.
+[x]  Ability to change group icons.
 [x]  Ability to change user profile picture.
-[ ]  Ability to change user profile background image.
+[x]  Ability to change user profile background image.
 
 ### Improvements
 
