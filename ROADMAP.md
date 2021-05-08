@@ -1,4 +1,4 @@
-*Last updated: 02. May 2021*
+*Last updated: 08. May 2021*
 
 # Roadmap
 
@@ -37,8 +37,8 @@ This update aims to refine how the CDN works.
 
 [x]  Add support for S3.
 [x]  Remove EXIF data.
-[ ]  Link embeds.
-[ ]  Image proxy.
+[x]  Link embeds.
+[x]  Image proxy.
 [x]  Announce max file limit through server configuration.
 [x]  Save file size to database, and display it in client.
 [x]  Improve image / video detection, hence allow more file types.
