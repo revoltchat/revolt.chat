@@ -49,7 +49,7 @@ export default function Home() {
                     <div className={styles.overview}>
                         <div className={styles.left}>
                             <div className={styles.tagline}>
-                                <p>Don't bother with other chat apps when</p>
+                                <p>Don't bother with other chat apps.</p>
                                 <h1>Communication is critical.<br />Privacy is essential.</h1>
                                 <JoinLinks />
                             </div>
@@ -66,15 +66,15 @@ export default function Home() {
                     <div className={styles.content}>
                         <div>
                             <h1>Familiar and simple,<br/>just how you like it.</h1>
-                            <p>Revolt is built on the same technologies as other popular chat applications, so there won’t be any need to re-learn on how to use it. Also, you can customize it to your heart’s content.</p>
+                            <p>Revolt is built on the same technologies as other popular chat applications, so there won’t be any need to re-learn how to use it. If you don't like the default look, you can customize it to your heart’s content.</p>
                         </div>
                     </div>
                 </section>
                 <section className={styles.section}>
                     <div className={styles.content}>
                         <div>
-                            <h1>Open source<br />to the public</h1>
-                            <p>We believe that there’s more to it than just code. By having the Revolt project open source means that we can create a transparent layer between us and the user.<br/><br/>Contribute, create your own bot or make your own version of the Revolt client.</p>
+                            <h1>Open source<br />to the public.</h1>
+                            <p>We believe that there’s more to it than just code. Having the Revolt project open source means that we can create a transparent layer between us and the user.<br/><br/>You can contribute, create your own bot, or make your own version of the Revolt client.</p>
                             <a className={styles.link} href="https://gitlab.insrt.uk/revolt" target="_blank"><ArrowRight size={24} strokeWidth={2}/>View project on GitLab</a>
                         </div>
                     </div>
@@ -88,8 +88,8 @@ export default function Home() {
                     </div>
                     <div className={styles.content}>
                         <div>
-                            <h1>Available<br/>everywhere</h1>
-                            <p>From desktop to mobile, the Revolt app is available wherever you are, so you can chat, call or get in a video call, even if you're not in front of your computer.</p>
+                            <h1>Available<br/>everywhere.</h1>
+                            <p>From desktop to mobile, the Revolt app is available wherever you are, so you can hang out, coordinate a meetup, or hop in a video call, even if you're not in front of your computer.</p>
                         </div>
                     </div>
                 </section>
