@@ -1,5 +1,6 @@
-export const URLs = {
+module.exports = {
     Apply: 'https://revolt.chat/beta',
+    ApplicationForm: 'https://form.insrt.uk/form/607d7318ed1716002285770a',
     App: 'https://app.revolt.chat',
     Developers: 'https://developers.revolt.chat',
 

@@ -1,11 +1,11 @@
+import URLs from '../urls';
 import Head from 'next/head';
 import { Footer } from '../components/Footer';
-import { JoinLinks } from '../components/JoinLinks';
-import { ArrowRight, HelpCircle } from '@styled-icons/feather';
-import { JoinPrompt } from '../components/JoinPrompt';
 import { Navbar } from '../components/Navbar';
 import styles from '../styles/Home.module.scss';
-import { URLs } from '../urls';
+import { JoinLinks } from '../components/JoinLinks';
+import { JoinPrompt } from '../components/JoinPrompt';
+import { ArrowRight, HelpCircle } from '@styled-icons/feather';
 
 export default function Home() {
     return (

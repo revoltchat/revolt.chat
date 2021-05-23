@@ -1,9 +1,9 @@
+import URLs from '../urls';
 import Head from 'next/head';
 import { Footer } from '../components/Footer';
 import { Navbar } from '../components/Navbar';
 import styles from '../styles/Legal.module.scss';
 import { useRouter } from 'next/dist/client/router';
-import { URLs } from '../urls';
 import { ExternalLink } from '@styled-icons/feather';
 
 export default function Onboarding() {

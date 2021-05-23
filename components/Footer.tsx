@@ -1,7 +1,7 @@
-import { Gitlab, Reddit, Twitter } from '@styled-icons/simple-icons';
+import URLs from '../urls';
 import Link from 'next/link';
-import { URLs } from '../urls';
 import styles from './Footer.module.scss';
+import { Gitlab, Reddit, Twitter } from '@styled-icons/simple-icons';
 
 export function Footer() {
     return (

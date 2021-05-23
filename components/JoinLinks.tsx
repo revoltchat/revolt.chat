@@ -1,4 +1,4 @@
-import { URLs } from '../urls';
+import URLs from '../urls';
 import classNames from 'classnames';
 import { Edit } from '@styled-icons/feather';
 import styles from './JoinLinks.module.scss';
