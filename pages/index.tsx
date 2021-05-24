@@ -31,8 +31,6 @@ export default function Home() {
                 <meta property="og:image:width" content="1280" />
                 <meta property="og:image:height" content="720" />
 
-                <script async defer data-domain='revolt.chat' src='https://plausible.insrt.uk/js/plausible.js' />
-
                 {   // Disabled scroll snapping.
                     /* // Firefox only: Scroll snapping.
                     // Doesn't work properly with Chromium.
