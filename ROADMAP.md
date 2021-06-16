@@ -57,7 +57,9 @@ This update aims to refine how the CDN works.
 
 ## 0.5: Servers
 
-This update adds community and server features. ~~It is expected to be completed around mid-June.~~ This update has been delayed due to a number of reasons out of our control, please see the Wekan board for exact information or join the [Discord server](https://discord.gg/AWFZeCc).
+This update adds community and server features.
+
+This update has been delayed due to a number of reasons out of our control, please see [the Wekan board](https://wekan.insrt.uk/b/jj3x5C6nbYzM6ERQD/revolt) for exact information or join the [Discord server](https://discord.gg/AWFZeCc).
 
 ### Features
 

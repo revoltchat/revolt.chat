@@ -27,6 +27,9 @@ export function Footer() {
                     <Link href="/roadmap">
                         <a>Roadmap</a>
                     </Link>
+                    <a href={URLs.Wekan}>
+                        <a>Wekan Board</a>
+                    </a>
                     {/*<a>Download</a>
                     <a>Features</a>
                     <a>Branding</a>*/}
