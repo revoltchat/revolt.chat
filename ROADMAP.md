@@ -57,17 +57,17 @@ This update aims to refine how the CDN works.
 
 ## 0.5: Servers
 
-This update adds community and server features. It is expected to be completed around mid-June.
+This update adds community and server features. ~~It is expected to be completed around mid-June.~~ This update has been delayed due to a number of reasons out of our control, please see the Wekan board for exact information or join the [Discord server](https://discord.gg/AWFZeCc).
 
 ### Features
 
-[ ]  Ability to create a server.
-[ ]  Creating server channels.
-[ ]  Deleting server channels.
-[ ]  Ability to change server name.
+[x]  Ability to create a server.
+[x]  Creating, editing and deleting server channels.
+[x]  Ability to edit server. (name, description, banner)
+[x]  Ability to ban and unban users.
+[x]  Invites.
 [ ]  Mini member pop out.
 [ ]  Permission editor.
-[ ]  Invites.
 
 ## 0.5.1: Bot Support
 
