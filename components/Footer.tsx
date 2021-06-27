@@ -1,7 +1,7 @@
 import URLs from '../urls';
 import Link from 'next/link';
 import styles from './Footer.module.scss';
-import { Gitlab, Reddit, Twitter } from '@styled-icons/simple-icons';
+import { Gitlab, Reddit, Twitter, Mastodon, Github } from '@styled-icons/simple-icons';
 
 export function Footer() {
     return (
@@ -9,14 +9,20 @@ export function Footer() {
             <div className={styles.branding}>
                 <img src="/logo.svg" draggable={false} />
                 <div className={styles.socials}>
-                    <a href="https://gitlab.insrt.uk/revolt">
+                    <a href={URLs.GitLab}>
                         <Gitlab size={24} />
                     </a>
-                    <a href="https://reddit.com/r/revoltchat">
+                    <a href={URLs.GitHub}>
+                        <Github size={24} />
+                    </a>
+                    <a href={URLs.Reddit}>
                         <Reddit size={24} />
                     </a>
-                    <a href="https://twitter.com/revoltchat">
+                    <a href={URLs.Twitter}>
                         <Twitter size={24} />
+                    </a>
+                    <a rel="me" href={URLs.Mastodon}>
+                        <Mastodon size={24} />
                     </a>
                 </div>
             </div>
