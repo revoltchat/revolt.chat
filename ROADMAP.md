@@ -2,7 +2,8 @@
 
 # Roadmap
 
-This roadmap is a rough approximation of the major features being added, you should look to [our Wekan board](https://wekan.insrt.uk/b/jj3x5C6nbYzM6ERQD/revolt)] where all ongoing issues are tracked. You can also talk to the team and monitor development from the REVOLT testers server. (which is also [bridged to Discord here!](https://discord.gg/AWFZeCc))
+> ## Please read!
+> This roadmap is a rough approximation of the major features being added, you should look to [our Wekan board](https://wekan.insrt.uk/b/jj3x5C6nbYzM6ERQD/revolt) where all ongoing issues are tracked. You can also talk to the team and monitor development from the REVOLT testers server. (which is also [bridged to Discord here!](https://discord.gg/AWFZeCc))
 
 ## 0.4: Voice
 
