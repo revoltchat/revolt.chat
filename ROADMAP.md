@@ -2,6 +2,8 @@
 
 # Roadmap
 
+This roadmap is a rough approximation of the major features being added, you should look to [our Wekan board](https://wekan.insrt.uk/b/jj3x5C6nbYzM6ERQD/revolt)] where all ongoing issues are tracked. You can also talk to the team and monitor development from the REVOLT testers server. (which is also [bridged to Discord here!](https://discord.gg/AWFZeCc))
+
 ## 0.4: Voice
 
 This update introduces voice support to REVOLT.
@@ -59,8 +61,6 @@ This update aims to refine how the CDN works.
 
 This update adds community and server features.
 
-This update has been delayed due to a number of reasons out of our control, please see [the Wekan board](https://wekan.insrt.uk/b/jj3x5C6nbYzM6ERQD/revolt) for exact information or join the [Discord server](https://discord.gg/AWFZeCc).
-
 ### Features
 
 [x]  Ability to create a server.
@@ -68,8 +68,9 @@ This update has been delayed due to a number of reasons out of our control, plea
 [x]  Ability to edit server. (name, description, banner)
 [x]  Ability to ban and unban users.
 [x]  Invites.
+[x]  Roles.
+[x]  Permission editor.
 [ ]  Mini member pop out.
-[ ]  Permission editor.
 
 ## 0.5.1: Bot Support
 
