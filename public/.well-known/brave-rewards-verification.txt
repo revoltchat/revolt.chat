@@ -1,0 +1,4 @@
+This is a Brave Rewards publisher verification file.
+
+Domain: revolt.chat
+Token: 7ea0349109bdaa858f46e1af41e207da54854e67418a3373557f0f3a49b3de9e
