@@ -3,7 +3,7 @@
 # Roadmap
 
 > ## Please read!
-> This roadmap is a rough approximation of the major features being added, you should look to [our Wekan board](https://wekan.insrt.uk/b/jj3x5C6nbYzM6ERQD/revolt) where all ongoing issues are tracked. You can also talk to the team and monitor development from the REVOLT testers server. (which is also [bridged to Discord here!](https://discord.gg/AWFZeCc))
+> This roadmap is a rough approximation of the major features being added, please look to the [release tracker for more detailed information](https://github.com/orgs/revoltchat/projects/2). You can also talk to the team and monitor development from the REVOLT testers server. (which is also [bridged to Discord here!](https://discord.gg/AWFZeCc))
 
 ## 0.4: Voice
 
@@ -71,16 +71,33 @@ This update adds community and server features.
 [x]  Invites.
 [x]  Roles.
 [x]  Permission editor.
-[ ]  Mini member pop out.
 
-## 0.5.1: Bot Support
+## 0.5.2: Bot Support
 
 This update adds bot support.
 
 ### Features
 
+[ ]  Mini member pop out.
 [ ]  Bot support.
 [ ]  Webhooks for groups / guild channels.
+
+## 0.5.3: Moderation and Native BRidges
+
+This update adds natively supported bridges to other platforms.
+
+### Features
+
 [ ]  Built-in bridges to other platforms.
   [ ]  Discord bridge. (prototype has already been built)
   [ ]  Matrix bridge.
+
+## 0.5.4: Emoji Overhaul
+
+This update adds better emoji support. This is more or less a requirement to bringing in certain people over.
+
+### Features
+
+[ ]  Emoji Picker
+[ ]  Server Emojis
+[ ]  Message Reactions
