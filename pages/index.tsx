@@ -73,7 +73,7 @@ export default function Home() {
                         <div>
                             <h1>Open source<br />to the public.</h1>
                             <p>We believe that there’s more to it than just code. Having the Revolt project open source means that we can create a transparent layer between us and the user.<br/><br/>You can contribute, create your own bot, or make your own version of the Revolt client.</p>
-                            <a className={styles.link} href="https://gitlab.insrt.uk/revolt" target="_blank"><ArrowRight size={24} strokeWidth={2}/>View project on GitLab</a>
+                            <a className={styles.link} href={URLs.GitHub} target="_blank"><ArrowRight size={24} strokeWidth={2}/>View project on GitHub</a>
                         </div>
                     </div>
                     <div className={styles.image}>
@@ -95,7 +95,7 @@ export default function Home() {
                     <div className={styles.content}>
                         <div>
                             <h1>Your data should be yours,<br/>not ours.</h1>
-                            <p>Privacy has become a major concern over the past few years, and we wanted to take action by building a <u>privacy-safe, open source chat platform without any data aggregation.</u></p>
+                            <p>Privacy has become a major concern over the past few years, and we wanted to take action by building a <u>privacy-first, open source chat platform.</u></p>
                         </div>
                     </div>
                     <div className={styles.image}>

@@ -10,8 +10,8 @@ interface Props {
 export function JoinLinks(props: Props) {
     return (
         <div className={styles.actions}>
-            <a className={classNames("button", "red", props.contrast && "border")} href={URLs.Apply}>
-                <Edit size={24} strokeWidth={2}/> Apply for the Beta
+            <a className={classNames("button", "red", props.contrast && "border")} href={URLs.PublicBeta}>
+                <Edit size={24} strokeWidth={2}/> Join Public Beta
             </a>
             <a className="button" href={URLs.App}>
                 Open Web app

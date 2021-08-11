@@ -101,3 +101,7 @@ This update adds better emoji support. This is more or less a requirement to bri
 [ ]  Emoji Picker
 [ ]  Server Emojis
 [ ]  Message Reactions
+
+## (draft) 0.6.0: E2EE Chat
+
+This is the drafted version for e2ee.

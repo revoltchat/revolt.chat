@@ -9,11 +9,11 @@ export function Footer() {
             <div className={styles.branding}>
                 <img src="/logo.svg" draggable={false} />
                 <div className={styles.socials}>
-                    <a href={URLs.GitLab}>
-                        <Gitlab size={24} />
-                    </a>
                     <a href={URLs.GitHub}>
                         <Github size={24} />
+                    </a>
+                    <a href={URLs.GitLab}>
+                        <Gitlab size={24} />
                     </a>
                     <a href={URLs.Reddit}>
                         <Reddit size={24} />
@@ -33,8 +33,8 @@ export function Footer() {
                     <Link href="/roadmap">
                         <a>Roadmap</a>
                     </Link>
-                    <a href={URLs.Wekan}>
-                        <a>Wekan Board</a>
+                    <a href={URLs.ReleaseTracker}>
+                        <a>Release Tracker</a>
                     </a>
                     {/*<a>Download</a>
                     <a>Features</a>
@@ -42,7 +42,7 @@ export function Footer() {
                 </div>
                 <div className={styles.column}>
                     <b>Developers</b>
-                    <a href={URLs.SourceCode}>Contribute</a>
+                    <a href={URLs.GitHub}>Contribute</a>
                     <a href={URLs.Developers}>Documentation</a>
                     <a href={URLs.Translate}>Help translate</a>
                 </div>

@@ -1,11 +1,13 @@
 module.exports = {
     Apply: 'https://revolt.chat/beta',
-    ApplicationForm: 'https://form.insrt.uk/form/607d7318ed1716002285770a',
+    PublicBeta: 'https://revolt.chat/publicbeta',
+    GenerateCode: 'https://campaign.revolt.chat/api/revolt.chat',
+    ApplicationForm: 'https://revolt.chat/publicbeta',
     App: 'https://app.revolt.chat',
     Developers: 'https://developers.revolt.chat',
-    Wekan: 'https://wekan.insrt.uk/b/jj3x5C6nbYzM6ERQD/revolt',
+    ReleaseTracker: 'https://github.com/orgs/revoltchat/projects/2',
     
-    Feedback: 'https://form.insrt.uk/form/607f276fed17160022857908',
+    Feedback: 'https://github.com/revoltchat/revolt/discussions',
     SourceCode: 'https://gitlab.insrt.uk/revolt',
     Reddit: 'https://reddit.com/r/revoltchat',
     Twitter: 'https://twitter.com/revoltchat',
