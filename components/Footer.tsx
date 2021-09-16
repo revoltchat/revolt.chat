@@ -47,7 +47,7 @@ export function Footer() {
                     <a href={URLs.Translate}>Help translate</a>
                 </div>
                 <div className={styles.column}>
-                    <b>Company</b>
+                    <b>Team</b>
                     <Link href="/about">
                         <a>About Us</a>
                     </Link>
