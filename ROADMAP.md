@@ -1,13 +1,13 @@
-*Last updated: 08. May 2021*
+*Last updated: 22 September 2021*
 
 # Roadmap
 
 > ## Please read!
-> This roadmap is a rough approximation of the major features being added, please look to the [release tracker for more detailed information](https://github.com/orgs/revoltchat/projects/2). You can also talk to the team and monitor development from the REVOLT testers server. (which is also [bridged to Discord here!](https://discord.gg/AWFZeCc))
+> This roadmap is a rough approximation of the major features being added. Please look to [the release tracker](https://github.com/orgs/revoltchat/projects/2) for more detailed information. You can also talk to the team and monitor development from the Revolt testers server. (which is also [bridged to Discord here!](https://discord.gg/AWFZeCc))
 
 ## 0.4: Voice
 
-This update introduces voice support to REVOLT.
+This update introduces voice support to Revolt.
 
 ### Release Features
 
@@ -51,7 +51,7 @@ This update aims to refine how the CDN works.
 
 ### Improvements
 
-[ ]  Deafening
+[x]  Deafening
 [ ]  Volume Sliders
 [ ]  Show Call Status Globally
 [ ]  Ringing
@@ -79,7 +79,7 @@ This update adds bot support.
 ### Features
 
 [ ]  Mini member pop out.
-[ ]  Bot support.
+[x]  Bot support.
 [ ]  Webhooks for groups / guild channels.
 
 ## 0.5.3: Moderation and Native BRidges

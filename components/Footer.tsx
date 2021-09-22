@@ -29,6 +29,9 @@ export function Footer() {
             <div className={styles.links}>
                 <div className={styles.column}>
                     <b>App</b>
+                    <Link href="/desktop">
+                        <a>Download</a>
+                    </Link>
                     <a href={URLs.App}>Open App</a>
                     <Link href="/roadmap">
                         <a>Roadmap</a>
@@ -36,8 +39,7 @@ export function Footer() {
                     <a href={URLs.ReleaseTracker}>
                         <a>Release Tracker</a>
                     </a>
-                    {/*<a>Download</a>
-                    <a>Features</a>
+                    {/*<a>Features</a>
                     <a>Branding</a>*/}
                 </div>
                 <div className={styles.column}>

@@ -14,8 +14,12 @@ export function Navbar() {
                 <Link href="/roadmap">
                     <a>Roadmap</a>
                 </Link>
-                {/* <a>Developers</a> */}
-                {/* <a>Download</a> */}
+                <Link href="/desktop">
+                    <a>Download</a>
+                </Link>
+                <Link href="https://developers.revolt.chat">
+                    <a>Developers</a>
+                </Link>
                 {/*<a><Globe size={28} strokeWidth={2} /></a>*/}
             </div>
         </div>

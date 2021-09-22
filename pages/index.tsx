@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import URLs from '../urls';
 import Head from 'next/head';
 import { Footer } from '../components/Footer';
@@ -50,6 +51,7 @@ export default function Home() {
                                 <p>Don't bother with other chat apps.</p>
                                 <h1>Communication is critical.<br />Privacy is essential.</h1>
                                 <JoinLinks />
+                                <h3>(<Link href="/desktop">See here</Link> for more information on downloading Revolt Desktop.)</h3>
                             </div>
                         </div>
                         <div className={styles.graphic}>

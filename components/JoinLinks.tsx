@@ -14,7 +14,10 @@ export function JoinLinks(props: Props) {
                 <Edit size={24} strokeWidth={2}/> Join Public Beta
             </a>
             <a className="button" href={URLs.App}>
-                Open Web app
+                Open web app
+            </a>
+            <a className="button" href={URLs.DesktopApp}>
+                Download desktop app
             </a>
         </div>
     )
