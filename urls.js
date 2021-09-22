@@ -4,7 +4,6 @@ module.exports = {
     GenerateCode: 'https://campaign.revolt.chat/api/revolt.chat',
     ApplicationForm: 'https://revolt.chat/publicbeta',
     App: 'https://app.revolt.chat',
-    DesktopApp: 'https://github.com/revoltchat/desktop/releases/latest',
     Developers: 'https://developers.revolt.chat',
     ReleaseTracker: 'https://github.com/orgs/revoltchat/projects/2',
     

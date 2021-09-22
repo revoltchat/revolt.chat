@@ -8,7 +8,7 @@ export default function Home({ content }: { content: string }) {
     return (
         <div>
             <Head>
-                <title>Desktop Apps - Revolt</title>
+                <title>Revolt Desktop - Revolt</title>
                 <link rel="icon" href="/favicon.ico" />
                 <meta name="viewport" content="width=device-width, initial-scale=0.9, user-scalable=0" />
             </Head>

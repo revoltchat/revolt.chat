@@ -16,7 +16,7 @@ export function JoinLinks(props: Props) {
             <a className="button" href={URLs.App}>
                 Open web app
             </a>
-            <a className="button" href={URLs.DesktopApp}>
+            <a className="button" href="/desktop">
                 Download desktop app
             </a>
         </div>
