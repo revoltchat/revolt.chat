@@ -39,9 +39,6 @@ export default function Home() {
                     <style dangerouslySetInnerHTML={{ __html: `html { scroll-snap-type: y mandatory; }` }} /> */ }
             </Head>
             <main>
-                <a className={styles.feedback} href={URLs.Feedback} target="_blank">
-                    <HelpCircle size={24} strokeWidth={2}/>Feedback
-                </a>
                 <section className={styles.hero}>
                     <Navbar />
                     <div className={styles.overview}>
