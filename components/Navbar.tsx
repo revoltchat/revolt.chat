@@ -11,8 +11,8 @@ export function Navbar() {
                 </a>
             </Link>
             <div className={styles.actions}>
-                <a href={URLs.ReleaseTracker}>
-                    Release Tracker
+                <a href={URLs.ProjectTracker}>
+                    Project Tracker
                 </a>
                 {/* <a>Developers</a> */}
                 {/* <a>Download</a> */}

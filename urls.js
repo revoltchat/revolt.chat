@@ -5,7 +5,7 @@ module.exports = {
     ApplicationForm: 'https://revolt.chat/publicbeta',
     App: 'https://app.revolt.chat',
     Developers: 'https://developers.revolt.chat',
-    ReleaseTracker: 'https://github.com/orgs/revoltchat/projects/2',
+    ProjectTracker: 'https://github.com/orgs/revoltchat/projects/3/views/1',
     
     Feedback: 'https://github.com/revoltchat/revolt/discussions',
     SourceCode: 'https://gitlab.insrt.uk/revolt',

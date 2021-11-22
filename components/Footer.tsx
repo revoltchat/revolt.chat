@@ -30,8 +30,8 @@ export function Footer() {
                 <div className={styles.column}>
                     <b>App</b>
                     <a href={URLs.App}>Open App</a>
-                    <a href={URLs.ReleaseTracker}>
-                        <a>Release Tracker</a>
+                    <a href={URLs.ProjectTracker}>
+                        <a>Project Tracker</a>
                     </a>
                     {/*<a>Download</a>
                     <a>Features</a>
