@@ -38,7 +38,7 @@ export default function Beta() {
                         Thank you!
                     </p>
                     <p>
-                        <a className={classNames("button", "red")} href={URLs.GenerateCode}>
+                        <a className={classNames("button", "red")} href={URLs.App}>
                             Continue
                         </a>
                     </p>
