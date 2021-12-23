@@ -11,7 +11,7 @@ module.exports = {
     SourceCode: 'https://gitlab.insrt.uk/revolt',
     Reddit: 'https://reddit.com/r/revoltchat',
     Twitter: 'https://twitter.com/revoltchat',
-    Mastodon: 'https://mastodon.social/@revoltapp',
+    Mastodon: 'https://mastodon.social/@revoltchat',
     GitHub: 'https://github.com/revoltchat',
     GitLab: 'https://gitlab.insrt.uk/revolt',
 
