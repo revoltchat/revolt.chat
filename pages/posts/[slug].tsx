@@ -4,6 +4,7 @@ import { Navbar } from '../../components/Navbar';
 import styles from '../../styles/Post.module.scss';
 import { Markdown } from '../../components/Markdown';
 import { getAllPostSlugs, getPostBySlug, Post as PostType } from '../../lib/posts';
+import { renderMarkdown } from '../../lib/markdown';
 
 export default function Post({ post }: { post: PostType }) {
     const date = new Date(post.date).toLocaleDateString("en-gb", {
@@ -25,12 +26,11 @@ export default function Post({ post }: { post: PostType }) {
                 <div className={styles.content}>
                     <h3 className={styles.metadata}>{date} | {post.readingTime}-minute read | Author: {post.author}</h3>
                     <h1 className={styles.title}>{post.title}</h1>
-                    <h3>{post.description}</h3>
                     {post.coverImage && <img
                         src={post.coverImage}
                         className={styles.image}
                     />}
-                    <Markdown content={post.content} />
+                    <Markdown rendered={post.content} />
                 </div>
                 <Footer />
             </main>
@@ -40,7 +40,8 @@ export default function Post({ post }: { post: PostType }) {
 
 export async function getStaticProps({ params }: { params: { slug: string } }) {
     const post = getPostBySlug(params.slug)
-    return { props: { post } }
+    const rendered = await renderMarkdown(post.content)
+    return { props: { post: { ...post, content: rendered } } }
 }
 
 export function getStaticPaths() {

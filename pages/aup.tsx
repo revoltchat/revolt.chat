@@ -3,6 +3,7 @@ import { Footer } from '../components/Footer';
 import { Navbar } from '../components/Navbar';
 import styles from '../styles/Legal.module.scss';
 import { Markdown } from '../components/Markdown';
+import { renderMarkdown } from '../lib/markdown';
 
 export default function Home({ content }: { content: string }) {
     return (
@@ -15,7 +16,7 @@ export default function Home({ content }: { content: string }) {
             <main>
                 <Navbar />
                 <div className={styles.content}>
-                    <Markdown content={content} />
+                    <Markdown rendered={content} />
                 </div>
                 <Footer />
             </main>
@@ -26,7 +27,8 @@ export default function Home({ content }: { content: string }) {
 export async function getStaticProps() {
     const { readFile } = require('fs/promises');
     const file = await readFile('./legal/Acceptable Usage Policy.md');
-    const content = file.toString();
-    
+    const rawMarkdown = file.toString();
+    const content = await renderMarkdown(rawMarkdown);
+
     return { props: { content } }
 }
