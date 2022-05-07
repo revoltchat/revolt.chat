@@ -11,6 +11,11 @@ export function Navbar() {
                 </a>
             </Link>
             <div className={styles.actions}>
+                <Link href="/posts">
+                    <a>
+                        Blog
+                    </a>
+                </Link>
                 <a href={URLs.ProjectTracker}>
                     Project Tracker
                 </a>
