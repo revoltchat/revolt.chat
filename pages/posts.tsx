@@ -28,7 +28,7 @@ export default function Post({ posts }: { posts: PostType[] }) {
                     <h1 className={styles.pageTitle}>Posts</h1>
                     <div className={styles.posts}>
                         {posts.map(post => (
-                            <Link href={`/posts/${post.slug}`}>
+                            <Link href={`/posts/${post.slug}`} key={post.slug}>
                                 <a>
                                     <div className={styles.post}>
                                         <img

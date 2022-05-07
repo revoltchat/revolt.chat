@@ -10,7 +10,8 @@
         margin: 0;
     }
 
-    h2, h3 {
+    h2,
+    h3 {
         margin-top: 2rem;
     }
 
@@ -19,8 +20,15 @@
     }
 
     blockquote {
-        opacity: 0.5;
-        margin-left: 24px;
+        opacity: 0.7;
+        padding: 1px 0;
+        padding-left: 24px;
+        margin-left: 0;
+        border-left: 3px solid var(--accent);
+    }
+
+    strong {
+        font-weight: bold;
     }
 
     a {
@@ -40,31 +48,5 @@
 
     label {
         pointer-events: none;
-    }
-
-    input[type="checkbox"] + label:before {
-        width: 32px;
-        height: 32px;
-        content: 'a';
-        line-height: 32px;
-        position: relative;
-        border-radius: 6px;
-        background: white;
-        display: inline-block;
-    }
-
-    input[type="checkbox"][checked="true"] + label:before {
-        content: '✓';
-        align-items: center;
-        display: inline-flex;
-        justify-content: center;
-        background: var(--accent);
-    }
-
-    input[type="checkbox"] + label {
-        top: -6px;
-        line-height: 20px;
-        padding-left: 6px;
-        position: relative;
     }
 }
