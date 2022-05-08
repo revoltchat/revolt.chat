@@ -8,7 +8,7 @@ date: "2022-05-08T12:00:00.000Z"
 
 > Image Credit: [Cory Woodward on Unsplash](https://unsplash.com/photos/JUqmfHPJNE8)
 
-**Disclaimer: Do not eat drywall... or at least consult your doctor first.**
+**Disclaimer: Consult a doctor before consuming drywall.**
 
 Instructions:
 
