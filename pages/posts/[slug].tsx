@@ -22,6 +22,8 @@ export default function Post({ post }: { post: PostType }) {
                 <title>{post.title} - Revolt</title>
                 <link rel="icon" href="/favicon.ico" />
                 <meta name="viewport" content="width=device-width, initial-scale=0.9, user-scalable=0" />
+                <meta property="og:site_name" content="Revolt" />
+                <meta property="og:url" content={'https://revolt.chat/posts/' + post.slug} />
                 <meta property="og:title" content={post.title} />
                 <meta property="og:type" content="article" />
                 <meta property="og:description" content={post.description} />
@@ -33,7 +35,6 @@ export default function Post({ post }: { post: PostType }) {
                         <meta name="twitter:image" content={'https://revolt.chat' + post.coverImage} />
                     </>
                 }
-
             </Head>
             <main>
                 <Navbar />

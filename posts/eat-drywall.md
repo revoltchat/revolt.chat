@@ -27,6 +27,10 @@ Instructions:
 
 ![](https://c.tenor.com/UrZGHw036AoAAAAC/rainbow-six-siege-siege.gif)
 
+> Live footage I recorded earlier
+
+![](https://c.tenor.com/noKLy1lamBMAAAAd/shrek-get-away.gif)
+
 ---
 
 Thank you for coming to my presentation.
