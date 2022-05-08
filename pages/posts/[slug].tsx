@@ -6,6 +6,8 @@ import { Markdown } from '../../components/Markdown';
 import { getAllPostSlugs, getPostBySlug, Post as PostType } from '../../lib/posts';
 import { renderMarkdown } from '../../lib/markdown';
 
+import Giscus from '@giscus/react';
+
 export default function Post({ post }: { post: PostType }) {
     const date = new Date(post.date).toLocaleDateString("en-gb", {
         weekday: "long",
@@ -20,6 +22,18 @@ export default function Post({ post }: { post: PostType }) {
                 <title>{post.title} - Revolt</title>
                 <link rel="icon" href="/favicon.ico" />
                 <meta name="viewport" content="width=device-width, initial-scale=0.9, user-scalable=0" />
+                <meta property="og:title" content={post.title} />
+                <meta property="og:type" content="article" />
+                <meta property="og:description" content={post.description} />
+                <meta property="og:article:published_time" content={post.date} />
+                <meta property="og:article:author" content={post.author} />
+                { post.coverImage &&
+                    <>
+                        <meta name="twitter:card" content="summary_large_image" />
+                        <meta name="twitter:image" content={post.coverImage} />
+                    </>
+                }
+
             </Head>
             <main>
                 <Navbar />
@@ -31,6 +45,22 @@ export default function Post({ post }: { post: PostType }) {
                         className={styles.image}
                     />}
                     <Markdown rendered={post.content} />
+                    { post.giscus && <div className={styles.giscus}>
+                        <Giscus
+                            id="comments"
+                            repo="revoltchat/revolt"
+                            repoId="MDEwOlJlcG9zaXRvcnkzOTM0MDIwNTY="
+                            category="Announcements"
+                            categoryId="DIC_kwDOF3LWyM4B-k-m"
+                            mapping="title"
+                            reactionsEnabled="1"
+                            emitMetadata="0"
+                            inputPosition="top"
+                            theme="https://revolt.chat/giscus.css"
+                            lang="en"
+                            loading="lazy"
+                        />
+                    </div> }
                 </div>
                 <Footer />
             </main>

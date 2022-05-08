@@ -47,6 +47,12 @@ svg, img {
     pointer-events: none;
 }
 
+hr {
+    border: 0;
+    margin: 1.5em 0;
+    border-top: 3px solid #ffffff33;
+}
+
 ::-webkit-scrollbar {
     width: 3px;
     height: 3px;

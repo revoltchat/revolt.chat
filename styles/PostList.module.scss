@@ -44,9 +44,12 @@
 }
 
 .image {
-    height: 200px;
     width: auto;
+    width: 360px;
+    height: 200px;
     display: block;
+    object-fit: cover;
+    image-rendering: -webkit-optimize-contrast;
 
     @media screen and (max-width: 900px) {
         height: auto;

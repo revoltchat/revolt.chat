@@ -11,7 +11,8 @@ export type Post = {
     author: string,
     slug: string,
     content: string,
-    readingTime: number
+    readingTime: number,
+    giscus?: boolean
 }
 
 const postsDirectory = path.join(process.cwd(), 'posts');
