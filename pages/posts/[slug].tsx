@@ -30,7 +30,7 @@ export default function Post({ post }: { post: PostType }) {
                 { post.coverImage &&
                     <>
                         <meta name="twitter:card" content="summary_large_image" />
-                        <meta name="twitter:image" content={post.coverImage} />
+                        <meta name="twitter:image" content={'https://revolt.chat' + post.coverImage} />
                     </>
                 }
 
