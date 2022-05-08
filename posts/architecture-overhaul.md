@@ -51,7 +51,7 @@ To calculate a user's permissions in a server:
 
 In essence, this means you can do stuff like create a "muted" or "restricted" role which removes permissions granted earlier down the role hierarchy. For example, the user below has a role which restricts their ability to view channels:
 
-![](/posts/architecture-overhaul/example1.png)
+![](/content/blog/architecture-overhaul/example1.png)
 
 Then to calculate a user's permissions in a channel:
 - Take the known server permissions.
