@@ -56,7 +56,7 @@ export default function Post({ post }: { post: PostType }) {
                             mapping="title"
                             reactionsEnabled="1"
                             emitMetadata="0"
-                            inputPosition="top"
+                            inputPosition="bottom"
                             theme="https://revolt.chat/giscus.css"
                             lang="en"
                             loading="lazy"
