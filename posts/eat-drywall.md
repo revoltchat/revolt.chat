@@ -2,7 +2,7 @@
 title: "How to eat drywall"
 description: Instructional guide on how to eat drywall
 author: Revolt
-coverImage: /posts/eat-drywall/drywall-cory-woodward-JUqmfHPJNE8-unsplash.jpg
+coverImage: /content/blog/eat-drywall/drywall-cory-woodward-JUqmfHPJNE8-unsplash.jpg
 date: "2022-05-08T12:00:00.000Z"
 ---
 
@@ -23,7 +23,7 @@ Instructions:
 
 ![](https://c.tenor.com/lCSsC5hSpAYAAAAC/garfield-drywall.gif)
 
-> Example anti-drywall eating propaganda
+> Example of anti-drywall eating propaganda
 
 ![](https://c.tenor.com/UrZGHw036AoAAAAC/rainbow-six-siege-siege.gif)
 

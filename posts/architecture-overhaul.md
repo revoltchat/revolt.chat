@@ -2,7 +2,7 @@
 title: "0.5.3 Release: Architecture Overhaul"
 description: How Revolt's back-end was rebuilt from the ground up along with a brand new permissions system.
 author: Paul Makles
-coverImage: /posts/architecture-overhaul/cover.png
+coverImage: /content/blog/architecture-overhaul/cover.png
 date: "2022-05-08T14:00:00.000Z"
 giscus: true
 ---
