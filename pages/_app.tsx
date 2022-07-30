@@ -3,6 +3,7 @@ import { ThemeProvider, DefaultTheme } from "styled-components";
 import GlobalStyle from "../components/global-styles";
 import Navbar from "../components/layout/navbar/Navbar";
 import "../assets/styles/inter.css";
+import GlobalMeta from "../components/layout/global/GlobalMeta";
 
 const revolt21theme: DefaultTheme = {
     colors: {
@@ -27,6 +28,7 @@ const CURRENT_THEME = revolt21theme;
 export default function App({ Component, pageProps }: AppProps) {
     return (
         <>
+            <GlobalMeta />
             <ThemeProvider theme={CURRENT_THEME}>
                 <GlobalStyle />
                 <Navbar />

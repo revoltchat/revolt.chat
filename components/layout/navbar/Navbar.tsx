@@ -48,7 +48,10 @@ const Navbar = () => {
                     <Link href="/posts" passHref>
                         <NavLink>Blog</NavLink>
                     </Link>
-                    <Link href="https://github.com/revoltchat" passHref>
+                    <Link
+                        href="https://github.com/orgs/revoltchat/projects/3/views/1"
+                        passHref
+                    >
                         <NavLink>Tracker</NavLink>
                     </Link>
                 </LinkContainer>
