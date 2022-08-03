@@ -79,8 +79,8 @@ const IndexHero = () => {
                 </Slogan>
                 <Pitch>
                     The Revolt app is one of the best ways to stay connected
-                    with your friends and community without sacrificing privacy
-                    or usability. We focus only on the user, and you can be sure
+                    with your friends and community without sacrificing any
+                    usability. We focus only on the user, and you can be sure
                     that your conversations are confidential and your data is
                     secure.
                 </Pitch>

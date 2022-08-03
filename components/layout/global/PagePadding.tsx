@@ -6,7 +6,7 @@ const Padding = styled.div`
     margin: auto;
 
     @media screen and (min-width: ${(p) => p.theme.breakpoints.xl}) {
-        max-width: 70vw;
+        max-width: min(1080px, 70vw);
     }
 `;
 

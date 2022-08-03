@@ -13,10 +13,18 @@
         "@styled-icons/boxicons-regular": "^10.38.0",
         "@styled-icons/boxicons-solid": "^10.38.0",
         "bowser": "^2.11.0",
+        "gray-matter": "^4.0.3",
         "next": "latest",
         "react": "^18.2.0",
         "react-dom": "^18.2.0",
-        "styled-components": "^5.3.5"
+        "reading-time": "^1.5.0",
+        "rehype-stringify": "^9.0.3",
+        "remark-gfm": "^3.0.1",
+        "remark-parse": "^10.0.1",
+        "remark-rehype": "^10.1.0",
+        "sass": "^1.54.0",
+        "styled-components": "^5.3.5",
+        "unified": "^10.1.2"
     },
     "devDependencies": {
         "@types/node": "^18.0.0",
