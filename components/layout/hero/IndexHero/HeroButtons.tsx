@@ -30,7 +30,11 @@ const OtherPlatforms = styled.a`
     font-weight: 300;
 `;
 
-const HeroButtons = () => {
+interface HeroButtonsProps {
+    darker?: boolean;
+}
+
+const HeroButtons = ({ darker }: HeroButtonsProps) => {
     const [platformId, setPlatformId] = useState<Platform | null>();
     const [platformInfo, setPlatformInfo] = useState<PlatformButton | null>();
 
@@ -45,7 +49,10 @@ const HeroButtons = () => {
     return (
         <>
             <Buttons>
-                <LinkButton variant="regular-invert" href={URLs.pwa}>
+                <LinkButton
+                    variant={darker ? "regular" : "regular-invert"}
+                    href={URLs.pwa}
+                >
                     Open Web App
                 </LinkButton>
                 {platformId &&

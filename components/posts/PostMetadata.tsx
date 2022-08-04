@@ -15,7 +15,7 @@ const Metadata = styled.div`
 `;
 
 const Heading = styled.h1`
-    font-weight: normal;
+    font-weight: 900;
     font-size: 2.5rem;
 `;
 

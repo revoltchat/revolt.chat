@@ -4,6 +4,7 @@ import GlobalStyle from "../components/global-styles";
 import Navbar from "../components/layout/navbar/Navbar";
 import GlobalMeta from "../components/layout/global/GlobalMeta";
 import "../assets/styles/inter.scss";
+import Footer from "../components/layout/navbar/Footer";
 
 const revolt21theme: DefaultTheme = {
     colors: {
@@ -33,6 +34,7 @@ export default function App({ Component, pageProps }: AppProps) {
                 <GlobalStyle />
                 <Navbar />
                 <Component {...pageProps} />
+                <Footer />
             </ThemeProvider>
         </>
     );

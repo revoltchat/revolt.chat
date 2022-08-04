@@ -13,6 +13,7 @@ const FadeoutVisual = styled.div`
 
 const KeyVisual = styled.img`
     width: 90vw;
+    pointer-events: none;
 
     @media screen and (min-width: ${(p) => p.theme.breakpoints.lg}) {
         width: 50vw;

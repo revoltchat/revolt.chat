@@ -58,16 +58,6 @@ const Pitch = styled.h3`
     }
 `;
 
-const ProductImage = styled.img`
-    padding-top: 6rem;
-    max-width: 90vw;
-    margin: auto;
-
-    @media screen and (min-width: ${(p) => p.theme.breakpoints.xl}) {
-        max-width: 70vw;
-    }
-`;
-
 const IndexHero = () => {
     return (
         <>
