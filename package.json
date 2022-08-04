@@ -9,6 +9,7 @@
     },
     "dependencies": {
         "@fontsource/inter": "^4.5.11",
+        "@giscus/react": "^2.2.0",
         "@styled-icons/boxicons-logos": "^10.38.0",
         "@styled-icons/boxicons-regular": "^10.38.0",
         "@styled-icons/boxicons-solid": "^10.38.0",

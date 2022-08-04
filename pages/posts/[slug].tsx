@@ -5,6 +5,7 @@ import { getAllPostSlugs, getPostBySlug, Post } from "../../lib/posts";
 import { renderMarkdown } from "../../lib/markdown";
 import MarkdownView from "../../components/posts/MarkdownView";
 import PostMetadata from "../../components/posts/PostMetadata";
+import CommentsView from "../../components/posts/CommentsView";
 
 interface PostsProps {
     post: Post;
@@ -16,6 +17,7 @@ export default function Posts({ post }: PostsProps) {
             <PageTitle>{`${post.title} - Revolt`}</PageTitle>
             <PostMetadata post={post} />
             <MarkdownView rendered={post.content}></MarkdownView>
+            {post.giscus && <CommentsView />}
         </PagePadding>
     );
 }

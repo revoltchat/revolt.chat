@@ -6,7 +6,7 @@ const Grid = styled.div`
     display: flex;
     flex-direction: column;
     width: 100%;
-    gap: 1rem;
+    gap: 2rem;
 `;
 
 interface PostListProps {
@@ -17,7 +17,7 @@ const PostGrid = ({ posts }: PostListProps) => {
     return (
         <Grid>
             {posts.map((post) => (
-                <PostLink post={post} />
+                <PostLink post={post} key={post.slug} />
             ))}
         </Grid>
     );
