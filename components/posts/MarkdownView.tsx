@@ -41,6 +41,27 @@ const MarkdownContainer = styled.div`
     a {
         text-decoration: underline;
     }
+
+    th {
+        border-bottom: 2px solid ${(p) => p.theme.colors.primary};
+        text-align: left;
+    }
+
+    table,
+    td,
+    th {
+        border-collapse: collapse;
+    }
+
+    td,
+    th {
+        padding: 0.5em 1em;
+    }
+
+    th,
+    tr:nth-child(2n) {
+        background-color: rgba(32, 48, 70, 0.4);
+    }
 `;
 
 interface MarkdownViewProps {
