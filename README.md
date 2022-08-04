@@ -2,7 +2,7 @@
 
 ## Description
 
-This is the support website for Revolt, which is available live at [revolt.chat](https://revolt.chat).
+This is the website for Revolt, which is available live at [revolt.chat](https://revolt.chat).
 
 ## Stack
 
