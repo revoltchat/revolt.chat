@@ -6,7 +6,7 @@ import GlobalMeta from "../components/layout/global/GlobalMeta";
 import "../assets/styles/inter.scss";
 import Footer from "../components/layout/navbar/Footer";
 
-const revolt21theme: DefaultTheme = {
+const revolt22theme: DefaultTheme = {
     colors: {
         foreground: "#ffffff",
         foregroundGrey: "#c2c2c2",
@@ -24,7 +24,7 @@ const revolt21theme: DefaultTheme = {
     easing: "cubic-bezier(0.65, 0, 0.35, 1)",
 };
 
-const CURRENT_THEME = revolt21theme;
+const CURRENT_THEME = revolt22theme;
 
 export default function App({ Component, pageProps }: AppProps) {
     return (
