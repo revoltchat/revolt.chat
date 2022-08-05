@@ -68,7 +68,7 @@ const IndexHero = () => {
                     connect with the world.
                 </Slogan>
                 <Pitch>
-                    The Revolt app is one of the best ways to stay connected
+                    Revolt is one of the best ways to stay connected
                     with your friends and community without sacrificing any
                     usability. We focus only on the user, and you can be sure
                     that your conversations are confidential and your data is
