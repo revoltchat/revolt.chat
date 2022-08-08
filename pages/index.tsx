@@ -9,17 +9,22 @@ import Servers from "../assets/illustrations/Servers.svg";
 import Roles from "../assets/illustrations/Roles.svg";
 import Private from "../assets/illustrations/Private.svg";
 import Colors from "../assets/illustrations/Colors.svg";
+import { GetStaticProps } from "next";
 
 const HeroContainer = styled.div`
     background-color: ${({ theme }) => theme.colors.backgroundLighter};
 `;
 
-export default function Home() {
+interface HomeProps {
+    fadeoutUrl: string;
+}
+
+export default function Home({ fadeoutUrl }: HomeProps) {
     return (
         <>
             <HeroContainer>
                 <IndexHero />
-                <HeroFadeout />
+                <HeroFadeout staticFadeoutUrl={fadeoutUrl} />
             </HeroContainer>
             <PagePadding>
                 <Feature
@@ -68,3 +73,24 @@ export default function Home() {
         </>
     );
 }
+
+export const getStaticProps: GetStaticProps<HomeProps> = async () => {
+    // See components/layout/hero/HeroFadeout for an explanation of what we're doing here
+    const fs = await import("fs/promises");
+    const { join } = await import("path");
+
+    const fadeoutPath = join(
+        process.cwd(),
+        "assets",
+        "illustrations",
+        "Fadeout.svg"
+    );
+    const fadeoutContents = await fs.readFile(fadeoutPath);
+    const fadeoutUrl = fadeoutContents.toString("base64");
+
+    return {
+        props: {
+            fadeoutUrl: `data:image/svg+xml;base64,${fadeoutUrl}`,
+        },
+    };
+};
