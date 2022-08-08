@@ -19,7 +19,8 @@ const nextConfig = {
         {
             // Temporary
             source: "/about",
-            destination: "/",
+            destination:
+                "https://github.com/revoltchat/legal/blob/master/About.md#communication-is-critical",
             permanent: false,
         },
     ],
