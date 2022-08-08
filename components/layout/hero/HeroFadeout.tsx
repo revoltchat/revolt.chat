@@ -15,7 +15,7 @@ const KeyVisual = styled.img`
     pointer-events: none;
 
     @media screen and (min-width: ${(p) => p.theme.breakpoints.lg}) {
-        width: 50vw;
+        width: 53vw;
     }
 `;
 
