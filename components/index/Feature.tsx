@@ -15,7 +15,7 @@ const FeatureFlex = styled.div`
 `;
 
 const FeatureText = styled.div`
-    @media screen and (min-width: ${(p) => p.theme.breakpoints.lg}) {
+    @media screen and (min-width: ${(p) => p.theme.breakpoints.md}) {
         flex: 50%;
     }
 `;
@@ -31,7 +31,7 @@ const FeatureHeading = styled.h2`
     line-height: 1.2;
     padding-bottom: 1.5rem;
 
-    @media screen and (min-width: ${(p) => p.theme.breakpoints.lg}) {
+    @media screen and (min-width: ${(p) => p.theme.breakpoints.md}) {
         line-height: 1;
         font-size: 3.5rem;
     }
@@ -40,7 +40,7 @@ const FeatureHeading = styled.h2`
 const FeatureVisual = styled.img`
     pointer-events: none;
 
-    @media screen and (min-width: ${(p) => p.theme.breakpoints.lg}) {
+    @media screen and (min-width: ${(p) => p.theme.breakpoints.md}) {
         flex: 50%;
         max-width: 50%;
     }
