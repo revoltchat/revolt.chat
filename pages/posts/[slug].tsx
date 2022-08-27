@@ -6,6 +6,7 @@ import { renderMarkdown } from "../../lib/markdown";
 import MarkdownView from "../../components/posts/MarkdownView";
 import PostMetadata from "../../components/posts/PostMetadata";
 import CommentsView from "../../components/posts/CommentsView";
+import CustomMeta from "../../components/layout/global/CustomMeta";
 
 interface PostsProps {
     post: Post;
@@ -14,6 +15,14 @@ interface PostsProps {
 export default function Posts({ post }: PostsProps) {
     return (
         <PagePadding>
+            <CustomMeta
+                meta={{
+                    title: `${post.title} - Revolt`,
+                    description: post.description,
+                    thumbnailAt: `https://revolt.chat${post.coverImage}`,
+                    url: `https://revolt.chat/posts/${post.slug}`,
+                }}
+            />
             <PageTitle>{`${post.title} - Revolt`}</PageTitle>
             <PostMetadata post={post} />
             <MarkdownView rendered={post.content}></MarkdownView>
