@@ -55,9 +55,21 @@ const HeroButtons = ({ darker }: HeroButtonsProps) => {
                 >
                     Open Web App
                 </LinkButton>
-                {platformId &&
-                    !["other", "ssr"].includes(platformId ?? "") &&
-                    (platformInfo?.url === null ? (
+                {
+                    platformId &&
+                        !["other", "ssr"].includes(platformId ?? "") &&
+                        platformInfo?.url && (
+                            <LinkButton
+                                href={platformInfo.url}
+                                variant="primary"
+                            >
+                                Download{" "}
+                                {platformInfo.source
+                                    ? `from ${platformInfo.source}`
+                                    : `for ${platformInfo?.name}`}
+                            </LinkButton>
+                        )
+                    /*(platformInfo?.url === null ? (
                         <Button variant="disabled">
                             Available on {platformInfo?.name} soon
                         </Button>
@@ -65,10 +77,11 @@ const HeroButtons = ({ darker }: HeroButtonsProps) => {
                         <LinkButton href={platformInfo?.url} variant="primary">
                             Download for {platformInfo?.name}
                         </LinkButton>
-                    ))}
+                    ))*/
+                }
             </Buttons>
             <Link href="/download" passHref>
-                <OtherPlatforms>See other platforms</OtherPlatforms>
+                <OtherPlatforms>See other platforms / downloads</OtherPlatforms>
             </Link>
         </>
     );

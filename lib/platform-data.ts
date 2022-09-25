@@ -4,6 +4,7 @@ import URLs from "./urls";
 export type PlatformButton = {
     name: string;
     url: string | null;
+    source: string | null;
 };
 
 export type PlatformButtonData = Record<Platform, PlatformButton>;
@@ -11,30 +12,37 @@ export type PlatformButtonData = Record<Platform, PlatformButton>;
 export const PLATFORM_BUTTON_DATA: PlatformButtonData = {
     android: {
         name: "Android",
+        source: "Google Play",
         url: URLs.android.googlePlay,
     },
     ios: {
         name: "iOS",
+        source: null,
         url: null,
     },
     linux: {
         name: "Linux",
+        source: "FlatHub",
         url: URLs.electron.flathub,
     },
     windows: {
         name: "Windows",
+        source: "Microsoft Store",
         url: URLs.electron.microsoftStore,
     },
     macos: {
         name: "macOS",
+        source: null,
         url: URLs.electron.releases,
     },
     ssr: {
         name: "SSR",
+        source: null,
         url: null,
     },
     other: {
         name: "Unknown",
+        source: null,
         url: null,
     },
 };
