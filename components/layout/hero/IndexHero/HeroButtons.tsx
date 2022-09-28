@@ -7,7 +7,6 @@ import {
     PLATFORM_BUTTON_DATA,
 } from "../../../../lib/platform-data";
 import URLs from "../../../../lib/urls";
-import Button from "../../../ui/Button";
 import LinkButton from "../../../ui/LinkButton";
 
 const Buttons = styled.div`
@@ -55,33 +54,21 @@ const HeroButtons = ({ darker }: HeroButtonsProps) => {
                 >
                     Open Web App
                 </LinkButton>
-                {
-                    platformId &&
-                        !["other", "ssr"].includes(platformId ?? "") &&
-                        platformInfo?.url && (
-                            <LinkButton
-                                href={platformInfo.url}
-                                variant="primary"
-                            >
-                                Download{" "}
-                                {platformInfo.source
-                                    ? `from ${platformInfo.source}`
-                                    : `for ${platformInfo?.name}`}
-                            </LinkButton>
-                        )
-                    /*(platformInfo?.url === null ? (
-                        <Button variant="disabled">
-                            Available on {platformInfo?.name} soon
-                        </Button>
-                    ) : (
-                        <LinkButton href={platformInfo?.url} variant="primary">
-                            Download for {platformInfo?.name}
+                {platformId &&
+                    !["other", "ssr"].includes(platformId ?? "") &&
+                    platformInfo?.url && (
+                        <LinkButton href={platformInfo.url} variant="primary">
+                            Download{" "}
+                            {platformInfo.source
+                                ? `from ${platformInfo.source}`
+                                : `for ${platformInfo?.name}`}
                         </LinkButton>
-                    ))*/
-                }
+                    )}
             </Buttons>
             <Link href="/download" passHref>
-                <OtherPlatforms>See other platforms / downloads</OtherPlatforms>
+                <OtherPlatforms>
+                    See other platforms and downloads
+                </OtherPlatforms>
             </Link>
         </>
     );
