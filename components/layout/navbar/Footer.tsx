@@ -111,6 +111,7 @@ const Footer = () => {
                         </Link>
                         <Link
                             href="https://mastodon.social/@revoltchat"
+                            rel="me"
                             passHref
                         >
                             <a>
