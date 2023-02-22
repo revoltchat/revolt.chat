@@ -1,20 +1,20 @@
 ---
 title: "Three new ways Revolt will be improving user safety"
-description: Introducing in-app reporting, updated guidelines for Revolt Discover and built-in anti-spam measures
+description: Introducing in-app reporting, updated guidelines for Revolt Discover and built-in anti-spam measures.
 author: Paul Makles
 coverImage: /content/blog/improving-user-safety/cover.png
 date: "2023-02-22T10:00:00.000Z"
 giscus: true
 ---
 
-The Revolt team is committed to providing a safe and secure platform for our users. We are rolling out new features to help ensure users stay safe while on the platform, primarily tackling spam and abuse on the platform. We've been working hard to improve Revolt behind the scenes, and we're excited to share some of the news in a few months.  
+The Revolt team is committed to providing a safe and secure platform for our users. As such, we are rolling out new features to help ensure users stay safe while on the platform, primarily tackling spam and abuse on the platform. We've also been working hard to improve Revolt behind the scenes, and we're excited to share some of the news in the next few months.  
 In the meantime, here's what we've been working on:
 
 # In-App Reporting
 
 To streamline reports to the moderation team, and to allow us to respond quickly and reliably to reports, we're introducing a new way to report content on the platform. You can now report any message, user or server directly from the app. Once a report has been actioned on, you'll receive an in-app notification.
 
-[screenshot in-app]
+<img style="margin: auto; display: block;" src="https://autumn.revolt.chat/attachments/ZuDVIjGiCl61Pk9XGk5qfc8-idN9EnFAk55DUQp713/the.png" alt="Screenshot of In-App Reporting Modal" />
 
 In the future, we'll be adding more features to the reporting system, such as the ability to view pending and resolved reports right from the app.
 
