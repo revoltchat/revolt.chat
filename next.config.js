@@ -24,6 +24,19 @@ const nextConfig = {
             permanent: false,
         },
     ],
+    async rewrites() {
+        return [
+            {
+                source: "/js/p.js",
+                destination:
+                    "https://plausible.insrt.uk/js/script.outbound-links.js",
+            },
+            {
+                source: "/api/hello",
+                destination: "https://plausible.insrt.uk/api/event",
+            },
+        ];
+    },
 };
 
 module.exports = nextConfig;
