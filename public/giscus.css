@@ -7,3 +7,4 @@
   /*! Extensions from @primer/css/alerts/flash.scss */--color-social-reaction-bg-hover:var(--color-scale-gray-7);--color-social-reaction-bg-reacted-hover:var(--color-scale-blue-8);color-scheme:dark}main .pagination-loader-container{background-image:url(https://github.com/images/modules/pulls/progressive-disclosure-line-dark.svg)}
 
 /*! Custom CSS */.gsc-reactions-count{display:none}.gsc-timeline{flex-direction:column-reverse}.gsc-header{padding-bottom:1rem}.gsc-comments>.gsc-header{order:1}.gsc-comments>.gsc-comment-box{margin-bottom:1rem;order:2}.gsc-comments>.gsc-timeline{order:3}.gsc-homepage-bg{background-color:#15202b}main .gsc-loading-image{background-image:url(https://github.githubassets.com/images/mona-loading-dimmed.gif)}
+html {background: transparent;}
