@@ -1,6 +1,6 @@
 ---
 title: "How to eat drywall"
-description: Instructional guide on how to eat drywall
+description: Instructional guide on how to eat drywall.
 author: Revolt
 coverImage: /content/blog/eat-drywall/drywall-cory-woodward-JUqmfHPJNE8-unsplash.jpg
 date: "2022-05-08T12:00:00.000Z"
