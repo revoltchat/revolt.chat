@@ -38,7 +38,7 @@ To help us more effectively combat spam, we have introduced additional checks du
 
 While we can't share all the details of these checks, we can share some of the things we're looking for:
 
--   Disposable emails are no longer permissible on Revolt. Almost all accounts originating from such services are overwhelmingly spam. These also provide no ability for the user to recover their account. Aliasing services are not affected by this change.
+-   Disposable emails are no longer permissible on Revolt. Almost all accounts originating from such services are used to spam the platform. These also provide no ability for the user to recover their account. Aliasing services are not affected by this change.
 -   Emails hosted on Freenom domains are also automatically blocked due to the high volume of abuse originating from these domains. However, this isn't a blanket ban and you can contact support for an exception.
 
 These checks, along with other measures, are performed by a service called Authifier Shield, a new part of the Authifier project. So far since deployment, Shield has helped block three separate waves of spam registrations, in all cases causing the parties involved to cease their attacks. Shield can adapt to a variety of situations due to its modular nature, and will likely be used to help protect other services and websites in the future.
