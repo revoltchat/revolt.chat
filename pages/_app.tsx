@@ -36,6 +36,12 @@ export default function App({ Component, pageProps }: AppProps) {
                 <Component {...pageProps} />
                 <Footer />
             </ThemeProvider>
+            <script
+                defer
+                data-domain="revolt.chat"
+                data-api="/api/hello"
+                src="/js/p.js"
+            ></script>
         </>
     );
 }
