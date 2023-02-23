@@ -3,7 +3,7 @@ title: "Three new ways Revolt will be improving user safety"
 description: Introducing in-app reporting, updated guidelines for Revolt Discover and built-in anti-spam measures.
 author: Paul Makles
 coverImage: /content/blog/improving-user-safety/cover.png
-date: "2023-02-22T10:00:00.000Z"
+date: "2023-02-23T20:00:00.000Z"
 giscus: true
 ---
 
