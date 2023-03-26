@@ -88,7 +88,7 @@ export const EXTENDED_PLATFORM_DATA: ExtendedPlatformMap = {
         infoText:
             "While we don't offer a dedicated iOS application yet, " +
             "you can install the web app to your home screen using " +
-            "Safari in the meantime.",
+            "Safari.",
     },
     linux: {
         name: "Linux",
@@ -119,7 +119,7 @@ export const EXTENDED_PLATFORM_DATA: ExtendedPlatformMap = {
                 url: URLs.electron.releases,
             },
         ],
-        infoText: "The macOS app is available as a .dmg from GitHub Releases.",
+        infoText: "The macOS app is available as a .dmg on GitHub.",
     },
     windows: {
         name: "Windows",
@@ -134,9 +134,9 @@ export const EXTENDED_PLATFORM_DATA: ExtendedPlatformMap = {
             },
         ],
         infoText:
-            "The Windows app is available on Winget as Revolt.RevoltDesktop. " +
-            "It is also published on the Microsoft Store, a standalone installer " +
-            "is available on GitHub.",
+            "The Windows app is available via the Microsoft Store. " +
+            "It's also available via Winget as Revolt.RevoltDesktop, " +
+            "and a standalone installer is available on GitHub.",
     },
     other: {
         name: "Other",
