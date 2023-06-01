@@ -32,7 +32,7 @@ const nextConfig = {
                     "https://plausible.insrt.uk/js/script.outbound-links.js",
             },
             {
-                source: "/api/hello",
+                source: "/p",
                 destination: "https://plausible.insrt.uk/api/event",
             },
         ];

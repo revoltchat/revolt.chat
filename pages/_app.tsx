@@ -39,7 +39,7 @@ export default function App({ Component, pageProps }: AppProps) {
             <script
                 defer
                 data-domain="revolt.chat"
-                data-api="/api/hello"
+                data-api="/p"
                 src="/js/p.js"
             ></script>
         </>
