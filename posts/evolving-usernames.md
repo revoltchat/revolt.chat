@@ -21,7 +21,7 @@ During our recent RFC, we engaged the Revolt community in a discussion regarding
 
 ### User empowerment through personalized usernames.
 
-Selecting an available username that truly reflects one's identity has become increasingly challenging. Our number tag system allows users to choose their desired username, as long as it meets the minimum requirement of being four letters long. This feature benefits individuals such as content creators, who value their privacy and prefer to maintain a lower profile, ensuring that their usernames remain less discoverable.
+Selecting an available username that truly reflects one's identity has become increasingly challenging. Our number tag system allows users to choose their desired username, as long as it meets the minimum requirement of being two letters long. This feature benefits individuals such as content creators, who value their privacy and prefer to maintain a lower profile, ensuring that their usernames remain less discoverable.
 
 ### Combating unauthorised account activities.
 
