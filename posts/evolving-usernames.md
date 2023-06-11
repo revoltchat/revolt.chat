@@ -23,7 +23,7 @@ During our recent RFC, we engaged the Revolt community in a discussion regarding
 
 Selecting an available username that truly reflects one's identity has become increasingly challenging. Our number tag system allows users to choose their desired username, as long as it meets the minimum requirement of being four letters long. This feature benefits individuals such as content creators, who value their privacy and prefer to maintain a lower profile, ensuring that their usernames remain less discoverable.
 
-### Combating unauthorized account activities.
+### Combating unauthorised account activities.
 
 With this change, we aim to address issues related to account selling, trading, and instances of attempted theft, which have unfortunately led to threats and bullying in some cases. Our new system aims to prevent such incidents, promoting a safer and more secure environment for all users.
 
@@ -35,6 +35,6 @@ Our revamped number tag system employs a fully randomized approach, ensuring fai
 
 We're almost ready to bring you WebHooks, which allow you to set up real-time notifications and triggers between Revolt and other platforms. Imagine receiving instant updates from your favourite social media, project management tool or timed events, directly within your Revolt community. With WebHooks, you'll always be in the loop.
 
-The Revolt team is also working on bringing a brand new experience for the web, along with the development of new native apps for both Android and iOS. **The current web client** (called `revite` for you super-🤓s) **enters maintanance mode** and only receives necessary (like security-related) updates, in favour of a new all-around web and desktop client with improvements both to speed and performance, and a brand new coat of paint added on top.
+The Revolt team is also working on bringing a brand new experience for the web, along with the development of new native apps for both Android and iOS. **The current web client** (called `revite` for you super-🤓s) **enters maintenance mode** and only receives necessary (like security-related) updates, in favour of a new all-around web and desktop client with improvements both to speed and performance, and a brand new coat of paint added on top.
 
 We'd like to thank everyone for your continuous support for Revolt and hope to see you at our next blog post.
