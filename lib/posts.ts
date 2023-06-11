@@ -13,6 +13,7 @@ export type Post = {
     content: string;
     readingTime: number;
     giscus?: boolean;
+    hidden?: boolean;
 };
 
 const postsDirectory = path.join(process.cwd(), "posts");
@@ -43,9 +44,11 @@ export const getAllPosts: () => Post[] = () => {
     const slugs = getAllPostSlugs();
     const posts = slugs
         .map((slug) => getPostBySlug(slug.replace(/.md$/, "")))
+        .filter(post => !post.hidden)
         // sort by date, newest first
         .sort((post1, post2) =>
             new Date(post1.date) < new Date(post2.date) ? 1 : -1
         );
+
     return posts;
 };
