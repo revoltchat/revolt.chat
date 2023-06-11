@@ -7,7 +7,7 @@ date: "2023-06-11T19:00:00.000Z"
 giscus: true
 ---
 
-We're changing the way usernames work on Revolt. After our initial implememntation with unique username handles, we are now replacing it with brand-new display names and usernames with a four-digit number tag. We worked alongside our community in the making of this transition. Read on to learn what's coming now for Revolt, and a very special feature announcement.
+We're changing the way usernames work on Revolt. After our initial implememtation with unique username handles, we are now replacing it with brand-new display names and usernames with a four-digit number tag. We worked alongside our community in the making of this transition. Read on to learn what's coming now for Revolt, and a very special feature announcement.
 
 ## So, how does the new system work?
 
