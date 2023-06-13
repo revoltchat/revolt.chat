@@ -20,7 +20,4 @@ This year has been the biggest year in growth though. We've received mentions on
 
 If you're interested in the full story of our path to this point, then you should check out the [timeline on our wiki](https://wiki.rvlt.gg/index.php/Revolt_Timeline). 
 
-## What's next? 
-We've got a whole ton of improvements and changes in the pipeline that we're excited to bring to you. We've got new clients for the Web, Android, and iOS, we've got Webhooks, we've even got a new voice server. It might be a little while until we can get them to you, but you can check out what we're working on and what we've got planned on our [roadmap](https://trello.com/b/4e2O7tge/revolt-roadmap). 
-
 Once again, thank you very much everyone for the continued support. We will see you again at 3 gazillion users. 
