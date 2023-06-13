@@ -20,4 +20,6 @@ This year has been the biggest year in growth though. We've received mentions on
 
 If you're interested in the full story of our path to this point, then you should check out the [timeline on our wiki](https://wiki.rvlt.gg/index.php/Revolt_Timeline). 
 
-Once again, thank you very much everyone for the continued support. We will see you again at 3 gazillion users. 
+Once again, thank you very much everyone for the continued support. We will see you again at 3 morbillion users. #revoltsweep
+
+![](https://autumn.revolt.chat/attachments/iGyPHBkGC73oMohRLhYwSncbhZ1G7AzdrNMcL2TLzO/image.png)
