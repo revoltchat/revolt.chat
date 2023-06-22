@@ -17,11 +17,12 @@ type ButtonStylesProps = ThemedStyledProps<HTMLButtonElement, DefaultTheme> & {
 // FIXME Do not cast to `any` here
 const ButtonStyles: any = styled.button`
     padding: 1rem;
-    font-weight: 500;
+    font-weight: 600;
     font-size: 1em;
     font-family: "Inter", sans-serif;
     border: none;
     cursor: pointer;
+    border-radius: 4px;
 
     background-color: ${(p: ButtonStylesProps) => p.background};
     color: ${(p: ButtonStylesProps) => p.foreground};
