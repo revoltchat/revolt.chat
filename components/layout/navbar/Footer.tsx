@@ -94,16 +94,6 @@ const Footer = () => {
                         </Link>
                     </BrandJustify>
                     <Socials>
-                        <Link href="https://twitter.com/revoltchat" passHref>
-                            <a>
-                                <Twitter size={30} />
-                            </a>
-                        </Link>
-                        <Link href="https://reddit.com/r/revoltchat" passHref>
-                            <a>
-                                <Reddit size={30} />
-                            </a>
-                        </Link>
                         <Link href="https://github.com/revoltchat" passHref>
                             <a>
                                 <Github size={30} />
@@ -116,6 +106,16 @@ const Footer = () => {
                         >
                             <a>
                                 <Mastodon size={30} />
+                            </a>
+                        </Link>
+                        <Link href="https://twitter.com/revoltchat" passHref>
+                            <a>
+                                <Twitter size={30} />
+                            </a>
+                        </Link>
+                        <Link href="https://reddit.com/r/revoltchat" passHref>
+                            <a>
+                                <Reddit size={30} />
                             </a>
                         </Link>
                     </Socials>
@@ -138,7 +138,7 @@ const Footer = () => {
                     </LinkContainer>
                     <LinkContainer>
                         <LinkContainerHeader>Developers</LinkContainerHeader>
-                        <Link href="https://github.com/revoltchat" passHref>
+                        <Link href="https://github.com/revoltchat/.github/blob/master/.github/CONTRIBUTING.md" passHref>
                             <NavLink>Contribute</NavLink>
                         </Link>
                         <Link href="https://developers.revolt.chat" passHref>
