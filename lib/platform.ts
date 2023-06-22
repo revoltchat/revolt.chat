@@ -12,7 +12,10 @@ export type Platform =
 export const getCurrentPlatform: () => Platform = () => {
     if (typeof window === "undefined") return "ssr";
 
-    const osName = Bowser.parse(window.navigator.userAgent).os.name;
+    let rawOSName = Bowser.parse(window.navigator.userAgent).os.name;
+    
+    // detect ipad users
+    const osName = rawOSName === "macOS" && window.navigator.maxTouchPoints > 0 ? "iOS" : rawOSName;
 
     switch (osName) {
         case "Windows":
