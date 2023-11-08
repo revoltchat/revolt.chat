@@ -6,7 +6,7 @@ import PageTitle from "../components/layout/global/PageTitle";
 export default function NotFound() {
     return (
         <PagePadding>
-            <PageTitle>{`Community Guidelines - Revolt`}</PageTitle>
+            <PageTitle>{`Page Not Found - Revolt`}</PageTitle>
             <ErrorPage code="404" message="Page Not Found" />
         </PagePadding>
     );
