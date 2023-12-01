@@ -23,7 +23,7 @@ As part of the new web client, we've completely overhauled the user interface an
 
 ![Screenshot of light and dark schemes.](/content/blog/refreshing-revolt-web/material-you-triangle.png)
 
-And for seasoned theme designers, you'll have even more control than ever over every single aspect of the client. Themes can now not change colours but typography, layouts, transitions, and more!
+And for seasoned theme designers, you'll have even more control than ever over every single aspect of the client. Themes can now not only change colours but typography, layouts, transitions, and more!
 
 ### Limited Demo Release
 
