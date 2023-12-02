@@ -30,3 +30,5 @@ And for seasoned theme designers, you'll have even more control than ever over e
 You can try this out right now at [revolt.chat/app](https://revolt.chat/app).
 
 This will give you access to play around with the new colour engine and try out the new client within the Revolt server. (we'll be releasing a more general alpha test soon so stay tuned!)
+
+_PS. you can select colour schemes by clicking on different colours in the server list!_
