@@ -22,7 +22,7 @@ export const PLATFORM_BUTTON_DATA: PlatformButtonData = {
     },
     linux: {
         name: "Linux",
-        source: "FlatHub",
+        source: "Flathub",
         url: URLs.electron.flathub,
     },
     windows: {
