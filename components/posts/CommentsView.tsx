@@ -20,6 +20,7 @@ const CommentsView = () => {
                 inputPosition="bottom"
                 lang="en"
                 loading="lazy"
+                theme="https://revolt.chat/giscus.css"
                 data-theme="https://revolt.chat/giscus.css"
             />
         </GiscusView>
