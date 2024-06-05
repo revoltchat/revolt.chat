@@ -8,6 +8,8 @@ import PostMetadata from "../../components/posts/PostMetadata";
 import CommentsView from "../../components/posts/CommentsView";
 import CustomMeta from "../../components/layout/global/CustomMeta";
 
+import "./md.css";
+
 interface PostsProps {
     post: Post;
 }
