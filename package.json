@@ -14,6 +14,7 @@
         "@styled-icons/boxicons-regular": "^10.38.0",
         "@styled-icons/boxicons-solid": "^10.38.0",
         "bowser": "^2.11.0",
+        "cors": "^2.8.5",
         "gray-matter": "^4.0.3",
         "next": "latest",
         "react": "^18.2.0",
