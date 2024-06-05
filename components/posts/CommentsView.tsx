@@ -1,4 +1,4 @@
-import Giscus from "@giscus/react";
+import Script from "next/script";
 import { useEffect } from "react";
 import styled from "styled-components";
 
@@ -8,29 +8,33 @@ const GiscusView = styled.div`
 
 const CommentsView = () => {
     useEffect(() => {
-        const HackForProductionRelease = setInterval(() => {
-            const el = document.querySelector("giscus-widget");
+        const HolyMotherOfHack = setInterval(() => {
+            const el = document.querySelector(".giscus");
             if (el) {
-                el.setAttribute("data-theme", "https://revolt.chat/giscus.css");
-                clearInterval(HackForProductionRelease);
+                clearInterval(HolyMotherOfHack);
+                document.getElementById("giscusTarget").appendChild(el);
             }
-        }, 100);
+        });
     }, []);
 
     return (
-        <GiscusView>
-            <Giscus
-                id="comments"
-                repo="revoltchat/revolt"
-                repoId="MDEwOlJlcG9zaXRvcnkzOTM0MDIwNTY="
-                category="Announcements"
-                categoryId="DIC_kwDOF3LWyM4B-k-m"
-                mapping="title"
-                reactionsEnabled="1"
-                emitMetadata="0"
-                inputPosition="bottom"
-                lang="en"
-                loading="lazy"
+        <GiscusView id="giscusTarget">
+            <Script
+                src="https://giscus.app/client.js"
+                data-repo="revoltchat/revolt"
+                data-repo-id="MDEwOlJlcG9zaXRvcnkzOTM0MDIwNTY="
+                data-category="Announcements"
+                data-category-id="DIC_kwDOF3LWyM4B-k-m"
+                data-mapping="title"
+                data-strict="0"
+                data-reactions-enabled="1"
+                data-emit-metadata="0"
+                data-input-position="bottom"
+                data-theme="https://revolt.chat/giscus.css"
+                data-lang="en"
+                data-loading="lazy"
+                crossOrigin="anonymous"
+                async
             />
         </GiscusView>
     );
