@@ -1,4 +1,5 @@
 import Giscus from "@giscus/react";
+import { useEffect } from "react";
 import styled from "styled-components";
 
 const GiscusView = styled.div`
@@ -6,6 +7,16 @@ const GiscusView = styled.div`
 `;
 
 const CommentsView = () => {
+    useEffect(() => {
+        const HackForProductionRelease = setInterval(() => {
+            const el = document.querySelector("giscus-widget");
+            if (el) {
+                el.setAttribute("data-theme", "https://revolt.chat/giscus.css");
+                clearInterval(HackForProductionRelease);
+            }
+        }, 100);
+    }, []);
+
     return (
         <GiscusView>
             <Giscus
