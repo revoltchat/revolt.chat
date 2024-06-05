@@ -115,3 +115,7 @@ main .gsc-loading-image {
 main {
     background: rgb(16, 24, 35);
 }
+
+.gsc-reactions {
+    transform: scale(1.2);
+}
