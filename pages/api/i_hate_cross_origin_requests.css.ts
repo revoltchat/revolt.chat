@@ -32,5 +32,5 @@ export default async function handler(
     res: NextApiResponse
 ) {
     await runMiddleware(req, res, cors);
-    res.status(200).send(cssBuffer);
+    res.status(200).setHeader("Content-Type", "text/css").send(cssBuffer);
 }
