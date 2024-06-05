@@ -28,7 +28,7 @@ const LinkContainer = styled.div`
     gap: 1rem;
 `;
 
-const NavLink = styled.a`
+const NavLink = styled.span`
     font-weight: 600;
 `;
 
@@ -36,16 +36,14 @@ const Navbar = () => {
     return (
         <NavbarFloat>
             <NavbarFlex>
-                <Link href="/" passHref>
-                    <a>
-                        <RevoltLogoContainer src={RevoltLogo.src} />
-                    </a>
+                <Link href="/">
+                    <RevoltLogoContainer src={RevoltLogo.src} />
                 </Link>
                 <LinkContainer>
-                    <Link href="https://support.revolt.chat" passHref>
+                    <Link href="https://support.revolt.chat">
                         <NavLink>Support</NavLink>
                     </Link>
-                    <Link href="/posts" passHref>
+                    <Link href="/posts">
                         <NavLink>Blog</NavLink>
                     </Link>
                     <Link

@@ -20,7 +20,7 @@ const PostContainer = styled.div`
     }
 `;
 
-const PostAnchor = styled.a`
+const PostAnchor = styled.span`
     display: flex;
     flex-direction: column;
 
@@ -57,7 +57,7 @@ interface PostLinkProps {
 
 const PostLink = ({ post }: PostLinkProps) => {
     return (
-        <Link href={`/posts/${post.slug}`} passHref>
+        <Link href={`/posts/${post.slug}`}>
             <PostAnchor>
                 <PostImage src={post.coverImage ?? "/post-placeholder.png"} />
                 <PostContainer>

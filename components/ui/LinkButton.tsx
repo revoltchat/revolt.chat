@@ -5,10 +5,8 @@ type LinkButtonProps = ButtonProps & { href: string };
 
 const LinkButton = ({ href, ...props }: LinkButtonProps) => {
     return (
-        <Link href={href} passHref>
-            <a>
-                <Button {...props}>{props.children}</Button>
-            </a>
+        <Link href={href} legacyBehavior>
+            <Button {...props}>{props.children}</Button>
         </Link>
     );
 };

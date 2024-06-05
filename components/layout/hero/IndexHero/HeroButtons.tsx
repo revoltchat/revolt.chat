@@ -24,7 +24,7 @@ const Buttons = styled.div`
     }
 `;
 
-const OtherPlatforms = styled.a`
+const OtherPlatforms = styled.span`
     color: ${(p) => p.theme.colors.foregroundGrey};
     font-weight: 300;
 `;
@@ -65,7 +65,7 @@ const HeroButtons = ({ darker }: HeroButtonsProps) => {
                         </LinkButton>
                     )}
             </Buttons>
-            <Link href="/download" passHref>
+            <Link href="/download">
                 <OtherPlatforms>
                     See other platforms and downloads
                 </OtherPlatforms>

@@ -77,7 +77,7 @@ const Socials = styled.div`
     gap: 1rem;
 `;
 
-const NavLink = styled.a`
+const NavLink = styled.span`
     font-weight: 400;
 `;
 
@@ -87,100 +87,71 @@ const Footer = () => {
             <FooterFlex>
                 <BrandBox>
                     <BrandJustify>
-                        <Link href="/" passHref>
-                            <a>
-                                <RevoltLogoContainer src={RevoltLogo.src} />
-                            </a>
+                        <Link href="/">
+                            <RevoltLogoContainer src={RevoltLogo.src} />
                         </Link>
                     </BrandJustify>
                     <Socials>
-                        <Link href="https://github.com/revoltchat" passHref>
-                            <a>
-                                <Github size={30} />
-                            </a>
+                        <Link href="https://github.com/revoltchat">
+                            <Github size={30} />
                         </Link>
                         <Link
                             href="https://mastodon.social/@revoltchat"
                             rel="me"
-                            passHref
                         >
-                            <a>
-                                <Mastodon size={30} />
-                            </a>
+                            <Mastodon size={30} />
                         </Link>
-                        <Link href="https://twitter.com/revoltchat" passHref>
-                            <a>
-                                <Twitter size={30} />
-                            </a>
+                        <Link href="https://twitter.com/revoltchat">
+                            <Twitter size={30} />
                         </Link>
-                        <Link href="https://reddit.com/r/revoltchat" passHref>
-                            <a>
-                                <Reddit size={30} />
-                            </a>
+                        <Link href="https://reddit.com/r/revoltchat">
+                            <Reddit size={30} />
                         </Link>
                     </Socials>
                 </BrandBox>
                 <Links>
                     <LinkContainer>
                         <LinkContainerHeader>App</LinkContainerHeader>
-                        <Link href="/download" passHref>
+                        <Link href="/download">
                             <NavLink>Download</NavLink>
                         </Link>
-                        <Link
-                            href="https://github.com/orgs/revoltchat/projects/3/views/1"
-                            passHref
-                        >
+                        <Link href="https://github.com/orgs/revoltchat/projects/3/views/1">
                             <NavLink>Project Tracker</NavLink>
                         </Link>
-                        <Link href="https://support.revolt.chat" passHref>
+                        <Link href="https://support.revolt.chat">
                             <NavLink>Support</NavLink>
                         </Link>
                     </LinkContainer>
                     <LinkContainer>
                         <LinkContainerHeader>Developers</LinkContainerHeader>
-                        <Link href="https://github.com/revoltchat/.github/blob/master/.github/CONTRIBUTING.md" passHref>
-                            <NavLink>Contribute</NavLink>
-                        </Link>
-                        <Link href="https://developers.revolt.chat" passHref>
+                        <Link href="https://developers.revolt.chat">
                             <NavLink>Documentation</NavLink>
                         </Link>
-                        <Link
-                            href="https://developers.revolt.chat/api"
-                            passHref
-                        >
-                            <NavLink>REST API</NavLink>
-                        </Link>
-                        <Link
-                            href="https://weblate.insrt.uk/engage/revolt/?utm_source=widget"
-                            passHref
-                        >
-                            <NavLink>Translations</NavLink>
+                        <Link href="https://weblate.insrt.uk/engage/revolt/?utm_source=widget">
+                            <NavLink>Help Translate</NavLink>
                         </Link>
                     </LinkContainer>
                     <LinkContainer>
                         <LinkContainerHeader>Team</LinkContainerHeader>
-                        <Link href="/about" passHref>
+                        <Link href="/about">
                             <NavLink>About</NavLink>
                         </Link>
-                        <Link href="/posts" passHref>
+                        <Link href="/posts">
                             <NavLink>Blog</NavLink>
                         </Link>
-                        <Link
-                            href="https://support.revolt.chat/contact"
-                            passHref
-                        >
+                        <Link href="https://support.revolt.chat/contact">
                             <NavLink>Contact</NavLink>
                         </Link>
                     </LinkContainer>
                     <LinkContainer>
                         <LinkContainerHeader>Legal</LinkContainerHeader>
-                        <Link href="/aup" passHref>
+                        <Link href="/aup">
                             <NavLink>Community Guidelines</NavLink>
                         </Link>
-                        <Link href="/terms" passHref>
+                        <Link href="/terms">
                             <NavLink>Terms of Service</NavLink>
                         </Link>
-                        <Link href="/privacy" passHref>
+                        <Link href="/privacy">
                             <NavLink>Privacy Policy</NavLink>
                         </Link>
                     </LinkContainer>
