@@ -30,7 +30,7 @@ const CommentsView = () => {
                 data-reactions-enabled="1"
                 data-emit-metadata="0"
                 data-input-position="bottom"
-                data-theme="https://revolt.chat/giscus.css"
+                data-theme="https://revolt.chat/api/i_hate_cross_origin_requests.css"
                 data-lang="en"
                 data-loading="lazy"
                 crossOrigin="anonymous"
