@@ -12,7 +12,7 @@ const CommentsView = () => {
             const el = document.querySelector(".giscus");
             if (el) {
                 clearInterval(HolyMotherOfHack);
-                document.getElementById("giscusTarget").appendChild(el);
+                document.getElementById("giscusTarget")!.appendChild(el);
             }
         });
     }, []);
@@ -30,7 +30,7 @@ const CommentsView = () => {
                 data-reactions-enabled="1"
                 data-emit-metadata="0"
                 data-input-position="bottom"
-                data-theme="https://revolt.chat/api/i_hate_cross_origin_requests.css"
+                data-theme="https://revolt.chat/giscus.css"
                 data-lang="en"
                 data-loading="lazy"
                 crossOrigin="anonymous"
