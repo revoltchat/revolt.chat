@@ -18,9 +18,9 @@ const CommentsView = () => {
                 reactionsEnabled="1"
                 emitMetadata="0"
                 inputPosition="bottom"
-                theme="https://revolt.chat/giscus.css"
                 lang="en"
                 loading="lazy"
+                data-theme="https://revolt.chat/giscus.css"
             />
         </GiscusView>
     );
