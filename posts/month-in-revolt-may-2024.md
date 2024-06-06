@@ -19,7 +19,7 @@ Announced [October last year](/posts/revolt-on-the-go), the Android app has come
 
 ![Preview of current app design](/content/blog/month-in-revolt-may-2024/android-1.png)
 
-We're happy to announce the next phase of beta testing will commence soon, at which point you'll be able to see the app's source code as well as try exciting new features.
+We're happy to announce the next phase of beta testing has commenced, which means you are now able to see the app's source code while the testers try out the exciting new features to the best of their ability. You can join our Google Play beta ring by asking in [the Android development server](https://rvlt.gg/PYDppbnD).
 
 > **Jennifer** says "Making an app for a feature-rich platform like Revolt can take quite a while, especially if your goal is to write code that is both sturdy and can be expanded upon years into the future. It's actually quite an iterative process to get everything to feel 'just right', considering both the obvious parts, such as how the user may behave, as well as smaller details, like users on larger screens or optimal thumb placement on phones. For example, I can show you some screenshots made during the development of the upcoming attachment preview. I hoped to get it to feel just right in the end, and I think I may have done it!"
 
@@ -31,7 +31,7 @@ We're happy to announce the next phase of beta testing will commence soon, at wh
 
 We've started preliminary work on replacing our old voice server with a completely new, battle-tested real-time media server. It's based on the same technology that powers the [Zed](https://zed.dev/) code editor among other things.
 
-This means that video calls, screen sharing, proper calls and voice channels are all monumentally closer, albeit we still need some time to cook. We'll share more as soon as we have more to say, but for now enjoy this exclusive peek at a tech demo we were experimenting with for the new real-time media server:
+This means that video calls, screen sharing, and proper calls are all monumentally closer, albeit we still need some time to cook. We'll share more as soon as we have more to say, but for now enjoy this exclusive peek at a tech demo we were experimenting with for the new real-time media server:
 
 ###### Proof of concept implementation in new Revolt for Web
 
