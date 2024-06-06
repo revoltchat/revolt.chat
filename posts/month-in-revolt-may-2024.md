@@ -51,7 +51,6 @@ Here are some things that don't deserve their own section but are worth mentioni
 
 -   Development of the new web frontend is now back on track, so look out for the coming monthly updates as things will be changing fast!
 -   We are working to embolden our commitment to Free and Open Source Software, more formal information will be published at a later date. Feel free to drop in and ask how we're improving.
--   We're not just ready yet to share our progress on iOS, but the project is also moving along swiftly.
 
 # From The Community
 
