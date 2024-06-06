@@ -19,7 +19,7 @@ Announced [October last year](/posts/revolt-on-the-go), the Android app has come
 
 ![Preview of current app design](/content/blog/month-in-revolt-may-2024/android-1.png)
 
-We're happy to announce the next phase of beta testing has commenced, which means you are now able to see the app's [source code](https://github.com/revoltchat/android) while the testers try out the exciting new features to the best of their ability. You can join our Google Play beta ring by asking in [the Android development server](https://rvlt.gg/PYDppbnD).
+We're happy to announce the next phase of beta testing ~~will commence soon~~ has commenced, which means you are now able to see the app's [source code](https://github.com/revoltchat/android) while the testers try out the exciting new features to the best of their ability. You can join our Google Play beta ring by asking in [the Android development server](https://rvlt.gg/PYDppbnD).
 
 > **Jennifer** says "Making an app for a feature-rich platform like Revolt can take quite a while, especially if your goal is to write code that is both sturdy and can be expanded upon years into the future. It's actually quite an iterative process to get everything to feel 'just right', considering both the obvious parts, such as how the user may behave, as well as smaller details, like users on larger screens or optimal thumb placement on phones. For example, I can show you some screenshots made during the development of the upcoming attachment preview. I hoped to get it to feel just right in the end, and I think I may have done it!"
 
