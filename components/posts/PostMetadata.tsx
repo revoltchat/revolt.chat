@@ -34,8 +34,8 @@ const PostMetadata = ({ post }: PostMetadataProps) => {
         <>
             <Heading>{post.title}</Heading>
             <Metadata>
-                {formatDate(post.date)} &middot; {post.author} &middot;{" "}
-                {post.readingTime} min to read
+                <time suppressHydrationWarning>{formatDate(post.date)}</time>{" "}
+                &middot; {post.author} &middot; {post.readingTime} min to read
             </Metadata>
             {post.coverImage && <CoverImage src={post.coverImage} />}
         </>
