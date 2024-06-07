@@ -50,7 +50,27 @@ Our developers website has gotten a refresh and has been designed to be as easy 
 Here are some things that don't deserve their own section but are worth mentioning:
 
 -   Development of the new web frontend is now back on track, so look out for the coming monthly updates as things will be changing fast!
--   We are working to embolden our commitment to Free and Open Source Software, more formal information will be published at a later date. Feel free to drop in and ask how we're improving.
+
+## Addendum
+
+Section added **7th June 2024**.
+
+Written by insert.
+
+While I was initially intending to leave this until all commitments were met, the overwhelming response says this should've been acknowledged. I personally did not see this as a huge deal to cover here, and that's my own fault, I think I just became out of touch with the situation after being completely burnt out from the whole thing.
+
+So what am I talking about? The licensing controversy addressed [in this post](http://affine.revolt.wtf/share/5e2dc870-4d69-4986-be52-3d51788d59bb/OoC7aqieazghQqM1CPhT-) (includes definitions), please go read that for the full context on the situation.
+
+And, what has been done since?
+
+-   We've dropped the Contributor License Agreement (CLA) in favour of the Developer Certificate of Origin (DCO).
+-   The Android app has been released libre.
+-   Admin panel has been released libre.
+
+What still needs doing?
+
+-   Auxiliary projects still need to be open sourced, namely Shield and Discover.
+-   We should introduce a Fiduciary License Agreement (FLA) down the line to still allow contributors to protect their contributions.
 
 # From The Community
 
