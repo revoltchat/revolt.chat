@@ -3,7 +3,7 @@ title: "Month in Revolt - May 2024"
 description: Find out what we've been up to in our monthly blog series.
 author: Revolt Team
 coverImage: /content/blog/month-in-revolt-may-2024/cover.png
-date: "2024-05-06T23:50:00.000Z"
+date: "2024-06-06T23:50:00.000Z"
 giscus: true
 ---
 
