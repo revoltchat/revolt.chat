@@ -155,6 +155,18 @@ const Footer = () => {
                             <NavLink>Privacy Policy</NavLink>
                         </Link>
                     </LinkContainer>
+                    <LinkContainer>
+                        <LinkContainerHeader>Subscribe</LinkContainerHeader>
+                        <Link href="/api/feed?format=rss">
+                            <NavLink>RSS</NavLink>
+                        </Link>
+                        <Link href="/api/feed?format=atom">
+                            <NavLink>Atom</NavLink>
+                        </Link>
+                        <Link href="/api/feed?format=json">
+                            <NavLink>JSON</NavLink>
+                        </Link>
+                    </LinkContainer>
                 </Links>
             </FooterFlex>
         </FooterContainer>
