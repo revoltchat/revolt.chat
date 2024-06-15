@@ -157,13 +157,13 @@ const Footer = () => {
                     </LinkContainer>
                     <LinkContainer>
                         <LinkContainerHeader>Subscribe</LinkContainerHeader>
-                        <Link href="/api/feed?format=rss">
+                        <Link href="/feed/rss">
                             <NavLink>RSS</NavLink>
                         </Link>
-                        <Link href="/api/feed?format=atom">
+                        <Link href="/feed/atom">
                             <NavLink>Atom</NavLink>
                         </Link>
-                        <Link href="/api/feed?format=json">
+                        <Link href="/feed/json">
                             <NavLink>JSON</NavLink>
                         </Link>
                     </LinkContainer>
