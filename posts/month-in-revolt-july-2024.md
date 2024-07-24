@@ -2,7 +2,7 @@
 title: "Month in Revolt - July 2024"
 description: The monthly blog update for June–July period.
 author: Revolt Team
-coverImage: /content/blog/month-in-revolt-may-2024/cover.png
+coverImage: /content/blog/month-in-revolt-july-2024/cover.png
 date: "2024-07-22T10:00:00.000Z"
 giscus: true
 ---
