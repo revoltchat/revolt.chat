@@ -3,3 +3,9 @@ h6 {
     font-weight: 400;
     font-size: 0.75em;
 }
+
+img {
+    margin: auto;
+    display: block;
+    border-radius: 6px;
+}
