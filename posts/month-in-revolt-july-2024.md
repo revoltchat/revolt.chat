@@ -7,7 +7,7 @@ date: "2024-07-22T10:00:00.000Z"
 giscus: true
 ---
 
-It's been a minute but we're back and still technically on time! After the first post we released, we agreed that we should change the format to instead cover the rough past month overview rather than confining ourselves to set month periods which is harder to manage and keep up with. The blog posts will continue to come out every month but will now be named after the month they come out in.
+It's been a minute but we're back and still technically on time! After the first post we released, we agreed that we should change the format to instead cover the rough past month overview rather than confining ourselves to set month periods which is harder to manage and keep up with. The blog posts will continue to come out every month but will now be named after the month they come out.
 
 ## Web Client
 
@@ -31,15 +31,16 @@ Markdown has been reimplemented in the new client and comes with a few minor imp
 
 -   KaTeX now requires the use of two dollar signs (`$$`) around formulas.
 -   All timestamps now show the exact date and time on hover.
--   Relative timestamps now update live.
--   Sending links to channels/messages will shorten them to just the display the channel name.
+-   Relative timestamps are now updated live.
+-   Sending links to channels/messages will shorten them to just display the channel name.
 
 ### 🚧 New Settings
 
-<!-- TODO -->
+Bit by bit, the settings are being reimplemented to a much higher standard than before.
 
--   the new settings pages, account, bots, profile
-    add a gif here that demonstrates the animations
+<video src="/content/blog/month-in-revolt-july-2024/screencast-settings.webm" autoplay muted loop></video>
+
+###### Screencast showcasing the account, profile, and bot pages
 
 ## Behind The Scenes
 
@@ -47,7 +48,7 @@ Revolt's backend continues to receive regular fixes and improvements, if you'd l
 
 Minor notable changes:
 
--   Add a limit to number of outgoing friend requests users may have at once ([0.7.9](https://github.com/revoltchat/backend/releases/tag/20240623-1)) and set lower limits for new users ([0.7.10](https://github.com/revoltchat/backend/releases/tag/20240625-1)).
+-   Add a limit to the number of outgoing friend requests users may have at once ([0.7.9](https://github.com/revoltchat/backend/releases/tag/20240623-1)) and set lower limits for new users ([0.7.10](https://github.com/revoltchat/backend/releases/tag/20240625-1)).
 -   Message events now include user/member information so apps and bots don't have to fetch additional information about users if it's missing ([0.7.11](https://github.com/revoltchat/backend/releases/tag/20240625-2)).
 -   Added support for 'silent' messages that suppress push/desktop notifications ([0.7.12](https://github.com/revoltchat/backend/releases/tag/20240626-1)).
 -   Server member leave events now include whether the leave was due to a kick or ban ([0.7.14](https://github.com/revoltchat/backend/releases/tag/20240710-1)).
@@ -61,9 +62,9 @@ In essence, changes were made that:
 
 -   Decouple the database from the API, allowing us to change the database or the API without breaking one or the other.
 -   Split off API models, allowing developers to easily pull them in under an MIT license.
--   Start work towards implementing testing throughout the whole projcet.
+-   Start work towards implementing testing throughout the whole project.
 
-Some issues did arise that were promptly fixed with the exception of a non-obvious bug with how user connections were being cleaned up: users started reporting sudden reconnects while server load was nominal, investigation into the issue proceeded as follows:
+Some issues did arise that were promptly fixed except for a non-obvious bug with how user connections were being cleaned up: users started reporting sudden reconnects while server load was nominal, investigation into the issue proceeded as follows:
 
 -   KeyDB (used as the message broker, a component that handles sending messages to the right places) was identified as not being able to handle the inflated load (more on this later)
 -   It was replaced by Dragonfly which pushed server resources much further but as a result server load was much higher, see graph below. On the plus side, users were now able to use the platform as normal.
@@ -79,7 +80,7 @@ Some issues did arise that were promptly fixed with the exception of a non-obvio
 
 Some takeaways from this situation:
 
--   The bug caused about 50-80x increase in internal traffic, which does bode well for potential future growth, it indicates there is overhead to spare.
+-   The bug caused about a 50-80x increase in internal traffic, which does bode well for potential future growth, it indicates there is overhead to spare.
 -   We should replace Redis(/KeyDB/Dragonfly) with a proper message broker such as RabbitMQ.
 
 # The Loop
@@ -98,7 +99,7 @@ You can check it out now at [github.com/revoltchat/ios](https://github.com/revol
 
 ### ⚙️ Coming organisational changes
 
-Revolt's current organisational structure has proven unsustainable and we are working to rebuild it from the ground up. We don't currently have any more information to share but we are currently in the process of drafting up a new operating structure.
+Revolt's current organisational structure has proven unsustainable and we are working to rebuild it from the ground up. We don't currently have any more information to share since we are currently in the process of drafting up a new operating structure.
 
 ### 🚶 Holiday season
 
@@ -106,4 +107,4 @@ It's officially the holiday season and we'll be going a bit slower through to Au
 
 ### 🌎 Update on prior post
 
-Unfortunately, we do not have any licensing update to provide for Shield / Discover just yet. Both are likely to be published in the near future, they are currently blocking on developer time but we are trying to schedule it in.
+Unfortunately, we do not have any licensing update to provide for Shield / Discover just yet. Both are likely to be published soon, they are currently blocking on developer time but we are trying to schedule it.

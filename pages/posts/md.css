@@ -9,3 +9,10 @@ img {
     display: block;
     border-radius: 6px;
 }
+
+video {
+    margin: auto;
+    display: block;
+    max-width: 100%;
+    border-radius: 6px;
+}
