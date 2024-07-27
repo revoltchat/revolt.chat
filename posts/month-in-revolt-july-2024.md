@@ -7,13 +7,13 @@ date: "2024-07-22T10:00:00.000Z"
 giscus: true
 ---
 
-<!-- TODO write about change in format from 'month overview' to 'past ~1 month overview', easier for team to manage, blog post will be named after month it is released in, continues to be monthly, etc -->
+It's been a minute but we're back and still technically on time! After the first post we released, we agreed that we should change the format to instead cover the rough past month overview rather than confining ourselves to set month periods which is harder to manage and keep up with. The blog posts will continue to come out every month but will now be named after the month they come out in.
 
 ## Web Client
 
 The new web client is inching ever closer to completion.
 
-This past month, the client received minor updates including:
+Since the last update, the client received minor updates including:
 
 -   Improvements to connection stability, hopefully addressing the dreaded stuck _Connecting_ message. Further work needs to be done here, but it's much more reliable than before!
 -   You can now sign up using the new client, as well as reset your password / verify your email.
@@ -27,7 +27,7 @@ This past month, the client received minor updates including:
 
 ###### Screenshot of Markdown in new client
 
-Markdown has been reimplemented in the new client and comes with a few minor tweaks:
+Markdown has been reimplemented in the new client and comes with a few minor improvements:
 
 -   KaTeX now requires the use of two dollar signs (`$$`) around formulas.
 -   All timestamps now show the exact date and time on hover.
@@ -57,6 +57,12 @@ Minor notable changes:
 
 About one year ago, work started to [improve the backend](https://github.com/revoltchat/backend/issues/239) and put it in a more reasonable state. This finally came to an end on the 11th of June when the old backend was put out of production.
 
+In essence, changes were made that:
+
+-   Decouple the database from the API, allowing us to change the database or the API without breaking one or the other.
+-   Split off API models, allowing developers to easily pull them in under an MIT license.
+-   Start work towards implementing testing throughout the whole projcet.
+
 Some issues did arise that were promptly fixed with the exception of a non-obvious bug with how user connections were being cleaned up: users started reporting sudden reconnects while server load was nominal, investigation into the issue proceeded as follows:
 
 -   KeyDB (used as the message broker, a component that handles sending messages to the right places) was identified as not being able to handle the inflated load (more on this later)
@@ -75,3 +81,29 @@ Some takeaways from this situation:
 
 -   The bug caused about 50-80x increase in internal traffic, which does bode well for potential future growth, it indicates there is overhead to spare.
 -   We should replace Redis(/KeyDB/Dragonfly) with a proper message broker such as RabbitMQ.
+
+# The Loop
+
+In our continued effort to increase transparency around the Revolt project, we'll now be publishing an additional section here detailing (if any) relevant information to everyone.
+
+### 📱 iOS source release
+
+The upcoming iOS app is now open source, accompanying statement by Zomatree:
+
+> This is both to hopefully aid in its development by allowing others to contribute (i don't have loads of free time to work on revolt with my full-time job), and to also help with the on-going transparency issues in revolt.
+>
+> Although the app was always planned to be open sourced i wanted to do it when it in more of a polished state, however i've decided to open source it now instead to help address the concerned the community has brought up.
+
+You can check it out now at [github.com/revoltchat/ios](https://github.com/revoltchat/ios)!
+
+### ⚙️ Coming organisational changes
+
+Revolt's current organisational structure has proven unsustainable and we are working to rebuild it from the ground up. We don't currently have any more information to share but we are currently in the process of drafting up a new operating structure.
+
+### 🚶 Holiday season
+
+It's officially the holiday season and we'll be going a bit slower through to August, please be patient with us regarding issues and support tickets.
+
+### 🌎 Update on prior post
+
+Unfortunately, we do not have any licensing update to provide for Shield / Discover just yet. Both are likely to be published in the near future, they are currently blocking on developer time but we are trying to schedule it in.
