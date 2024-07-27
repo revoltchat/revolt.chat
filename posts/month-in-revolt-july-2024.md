@@ -42,6 +42,29 @@ Bit by bit, the settings are being reimplemented to a much higher standard than 
 
 ###### Screencast showcasing the account, profile, and bot pages
 
+## iOS Client
+
+Over the past month, we've been busy chipping away at various features on the iOS client. At this point, we've implemented all the easy stuff, and now we're working on the more difficult features we avoided at first (last mile problem and all that).
+
+### Push notifications
+
+Push notifications have now been properly implemented in both the frontend and backend, which allowed us to ~~ping each other relentlessly~~ get each other's attention when needed.
+
+![Basic push notifications being sent to an iOS device.](/content/blog/month-in-revolt-july-2024/ios-push-1.png)
+<small>Don't worry about all the ids in the header and whatnot, this is just a picture from when we first got them working.</small>
+
+We thought we could do better though, and we set about to implement avatars into the notifications. Turns out this is quite complicated, and involves creating a whole separate background app.
+So that's exactly what we did.
+
+![Upgraded push notifications sent to an iOS device.](/content/blog/month-in-revolt-july-2024/ios-push-2.png)
+<small>You can reply to messages directly from the notification by long pressing on it</small>
+
+These aren't final designs, but getting this far has been quite the adventure.
+
+### Settings
+
+Any good mobile app needs to have settings, so we've done just that! You can now manage your account settings, your sessions, and your appearance from the settings page. Soon to come: managing your profile!
+
 ## Behind The Scenes
 
 Revolt's backend continues to receive regular fixes and improvements, if you'd like to keep up with changes as a developer, you can visit [the releases page on GitHub](https://github.com/revoltchat/backend/releases).
