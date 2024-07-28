@@ -1,18 +1,22 @@
+div[class^="MarkdownView"] h1 {
+    margin-top: 2em;
+}
+
+div[class^="MarkdownView"] h2 {
+    margin-top: 2em;
+}
+
 h6 {
     text-align: center;
     font-weight: 400;
     font-size: 0.75em;
 }
 
-img {
-    margin: auto;
-    display: block;
-    border-radius: 6px;
-}
-
+img,
 video {
     margin: auto;
     display: block;
     max-width: 100%;
+    max-height: 80vh;
     border-radius: 6px;
 }

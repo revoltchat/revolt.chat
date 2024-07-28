@@ -7,7 +7,7 @@ date: "2024-07-22T10:00:00.000Z"
 giscus: true
 ---
 
-It's been a minute but we're back and still technically on time! After the first post we released, we agreed that we should change the format to instead cover the rough past month overview rather than confining ourselves to set month periods which is harder to manage and keep up with. The blog posts will continue to come out every month but will now be named after the month they come out.
+It's been a minute but we're back and still technically on time! After the first post we released, we agreed that a better approach would be instead to change the format to cover the rough past month overview rather than confining ourselves to set month periods which is harder to manage and keep up with. The blog posts will continue to come out every month but will now be named after the month they come out.
 
 ## Web Client
 
@@ -46,22 +46,24 @@ Bit by bit, the settings are being reimplemented to a much higher standard than 
 
 Over the past month, we've been busy chipping away at various features on the iOS client. At this point, we've implemented all the easy stuff, and now we're working on the more difficult features we avoided at first (last mile problem and all that).
 
-### Push notifications
+### ☁️ Push notifications
 
 Push notifications have now been properly implemented in both the frontend and backend, which allowed us to ~~ping each other relentlessly~~ get each other's attention when needed.
 
-![Basic push notifications being sent to an iOS device.](/content/blog/month-in-revolt-july-2024/ios-push-1.png)
-<small>Don't worry about all the ids in the header and whatnot, this is just a picture from when we first got them working.</small>
+![Basic push notifications are being sent to an iOS device.](/content/blog/month-in-revolt-july-2024/ios-push-1.png)
 
-We thought we could do better though, and we set about to implement avatars into the notifications. Turns out this is quite complicated, and involves creating a whole separate background app.
+###### Don't worry about all the IDs in the header and whatnot, this is just a picture from when we first got them working.
+
+We thought we could do better though, and we set about to implement avatars into the notifications. Turns out this is quite complicated and involves creating a whole separate background app.
 So that's exactly what we did.
 
 ![Upgraded push notifications sent to an iOS device.](/content/blog/month-in-revolt-july-2024/ios-push-2.png)
-<small>You can reply to messages directly from the notification by long pressing on it</small>
+
+###### You can reply to messages directly from the notification by long pressing on it
 
 These aren't final designs, but getting this far has been quite the adventure.
 
-### Settings
+### ⚙️ Settings
 
 Any good mobile app needs to have settings, so we've done just that! You can now manage your account settings, your sessions, and your appearance from the settings page. Soon to come: managing your profile!
 
@@ -109,6 +111,8 @@ Some takeaways from this situation:
 # The Loop
 
 In our continued effort to increase transparency around the Revolt project, we'll now be publishing an additional section here detailing (if any) relevant information to everyone.
+
+Have any questions or feedback? Go to our [feedback](https://github.com/orgs/revoltchat/discussions/categories/feedback) or [Q&A](https://github.com/orgs/revoltchat/discussions/categories/q-a) discussions on GitHub.
 
 ### 📱 iOS source release
 
