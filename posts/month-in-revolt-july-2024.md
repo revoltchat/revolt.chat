@@ -108,6 +108,14 @@ Some takeaways from this situation:
 -   The bug caused about a 50-80x increase in internal traffic, which does bode well for potential future growth, it indicates there is overhead to spare.
 -   We should replace Redis(/KeyDB/Dragonfly) with a proper message broker such as RabbitMQ.
 
+# From The Community
+
+If you a cool project/art/thing related to Revolt that you've made or otherwise like to share, drop into the [#Month in Revolt](https://rvlt.gg/Testers) channel in the Revolt community server. We'd love to give you the opportunity to have it featured in this series.
+
+![ms paint drawing by doru](/content/blog/month-in-revolt-july-2024/community-1.png)
+
+###### 2 second drawing by Doru, [permalink](https://app.revolt.chat/server/01F7ZSBSFHQ8TA81725KQCSDDP/channel/01HXKSABKSDC3WMR1AVC67TEN1/01J0P2EQP5C9W16PXNZ24W1SKQ)
+
 # The Loop
 
 In our continued effort to increase transparency around the Revolt project, we'll now be publishing an additional section here detailing (if any) relevant information to everyone.
