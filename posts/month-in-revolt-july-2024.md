@@ -36,6 +36,8 @@ Markdown has been reimplemented in the new client and comes with a few minor imp
 -   All timestamps now show the exact date and time on hover.
 -   Relative timestamps are now updated live.
 -   Sending links to channels/messages will shorten them to just display the channel name.
+-   Spoilers now use two pipe characters (`||`) instead of exclamation marks (`!!`).
+-   Spoilers are now much more consistent and can now have rich text inside of them!
 
 ### 🚧 New Settings
 
