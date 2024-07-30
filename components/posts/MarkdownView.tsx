@@ -69,7 +69,12 @@ interface MarkdownViewProps {
 }
 
 const MarkdownView = ({ rendered }: MarkdownViewProps) => {
-    return <MarkdownContainer dangerouslySetInnerHTML={{ __html: rendered }} />;
+    return (
+        <MarkdownContainer
+            className="markdown"
+            dangerouslySetInnerHTML={{ __html: rendered }}
+        />
+    );
 };
 
 export default MarkdownView;
