@@ -7,7 +7,7 @@ date: "2024-07-22T10:00:00.000Z"
 giscus: true
 ---
 
-It's been a minute but we're back and still technically on time! After the first post we released, we agreed that a better approach would be instead to change the format to cover the rough past month overview rather than confining ourselves to set month periods which is harder to manage and keep up with. The blog posts will continue to come out every month but will now be named after the month they come out.
+It's been a minute but we're back and still technically on time! Since our last post, we decided a better approach would be to change the format to roughly cover the past month rather than confine ourselves to a set period. The blog posts will continue to come out every month but will now be named after the month they come out.
 
 ## Web Client
 
@@ -15,7 +15,8 @@ The new web client is inching ever closer to completion.
 
 Since the last update, the client received minor updates including:
 
--   Improvements to connection stability, hopefully addressing the dreaded stuck _Connecting_ message. Further work needs to be done here, but it's much more reliable than before!
+<!-- -   Improvements to connection stability, hopefully addressing the dreaded stuck _Connecting_ message. Further work needs to be done here, but it's much more reliable than before! -->
+
 -   You can now sign up using the new client, as well as reset your password / verify your email.
 -   Multi-factor authentication is now required to delete servers to prevent accidental deletion. <!-- not compulsary on API -->
 -   Account deletion is blocked until all owned servers are deleted or transferred. <!-- not compulsary on API, expand for bots? -->
@@ -110,7 +111,7 @@ Some takeaways from this situation:
 
 # From The Community
 
-If you a cool project/art/thing related to Revolt that you've made or otherwise like to share, drop into the [#Month in Revolt](https://rvlt.gg/Testers) channel in the Revolt community server. We'd love to give you the opportunity to have it featured in this series.
+If you have a cool project/art/thing related to Revolt that you've made or otherwise like to share, drop into the [#Month in Revolt](https://rvlt.gg/Testers) channel in the Revolt community server. We'd love to give you the opportunity to have it featured in this series.
 
 ![ms paint drawing by doru](/content/blog/month-in-revolt-july-2024/community-1.png)
 
