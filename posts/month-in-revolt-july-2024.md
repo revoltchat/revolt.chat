@@ -3,11 +3,13 @@ title: "Month in Revolt - July 2024"
 description: The monthly blog update for June–July period.
 author: Revolt Team
 coverImage: /content/blog/month-in-revolt-july-2024/cover.png
-date: "2024-07-22T10:00:00.000Z"
+date: "2024-07-30T18:00:00.000Z"
 giscus: true
 ---
 
 It's been a minute but we're back and still technically on time! Since our last post, we decided a better approach would be to change the format to roughly cover the past month rather than confine ourselves to a set period. The blog posts will continue to come out every month but will now be named after the month they come out.
+
+If you missed the last one, [check it out here](/posts/month-in-revolt-may-2024)!
 
 ## Web Client
 
