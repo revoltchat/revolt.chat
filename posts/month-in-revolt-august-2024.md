@@ -76,7 +76,8 @@ Minor notable changes:
 
     ###### Docker image size halved as a result!
 
--   Support for Apple Music embed information. ([0.7.15](https://github.com/revoltchat/backend/releases/tag/20240805-1))
+<!-- -   Support for Apple Music embed information. ([0.7.15](https://github.com/revoltchat/backend/releases/tag/20240805-1)) -->
+
 -   Various fixes for Apple Push Notifications and events. ([0.7.15](https://github.com/revoltchat/backend/releases/tag/20240805-1))
 -   Support for message pins has been added by Zomatree. This will likely find its way into clients in the near future. ([0.7.15](https://github.com/revoltchat/backend/releases/tag/20240805-1))
 -   Created a new package [revolt-nodejs-bindings](https://www.npmjs.com/package/revolt-nodejs-bindings) intended for exposing procedure calls from the Revolt backend to various Node.js projects, notably the admin panel.
@@ -88,7 +89,7 @@ We have begun migrating our file server from its previous host to Backblaze B2 a
 -   All files uploaded to Revolt (and migrated to B2) are encrypted using a pre-shared key and the aes-256-gcm algorithm. This means only Revolt can read files back from B2.
 -   All files are additionally encrypted at-rest by Backblaze using SSE-B2.
 
-We've also introduced de-duplication within the file service itself. It was previously provided by the filesystem however since we are now using an S3 provider, uploading the same file twice will mean we will get charged twice. So, all uploaded/processed files are hashed and are matched where appropriate to de-duplicate them internally.
+We've also introduced de-duplication within the file service itself which was previously provided by the filesystem and is no longer available. As such, uploading the same file twice will mean we will get charged twice, so instead: all uploaded/processed files are hashed and are matched where appropriate to de-duplicate them internally.
 
 The migration started on the 19th of August and by the 28th of August all files up until that point have been uploaded.
 
@@ -165,13 +166,21 @@ If you have a cool project/art/thing related to Revolt that you've made or other
 
 ###### ive watched this video like 100 times over the past 2 months, [permalink](https://app.revolt.chat/server/01F7ZSBSFHQ8TA81725KQCSDDP/channel/01HXKSABKSDC3WMR1AVC67TEN1/01J42QMQAG0M74F5FZASR59JRC)
 
+![Message by Taroovala: "My best redesign of the Revolt logo. This one is in the style of Artix Linux" with image of Revolt logo in style of Artix logo](/content/blog/month-in-revolt-august-2024/community-4.png)
+
+###### Taroovala's Revolt-Artix branding mashup, [permalink](https://app.revolt.chat/server/01F7ZSBSFHQ8TA81725KQCSDDP/channel/01HXKSABKSDC3WMR1AVC67TEN1/01J6M1EDEM5JF4FPMMX3C1VA2F)
+
+![Message by Delta: "49,196,159 microseconds to make", "yes i know it's a masterpiece", "don't ask me to teach you how to become a great artist like me, i will not be responding", with image of R in math style](/content/blog/month-in-revolt-august-2024/community-5.png)
+
+###### Delta's Revolt logo, [permalink](https://app.revolt.chat/server/01F7ZSBSFHQ8TA81725KQCSDDP/channel/01HXKSABKSDC3WMR1AVC67TEN1/01J6M8753Q86R6KKT5B6CXWCEZ)
+
 # The Loop
 
 Have any questions or feedback? Go to our [feedback](https://github.com/orgs/revoltchat/discussions/categories/feedback) or [Q&A](https://github.com/orgs/revoltchat/discussions/categories/q-a) discussions on GitHub.
 
 ### ⚙️ Organisational changes
 
-As mentioned before, our organisation structure became unsustainable and needed immediate change. The first focus is on our operations, to coordinate this, Jen has been chosen to lead as the COO of Revolt and has been working to put together organisational structures and generally figure out what everyone should be responsible for.
+As mentioned before, our organisation structure became unsustainable and needed immediate change. The first focus is on our operations, to coordinate this, Jen has been chosen to lead as the COO of Revolt and has been working to put together organisational structures (and generally figure out what everyone should be responsible for).
 
 ### 🚶 Holiday season (cont.)
 
@@ -181,5 +190,5 @@ We're coming to the tail end of the holiday season, some response times may stil
 
 Licensing updates in no particular order:
 
--   No changes yet for Discover, although it'll be published at latest when we update our website.
+-   No changes yet for Discover, although it will be published at latest when we update our website.
 -   The old admin panel and Shield source code has been [released](https://git.is.horse/revolt/legacy) (to the best of my ability).
