@@ -11,7 +11,7 @@ If you missed the last one, [check it out here](/posts/month-in-revolt-july-2024
 
 ## Mobile Development
 
-Our mobile teams have been swiftly moving forwards implementing various features and polishing the experience.
+Our mobile teams have been swiftly implementing various features and polishing the experience.
 
 ### ☁️ Push Notifications
 
@@ -41,15 +41,15 @@ Below are some teasers from the iOS team:
 
 And we've also got some Android updates for you!
 
-A new image picker has been implemented using the new [Android photo picker](https://developer.android.com/training/data-storage/shared/photopicker), various stability improvements have been made, and the sidebar has been redesigned to follow with Material 3 guidelines.
+A new image picker has been implemented using the new [Android photo picker](https://developer.android.com/training/data-storage/shared/photopicker), various stability improvements have been made, and the sidebar has been redesigned to follow Material 3 guidelines.
 
-![Screenshots showcasing new file picker and sidebar.](/content/blog/month-in-revolt-august-2024/android-merged1.png)
+![Screenshots showcasing the new file picker and sidebar.](/content/blog/month-in-revolt-august-2024/android-merged1.png)
 
 <!-- montage android-[1-2].png -tile 2x1 -geometry +20+0 -background none android-merged1.png -->
 
-###### Screenshots showcasing new file picker and sidebar.
+###### Screenshots showcasing the new file picker and sidebar.
 
-A new colour picker has also been shipped to help with users wishing to customise their experience to the fullest.
+A new colour picker has also been shipped to help users wishing to customise their experience to the fullest.
 
 ![Screenshots showcasing colour picker in slider, palette, and hex modes.](/content/blog/month-in-revolt-august-2024/android-merged2.png)
 
@@ -79,7 +79,7 @@ Minor notable changes:
 <!-- -   Support for Apple Music embed information. ([0.7.15](https://github.com/revoltchat/backend/releases/tag/20240805-1)) -->
 
 -   Various fixes for Apple Push Notifications and events. ([0.7.15](https://github.com/revoltchat/backend/releases/tag/20240805-1))
--   Support for message pins has been added by Zomatree. This will likely find its way into clients in the near future. ([0.7.15](https://github.com/revoltchat/backend/releases/tag/20240805-1))
+-   Support for message pins has been added by Zomatree. This will likely find its way into clients shortly. ([0.7.15](https://github.com/revoltchat/backend/releases/tag/20240805-1))
 -   Created a new package [revolt-nodejs-bindings](https://www.npmjs.com/package/revolt-nodejs-bindings) intended for exposing procedure calls from the Revolt backend to various Node.js projects, notably the admin panel.
 
 ### ☁️ Migration to Backblaze B2
@@ -87,7 +87,7 @@ Minor notable changes:
 We have begun migrating our file server from its previous host to Backblaze B2 and we've taken measures to ensure this data can only be ever read by our servers and can't fall into bad actors:
 
 -   All files uploaded to Revolt (and migrated to B2) are encrypted using a pre-shared key and the aes-256-gcm algorithm. This means only Revolt can read files back from B2.
--   All files are additionally encrypted at-rest by Backblaze using SSE-B2.
+-   All files are additionally encrypted at rest by Backblaze using SSE-B2.
 
 We've also introduced de-duplication within the file service itself which was previously provided by the filesystem and is no longer available. As such, uploading the same file twice will mean we will get charged twice, so instead: all uploaded/processed files are hashed and are matched where appropriate to de-duplicate them internally.
 
@@ -101,7 +101,7 @@ The remaining micro-services which aren't already in the backend monorepo, are b
 
 -   Both january and autumn are being migrated to [services/january](https://github.com/revoltchat/backend/tree/main/crates/services/january) and [services/autumn](https://github.com/revoltchat/backend/tree/main/crates/services/autumn) respectively.
 -   They both now use axum instead of actix as the HTTP framework.
--   They both now generate an OpenAPI specification accessible through Scalar.
+-   They both now generate an OpenAPI specification that is accessible through Scalar.
 -   Since they are being moved into the backend repository, they will both gain ARM64 build support. Yippie!
 
 ![Scalar API documentation for january (dark mode)](/content/blog/month-in-revolt-august-2024/backend-2.png)
@@ -116,19 +116,19 @@ The remaining micro-services which aren't already in the backend monorepo, are b
 
 _Written by insert._
 
-Unfortunately client work has stalled due to a lack of time on end, my focus has been shifted over to assisting with the other teams, working on the backend, and also on our moderation tools.
+Unfortunately, client work has stalled due to a lack of time on end, my focus has been shifted over to assisting with the other teams, working on the backend, and also on our moderation tools.
 
-More contributors to the project would be helpful but I think the most important thing the frontend project is missing right now is at least one additional maintainer that can help guide contributions and triage incoming pull requests. I think there are other areas of the project that could also benefit from this but objectively the frontend is suffering the most currently.
+More contributors to the project would be helpful but I think the most important thing the frontend project is missing right now is at least one additional maintainer that can help guide contributions and triage incoming pull requests. I think other areas of the project could also benefit from this but objectively the frontend is suffering the most currently.
 
 Please come talk to me in [#Revolt Discussion](https://rvlt.gg/Testers) if you are interested.
 
 ## Admin Panel
 
-If you run your own Revolt instance, we have new and upgraded tools coming in the pipeline for managing your services. The _new_ admin panel is still a heavy work-in-progress but it's slowly coming together!
+If you run your own Revolt instance, we have new and upgraded tools coming in the future for managing your services. The _new_ admin panel is still a heavy work in progress but it's slowly coming together!
 
-> **Note!** Apologies on the lack of updates of the self-hosted repo with the recent configuration changes, work is being done to standardise everything on the code side and setup guides will follow after. Thank you for your patience.
+> **Note!** Apologies for the lack of updates on the self-hosted repo with the recent configuration changes, work is being done to standardise everything on the code side and setup guides will follow after. Thank you for your patience.
 
-Currently the focus is on providing the ability to quickly jump to content whether necessary to assist with support tickets or to handle external moderation reports.
+Currently, the focus is on providing the ability to quickly jump to content whether necessary to assist with support tickets or to handle external moderation reports.
 
 The search functionality allows you to quickly jump to users by username, username#discriminator, most objects by ID, channels/servers by invite code, and so forth.
 
@@ -190,5 +190,5 @@ We're coming to the tail end of the holiday season, some response times may stil
 
 Licensing updates in no particular order:
 
--   No changes yet for Discover, although it will be published at latest when we update our website.
--   The old admin panel and Shield source code has been [released](https://git.is.horse/revolt/legacy) (to the best of my ability).
+-   No changes yet for Discover, although it will be published at the latest when we update our website.
+-   The old admin panel and Shield source code have been [released](https://git.is.horse/revolt/legacy) (to the best of my ability).
