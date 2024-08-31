@@ -84,7 +84,7 @@ Minor notable changes:
 
 ### ☁️ Migration to Backblaze B2
 
-We have begun migrating our file server from its previous host to Backblaze B2 and we've taken measures to ensure this data can only be ever read by our servers and can't fall into bad actors:
+We have begun migrating our file server from its previous host to Backblaze B2 and we've taken measures to ensure this data can only ever be read by our servers:
 
 -   All files uploaded to Revolt (and migrated to B2) are encrypted using a pre-shared key and the aes-256-gcm algorithm. This means only Revolt can read files back from B2.
 -   All files are additionally encrypted at rest by Backblaze using SSE-B2.
