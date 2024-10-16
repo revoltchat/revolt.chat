@@ -4,7 +4,7 @@ description: Revolt breaks the ceiling on five-hundred thousand registered users
 author: Revolt Team
 coverImage: /content/blog/500K-users/cover.png
 date: "2024-10-16T00:00:00.000Z"
-giscus: false
+giscus: true
 ---
 
 **Revolt Celebrates 500,000+ Users Milestone**
