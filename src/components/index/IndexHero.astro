@@ -1,0 +1,80 @@
+---
+import Cta from "./Cta.astro"
+import hero from "../../assets/index/other/hero-image.svg"
+---
+
+<header>
+    <h1>Find your community</h1>
+    <p>Revolt is the chat app that’s<br />truly built with you in mind.</p>
+    <div class="top">
+        <Cta />
+    </div>
+    <img src={hero.src} alt="" class="hero" aria-hidden="true" />
+    <div class="hero-placeholder"></div>
+</header>
+<style lang="scss">
+    header {
+        background: url("../../assets/index/bgel/hero-bgel.png");
+        background-size: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 10rem;
+        padding-top: 13rem;
+
+        h1 {
+            font-size: 6rem;
+            font-weight: 750;
+            margin: 0;
+            line-height: 1.2;
+            z-index: 0;
+
+            @media (max-width: 1024px) {
+                font-size: 4rem;
+                line-height: 1;
+            }
+
+            @media (max-width: 768px) {
+                font-size: 3rem;
+                line-height: 1;
+                z-index: 1;
+            }
+        }
+
+        p {
+            font-size: 2em;
+            font-weight: 700;
+            z-index: 1;
+        }
+
+        .top {
+            z-index: 1;
+        }
+
+        .hero {
+            user-select: none;
+            pointer-events: none;
+            position: absolute;
+            top: 240px;
+            width: 80vw;
+            z-index: 0;
+
+            @media (max-width: 768px) {
+                top: 50vh;
+                transform: scale(2);
+                width: 50vw;
+                max-width: 100vw;
+                overflow-x: hidden;
+            }
+        }
+
+        .hero-placeholder {
+            min-height: 0vh;
+        }
+    }
+</style>

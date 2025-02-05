@@ -1,0 +1,124 @@
+---
+import CtaButton from "../../components/index/CtaButton.astro"
+import Phone from "../../assets/screenshots/android.png"
+import Footer from "../../components/layout/Footer.astro"
+import Navbar from "../../components/layout/Navbar.astro"
+import MarketingLayout from "../../layouts/MarketingLayout.astro"
+import Consts from "../../lib/consts"
+---
+
+<MarketingLayout title="Download Revolt for Android" backgroundColor="#150E2A">
+    <Navbar />
+    <div class="spacer"></div>
+    <div class="lr-pad">
+        <div class="with-phone">
+            <div class="main">
+                <h1 class="main-heading">Get Revolt for Android (Beta)</h1>
+                <p class="main-heading-sub">
+                    <span class="block-sm">No matter where you are. </span>
+                    No matter what device you're on.<br />
+                    <span class="block-sm">Revolt is here for you.</span>
+                    On tablets and foldables too.<br />
+                    <span class="early-access"
+                        >Early access: App may be unstable, but we'll keep
+                        improving it.</span
+                    >
+                </p>
+                <CtaButton
+                    href={Consts.PLAYSTORE_URL}
+                    label="Play Store"
+                    primary
+                />
+            </div>
+            <img
+                src={Phone.src}
+                alt="Screenshot of Revolt on an Android phone"
+                class="phone"
+            />
+        </div>
+    </div>
+    <Footer />
+</MarketingLayout>
+<style lang="scss">
+    .lr-pad {
+        max-width: min(130ch, 90vw);
+        margin: 0 auto;
+        display: grid;
+        gap: 4rem;
+        padding-bottom: 4rem;
+    }
+
+    .spacer {
+        height: 12rem;
+    }
+
+    .with-phone {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+
+        @media (max-width: 768px) {
+            flex-direction: column-reverse;
+            align-items: center;
+            gap: 2rem;
+        }
+    }
+
+    .main {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin: 0;
+        text-align: left;
+
+        @media (max-width: 768px) {
+            align-items: center;
+            text-align: center;
+        }
+    }
+
+    .main-heading {
+        font-size: 4rem;
+        font-weight: 750;
+        color: white;
+        line-height: 1;
+        margin: 0;
+    }
+
+    .main-heading-sub {
+        font-size: 1.5rem;
+        color: white;
+        opacity: 0.7;
+        line-height: 1.5;
+
+        span.early-access {
+            display: block;
+            margin-top: 1rem;
+            font-size: 0.7em;
+            opacity: 0.8;
+        }
+
+        @media (max-width: 768px) {
+            font-size: 1.25rem;
+
+            span.block-sm {
+                display: block;
+            }
+
+            span.early-access {
+                font-size: 1rem;
+            }
+        }
+    }
+
+    .phone {
+        width: min(30vw, 400px);
+        height: auto;
+
+        @media (max-width: 768px) {
+            width: 50%;
+            height: auto;
+        }
+    }
+</style>

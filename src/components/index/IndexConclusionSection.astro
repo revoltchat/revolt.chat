@@ -1,0 +1,32 @@
+---
+import Cta from "./Cta.astro"
+---
+
+<section>
+    <h2>That’s the website,<br/>you can’t scroll further.</h2>
+    <Cta />
+</section>
+<style lang="scss">
+section {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    justify-content: center;
+    align-items: center;
+    padding: 10rem 0;
+
+    h2 {
+        font-size: 4rem;
+        font-weight: 750;
+        margin: 0;
+        line-height: 1.2;
+
+        @media (max-width: 768px) {
+            font-size: 3rem;
+            line-height: 1;
+        }
+    }
+}
+</style>

@@ -1,0 +1,76 @@
+---
+import Navbar from "../components/layout/Navbar.astro"
+import MarketingLayout from "../layouts/MarketingLayout.astro"
+import Footer from "../components/layout/Footer.astro"
+import Goostle from "../assets/goostle.png"
+---
+
+<MarketingLayout title="Revolt: 404" backgroundColor="#120A24">
+    <Navbar />
+
+    <div class="spacer"></div>
+    <div class="lr-pad">
+        <div class="center">
+            <h1 class="main-heading">That's a no.</h1>
+            <p class="main-heading-sub">
+                We couldn't find the page you were looking for. Maybe it's a
+                typo, maybe it's a broken link.
+            </p>
+            <p class="goostle-hint">Have you asked Goostle about it?</p>
+            <img
+                src={Goostle.src}
+                alt="Goostle, a Revolt mascot. A goose with a turtle shell. The name is a portmanteau of goose and turtle."
+                class="goostle"
+            />
+        </div>
+    </div>
+    <Footer />
+</MarketingLayout>
+<style lang="scss">
+    .lr-pad {
+        max-width: min(130ch, 90vw);
+        margin: 0 auto;
+        display: grid;
+        padding-bottom: 4rem;
+    }
+
+    .spacer {
+        height: 12rem;
+    }
+
+    .center {
+        display: block;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .main-heading {
+        font-size: 4rem;
+        font-weight: 750;
+        color: white;
+        line-height: 1;
+    }
+
+    .main-heading-sub {
+        font-size: 1.5rem;
+        color: white;
+        opacity: 0.7;
+        margin-bottom: 4rem;
+        line-height: 1.5;
+    }
+
+    .goostle-hint {
+        font-size: 1.2rem;
+        color: white;
+        opacity: 0.7;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .goostle {
+        width: 10rem;
+        opacity: 100%;
+        display: block;
+        margin: 0 auto;
+    }
+</style>

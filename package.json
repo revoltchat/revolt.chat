@@ -1,0 +1,27 @@
+{
+  "name": "revolt2",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro check && astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/check": "^0.9.3",
+    "@astrojs/mdx": "^3.1.7",
+    "@astrojs/node": "^8.3.3",
+    "@astrojs/solid-js": "^4.4.1",
+    "@fontsource/fragment-mono": "^5.1.0",
+    "astro": "^4.14.5",
+    "cbor2": "^1.7.1",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "sass": "^1.77.8",
+    "solid-js": "^1.8.21",
+    "typescript": "^5.5.4"
+  },
+  "packageManager": "pnpm@9.7.0+sha512.dc09430156b427f5ecfc79888899e1c39d2d690f004be70e05230b72cb173d96839587545d09429b55ac3c429c801b4dc3c0e002f653830a420fa2dd4e3cf9cf"
+}

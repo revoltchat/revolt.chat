@@ -1,0 +1,10 @@
+@font-face {
+  font-family: "Revolt Sans";
+  src: url("./RevoltSans.woff2") format("woff2");
+  font-style: normal;
+}
+@font-face {
+  font-family: "Revolt Sans";
+  src: url("./RevoltSans-Italic.woff2") format("woff2");
+  font-style: italic;
+}

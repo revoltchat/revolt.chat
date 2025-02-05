@@ -1,0 +1,131 @@
+---
+import CtaButton from "../components/index/CtaButton.astro"
+import Navbar from "../components/layout/Navbar.astro"
+import MarketingLayout from "../layouts/MarketingLayout.astro"
+import { decode as cborDecode } from "cbor2"
+
+type UserQRData = {
+    format: string
+    avatar: string
+    displayName: string
+    username: string
+    discriminator: string
+    id: string
+}
+
+let error: String | null = null
+let title = "Revolt"
+let data: UserQRData | null = null
+let noDisplayName = false
+
+try {
+    const qr = new URL(Astro.request.url).search
+    if (qr.length < 1) {
+        throw new Error("No QR code provided")
+    }
+
+    const base64 = qr.substring(1)
+    data = cborDecode(
+        Uint8Array.from(Buffer.from(base64, "base64"))
+    ) as UserQRData
+
+    if (data.format !== "rqr$user$0") {
+        throw new Error("Unsupported QR code format")
+    }
+
+    noDisplayName = data.displayName === "01JDZRDD1YZ84HA8EST2E5GVXT" // Sentinel value
+    title = `${noDisplayName ? data.username : data.displayName} is on Revolt`
+} catch (e: any) {
+    error = e.message
+}
+---
+
+<MarketingLayout title={title} backgroundColor="#120A24">
+    <Navbar />
+    <div class="spacer"></div>
+    {
+        error ? (
+            <div class="lr-pad">
+                <h1>{error}</h1>
+                <p>
+                    The QR code you scanned is invalid. Please make sure you are
+                    scanning a valid Revolt QR code.
+                </p>
+            </div>
+        ) : (
+            <div class="lr-pad">
+                <img
+                    src={`https://autumn.revolt.chat/avatars/${data?.avatar}?max_side=256`}
+                    alt={
+                        ((noDisplayName ? data?.username : data?.displayName) ??
+                            "User") +
+                        "'s avatar"
+                    }
+                    class="avatar"
+                />
+                <h1 class="displayname">{title}</h1>
+                <h2 class="tag">
+                    <!-- prettier-ignore -->
+                    {data?.username}<span class="discriminator">#{data?.discriminator}</span>
+                </h2>
+                <p>
+                    Join them on Revolt by scanning this QR code with the Revolt Android and iOS apps or on the web.
+                </p>
+                
+                <p style="opacity: 0.7">
+                    Revolt is the chat app that's built with you in mind. It's built for everyone from friends to communities,
+                    and it's open-source and free to use.
+                </p>
+
+                <div class="middle">
+                    <CtaButton href="https://revolt.chat/app" label="Open Revolt" primary />
+                    <CtaButton href="https://revolt.chat" label="Learn More" />
+                </div>
+            </div>
+        )
+    }
+</MarketingLayout>
+
+<style lang="scss">
+    .lr-pad {
+        max-width: min(80ch, 90vw);
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .spacer {
+        height: 12rem;
+    }
+
+    .avatar {
+        border-radius: 50%;
+        width: 128px;
+        height: 128px;
+        margin: 0 auto;
+    }
+
+    .displayname {
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
+
+    .tag {
+        font-size: 1.5rem;
+        font-weight: 500;
+        opacity: 0.8;
+        padding-top: 0.5rem;
+        margin-top: 0;
+        margin-bottom: 3rem;
+
+        .discriminator {
+            font-weight: 200;
+        }
+    }
+
+    .middle {
+        display: flex;
+        gap: 1rem;
+        justify-content: center;
+        margin-top: 2rem;
+    }
+</style>

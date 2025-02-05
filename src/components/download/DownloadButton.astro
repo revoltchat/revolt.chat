@@ -1,0 +1,52 @@
+---
+interface Props {
+    href: string
+    primary: boolean
+}
+
+const { href, primary } = Astro.props
+---
+
+<a href={href} class:list={["dl-button", primary && "primary"]}>
+    <slot />
+</a>
+
+<style lang="scss">
+    .dl-button {
+        padding: 0.9rem 1.5rem;
+        border-radius: 9999px;
+        font-size: 1rem;
+        font-weight: 500;
+        letter-spacing: 0.02em;
+        font-family: inherit;
+        cursor: pointer;
+        text-decoration: none;
+        transition:
+            background-color 0.2s,
+            filter 0.2s;
+        display: inline-block;
+        text-align: center;
+        color: white;
+        background-color: rgb(255 255 255 / 10%);
+
+        &:hover {
+            background-color: rgb(255 255 255 / 20%);
+        }
+
+        &:active {
+            background-color: rgb(255 255 255 / 30%);
+        }
+
+        &.primary {
+            background-color: var(--colour-ultra-pink);
+
+            &:hover {
+                filter: brightness(1.1);
+            }
+
+            &:active {
+                filter: brightness(0.9);
+            }
+        }
+    }
+</style>

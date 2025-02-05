@@ -1,0 +1,29 @@
+---
+import { getCollection } from "astro:content"
+import Layout from "../../layouts/LegalLayout.astro"
+
+const entries = await getCollection("legal")
+---
+
+<Layout
+    title="Legal"
+    description="Legal information for Revolt"
+    showDescriptionOnPage={false}
+    backgroundColor="#120A24"
+>
+    <p>
+        On this page you will find a collection of legal information that may be
+        relevant to you as a user of Revolt.<br />
+        Click the links below to view the full details.
+    </p>
+
+    <ul>
+        {
+            entries.map((entry) => (
+                <li>
+                    <a href={`/legal/${entry.slug}`}>{entry.data.title}</a>
+                </li>
+            ))
+        }
+    </ul>
+</Layout>

@@ -1,0 +1,55 @@
+---
+interface Props {
+    label: string
+    href: string
+    primary?: boolean
+}
+
+const { label, href, primary } = Astro.props
+---
+
+<a href={href} class:list={['cta-button', primary && 'cta-button-primary']}>
+    <span class="cta-button-label">{label}</span>
+</a>
+
+<style lang="scss">
+    .cta-button {
+        backface-visibility: hidden;
+        border-radius: 9999px;
+        width: 272.97px;
+        height: 62px;
+        background: linear-gradient(180deg, rgb(255 255 255 / 0.2) 0%, rgb(160 160 160 / 0.2) 100%);
+        box-shadow: 0px 5px 30px rgba(255, 0, 92, 0.1);
+        display: grid;
+        place-items: center;
+        will-change: transform;
+
+        transition: filter 0.2s var(--easing), transform 0.2s var(--easing);
+
+        &:hover {
+            filter: brightness(0.9);
+            transform: scale(0.98);
+        }
+
+        &:active {
+            filter: brightness(0.8);
+            transform: scale(0.96);
+        }
+
+        &:link, &:visited {
+            text-decoration: none;
+        }
+    }
+
+    .cta-button-primary {
+        background: linear-gradient(180deg, #FF005C 0%, #9A0239 100%);
+        box-shadow: 0px 5px 30px rgba(255, 0, 92, 0.2);
+    }
+
+    .cta-button-label {
+        font-size: 1.4rem;
+        letter-spacing: 0.02em;
+        font-weight: 500;
+        color: white;
+    }
+</style>

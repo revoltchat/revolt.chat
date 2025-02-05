@@ -1,0 +1,56 @@
+---
+interface Props {
+    title: string
+    reverse?: boolean
+}
+
+const { title, reverse } = Astro.props
+
+const orderA = reverse ? "1" : "-1"
+const orderB = reverse ? "-1" : "1"
+---
+
+<div class="about-layout">
+    <div class="with-title slot-a">
+        <h2>{title}</h2>
+        <slot name="a" />
+    </div>
+    <div class="slot-b">
+        <slot name="b" />
+    </div>
+</div>
+<style lang="scss" define:vars={{ orderA, orderB }}>
+    .about-layout {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+        align-items: center;
+
+        .with-title > h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin: 0;
+            line-height: 1.2;
+        }
+    }
+    @media (max-width: 768px) {
+        .about-layout {
+            grid-template-columns: 1fr;
+        }
+    }
+    @media (min-width: 769px) {
+        .about-layout {
+            max-width: 100vw;
+            .slot-a,
+            .slot-b {
+                flex: 1;
+            }
+        }
+        .slot-a {
+            order: var(--orderA);
+        }
+        .slot-b {
+            order: var(--orderB);
+        }
+    }
+</style>

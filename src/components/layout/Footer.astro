@@ -1,0 +1,154 @@
+---
+import WordmarkWhite from "../../assets/wordmark-w-only.svg"
+---
+
+<footer>
+    <div class="copyright-section">
+        <img src={WordmarkWhite.src} alt="Revolt" class="wordmark" />
+        <div class="copyright">
+            © {new Date().getFullYear()}
+        </div>
+    </div>
+    <div class="links-section">
+        <div class="links">
+            <span>Revolt App</span>
+            <a href="/download">Download for Desktop</a>
+            <a href="/download/android">Download for Android</a>
+            <a href="/download/ios">Download for iOS and iPadOS</a>
+            <a href="https://support.revolt.chat/" target="_blank">Support</a>
+        </div>
+        <div class="links">
+            <span>Developers</span>
+            <a href="https://developers.revolt.chat/" target="_blank"
+                >Documentation</a
+            >
+            <a href="https://translate.revolt.chat/" target="_blank"
+                >Help Translate</a
+            >
+        </div>
+        <div class="links">
+            <span>Team</span>
+            <a href="/about">About</a>
+            <a href="/updates">Blog and Changelogs</a>
+            <a href="https://support.revolt.chat/contact" target="_blank"
+                >Contact</a
+            >
+        </div>
+        <div class="links">
+            <span>Revolt on Socials</span>
+            <a href="https://bsky.app/profile/revolt.chat" target="_blank"
+                >Bluesky</a
+            >
+            <a href="https://reddit.com/r/revoltchat" target="_blank">Reddit</a>
+            <a href="https://rvlt.gg/Testers" target="_blank">Revolt Server</a>
+        </div>
+        <div class="links">
+            <span>Legal</span>
+            <a href="/legal/community-guidelines">Community Guidelines</a>
+            <a href="/legal/terms">Terms of Service</a>
+            <a href="/legal/privacy">Privacy Policy</a>
+        </div>
+    </div>
+</footer>
+
+<style lang="scss">
+    footer {
+        color: white;
+        background-image: url("../../assets/revoltbg-footer.png");
+        background-size: cover;
+        background-position: center;
+        background-opacity: 0.5;
+        padding: 0;
+        padding: 5rem 10rem;
+        border-top: 5px solid;
+        border-image: linear-gradient(
+                to right,
+                #ff247f 0,
+                #bf4eff 30%,
+                #3fa8ff 65%,
+                #5fffb1 100%
+            )
+            1;
+        transition:
+            padding 0.5s var(--easing),
+            flex-direction 0.5s var(--easing);
+
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+
+        @media (max-width: 1600px) {
+            padding: 5rem 2rem;
+        }
+        @media (max-width: 1350px) {
+            flex-direction: column;
+            justify-content: center;
+            gap: 2rem;
+        }
+
+        .copyright-section {
+            .wordmark {
+                width: 140px;
+                height: auto;
+            }
+
+            .copyright {
+                font-size: 0.9rem;
+                margin-top: 1rem;
+                opacity: 0.75;
+            }
+        }
+
+        .links-section {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+            align-items: flex-start;
+            gap: 2.5rem;
+
+            @media (max-width: 1350px) {
+                flex-wrap: wrap;
+                justify-content: flex-start;
+            }
+
+            @media (max-width: 600px) {
+                flex-direction: column;
+                justify-content: flex-start;
+
+                .links > span {
+                    font-weight: 800 !important;
+                    margin-bottom: 0 !important;
+                }
+            }
+
+            .links {
+                display: flex;
+                flex-direction: column;
+                gap: 0.75rem;
+
+                span {
+                    transition:
+                        margin-bottom 0.2s var(--easing),
+                        font-weight 0.2s var(--easing);
+                    font-weight: 600;
+                    margin-bottom: 1rem;
+                }
+
+                a:link,
+                a:visited {
+                    color: white;
+                    transition:
+                        opacity 0.2s var(--easing),
+                        filter 0.2s var(--easing);
+                    text-decoration: none;
+
+                    &:hover {
+                        opacity: 0.75;
+                        filter: brightness(0.7);
+                    }
+                }
+            }
+        }
+    }
+</style>

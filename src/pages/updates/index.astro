@@ -1,0 +1,261 @@
+---
+// This is the "All blog posts" page, but also "All changelogs".
+// They are amalgamated into one page and query parameters decide what to show.
+// PHP called. It wants this file back. But it isn't getting it, because this is actually the simplest way to do this.
+
+import { getCollection } from "astro:content"
+import Layout from "../../layouts/MarketingLayout.astro"
+import Article from "../../components/blog/Article.astro"
+import Navbar from "../../components/layout/Navbar.astro"
+import ChangelogTag from "../../components/blog/ChangelogTag.astro"
+import Footer from "../../components/layout/Footer.astro"
+
+const blogEntries = (await getCollection("blog"))
+    .filter((entry) => entry.data.hidden !== true)
+    .toSorted((a, b) => {
+        return new Date(b.data.date).getTime() - new Date(a.data.date).getTime()
+    })
+const firstBlogPost = blogEntries.shift()!
+
+let changelogEntries = (await getCollection("changelog"))
+    .toSorted((a, b) => {
+        return new Date(b.data.date).getTime() - new Date(a.data.date).getTime()
+    })
+
+const allChangelogs = Astro.url.searchParams.get("show") === "changelogs"
+if (!allChangelogs) {
+    changelogEntries.splice(3)
+}
+
+const changelogsOnlyForProduct = Astro.url.searchParams.get("product")
+const validProducts = ["api", "web", "android", "ios", "all"] // Note: "all" is a separate product, not the union of all products
+if (changelogsOnlyForProduct) {
+    if (!validProducts.includes(changelogsOnlyForProduct)) {
+        return Astro.rewrite("/404")
+    }
+
+    changelogEntries = changelogEntries.filter((entry) => {
+        return entry.data.product === changelogsOnlyForProduct || entry.data.product === "all"
+    })
+}
+---
+
+<Layout title="Updates from Revolt" backgroundColor="#120A24">
+    <Navbar />
+    <div class="spacer"></div>
+    <div class="lr-pad">
+        {
+            // Do not show articles if we're showing all changelogs (= only changelogs)
+            !allChangelogs && (
+                <Article
+                    href={`/updates/${firstBlogPost.slug}`}
+                    big={true}
+                    title={firstBlogPost.data.title}
+                    description={firstBlogPost.data.description}
+                    publishedAt={new Date(firstBlogPost.data.date)}
+                >
+                    {firstBlogPost.data.coverImage && (
+                        <img
+                            slot="cover-image"
+                            class="cover-image big"
+                            src={firstBlogPost.data.coverImage}
+                            alt=""
+                            aria-hidden="true"
+                        />
+                    )}
+                </Article>
+            )
+        }
+
+        <!-- Show all changelogs when show query param is set to "changelogs", otherwise show latest changelogs -->
+        {allChangelogs ? <h1>All Changelogs</h1> : <h2>Latest Changelogs</h2>}
+        <!-- Show product selector when showing all changelogs -->
+        {allChangelogs && (
+            <div class="product-selector">
+                <div class:list={[changelogsOnlyForProduct === "android" && "selected", "product-selector-item"]}>
+                    <a href="/updates?show=changelogs&product=android">
+                        <ChangelogTag product="android" noMargin />
+                    </a>
+                </div>
+                <div class:list={[changelogsOnlyForProduct === "ios" && "selected", "product-selector-item"]}>
+                    <a href="/updates?show=changelogs&product=ios">
+                        <ChangelogTag product="ios" noMargin />
+                    </a>
+                </div>
+                <div class:list={[changelogsOnlyForProduct === "web" && "selected", "product-selector-item"]}>
+                    <a href="/updates?show=changelogs&product=web">
+                        <ChangelogTag product="web" noMargin />
+                    </a>
+                </div>
+                <div class:list={[changelogsOnlyForProduct === "api" && "selected", "product-selector-item"]}>
+                    <a href="/updates?show=changelogs&product=api">
+                        <ChangelogTag product="api" noMargin />
+                    </a>
+                </div>
+                <div class:list={[changelogsOnlyForProduct === "all" && "selected", "product-selector-item"]}>
+                    <a href="/updates?show=changelogs&product=all">
+                        <ChangelogTag product="all" noMargin />
+                    </a>
+                </div>
+            </div>
+        )}
+
+        <!-- Grid with articles? No, grid with changelogs -->
+        <div class="article-grid">
+            {changelogEntries.length === 0 && <p class="none">No changelogs found.</p>}
+            {
+                changelogEntries
+                .map((entry, i) => (
+                    <Article
+                        href={`/updates/${entry.slug}`}
+                        big={false}
+                        title={entry.data.title}
+                        description={entry.data.description}
+                        publishedAt={new Date(entry.data.date)}
+                    >
+                        {entry.data.product && (
+                            <ChangelogTag
+                                slot="badge"
+                                product={entry.data.product}
+                            />
+                        )}
+                    </Article>
+                ))
+            }
+        </div>
+
+        <!-- If we are either 1. showing changelogs and posts mixed view, 2. showing only changelogs but there are no changelogs
+                or 3. showing changelogs for a specific product, show a "View all changelogs" link -->
+        {(!allChangelogs || changelogEntries.length === 0 || changelogsOnlyForProduct) && (
+            <a href="/updates?show=changelogs" class="view-changelogs">View all changelogs</a>
+        )}
+
+        {!allChangelogs && (
+            <h2>Updates from Revolt</h2>
+            <div class="article-grid">
+                {
+                    blogEntries.map((entry, i) => (
+                        <Article
+                            href={`/updates/${entry.slug}`}
+                            big={false}
+                            title={entry.data.title}
+                            description={entry.data.description}
+                            publishedAt={new Date(entry.data.date)}
+                        >
+                            {(entry.data as any).product && (
+                                <ChangelogTag
+                                    slot="badge"
+                                    product={(entry.data as any).product}
+                                />
+                            )}
+                            {(entry.data as any).coverImage && (
+                                <img
+                                    slot="cover-image"
+                                    class="cover-image"
+                                    src={(entry.data as any).coverImage}
+                                    alt=""
+                                    aria-hidden="true"
+                                />
+                            )}
+                        </Article>
+                    ))
+                }
+            </div>
+        )}
+    </div>
+    <!-- This is so that the footer is properly stuck to the bottom of the page -->
+    {allChangelogs && <div class="all-changelogs-extra-space" />}
+    <Footer />
+</Layout>
+
+<style>
+    .lr-pad {
+        max-width: min(130ch, 90vw);
+        margin: 0 auto;
+        margin-bottom: 4rem;
+    }
+
+    .spacer {
+        height: 12rem;
+    }
+
+    .article-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+        gap: 2rem;
+    }
+
+    .cover-image {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        aspect-ratio: 16 / 9;
+        border-radius: 0.5rem;
+
+        &.big {
+            aspect-ratio: 5 / 2;
+        }
+    }
+
+    h2 {
+        margin-top: 4rem;
+        margin-bottom: 2rem;
+        font-size: 2rem;
+        font-weight: 500;
+        color: var(--foreground-color, white);
+    }
+
+    h1 {
+        margin-bottom: 8rem;
+        font-size: 4rem;
+        font-weight: 750;
+        text-align: center;
+        color: var(--foreground-color, white);
+    }
+
+    .all-changelogs-extra-space {
+        margin-bottom: 8rem;
+    }
+
+    .view-changelogs {
+        display: block;
+        margin-top: 4rem;
+        text-align: center;
+        font-size: 1.2rem;
+        font-weight: 500;
+        color: var(--colour-ultra-pink);
+        text-decoration: none;
+    }
+
+    .none {
+        grid-column: 1 / -1;
+        text-align: center;
+        font-size: 1.5rem;
+        font-weight: 500;
+        color: var(--foreground-color, white);
+        opacity: 0.7;
+    }
+
+    .product-selector {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        justify-items: center;
+        vertical-align: middle;
+        gap: 1em;
+        padding: 1em 0;
+        margin-bottom: 3em;
+    }
+
+    .product-selector-item {
+        filter: grayscale(1);
+        transition: filter 0.2s var(--easing);
+
+        &:hover, 
+        &.selected {
+            filter: none;
+        }
+    }
+</style>

@@ -1,0 +1,68 @@
+---
+interface Props {
+    quote: string
+    author: string
+    title: string
+}
+
+const { quote, author, title } = Astro.props
+---
+
+<div class="quote">
+    <h2>{title}</h2>
+    <blockquote>
+        <p>{quote}</p>
+        <footer>
+            <cite>&mdash;{author}</cite>
+        </footer>
+    </blockquote>
+</div>
+
+<style lang="scss">
+    .quote {
+        max-width: min(130ch, 90vw);
+        margin: 0 auto;
+        text-align: center;
+
+        blockquote p {
+            width: fit-content;
+            text-align: center;
+            margin: 0 auto;
+            font-size: 1.8rem;
+            line-height: 1.6;
+            font-weight: 500;
+            color: #ffffff;
+            border-bottom: 0.25rem solid var(--colour-ultra-pink);
+            margin-bottom: 1rem;
+            padding: 1rem 1.5rem;
+            background-color: rgba(255, 0, 92, 0.1);
+
+            &::before {
+                content: open-quote;
+            }
+
+            &::after {
+                content: close-quote;
+            }
+        }
+
+        blockquote footer,
+        blockquote cite {
+            margin-top: 0.5rem;
+            margin-bottom: 3rem;
+            font-size: 1rem;
+            font-weight: 700;
+            color: #ffffff;
+            opacity: 0.8;
+            font-style: normal;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin: 0;
+            margin-bottom: 2rem;
+            line-height: 1.2;
+        }
+    }
+</style>

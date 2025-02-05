@@ -1,0 +1,108 @@
+---
+import Navbar from "../components/layout/Navbar.astro";
+import MarketingLayout from "../layouts/MarketingLayout.astro";
+import AboutHero from "../components/about/AboutHero.astro";
+import AboutLeftRightLayout from "../components/about/AboutLeftRightLayout.astro";
+import Calendar2021 from "../assets/about/calendar-2021.svg";
+import FossLove from "../assets/about/foss-love.svg";
+import Mission from "../assets/about/mission.svg";
+import AboutQuote from "../components/about/AboutQuote.astro";
+import AboutStats from "../components/about/AboutStats.astro";
+import Footer from "../components/layout/Footer.astro";
+import AboutConclusionSection from "../components/about/AboutConclusionSection.astro";
+---
+
+<MarketingLayout title="About Revolt" backgroundColor="#120A24">
+  <Navbar />
+  <AboutHero />
+  <div class="lr-pad">
+    <AboutLeftRightLayout title="Our Story">
+      <Fragment slot="a">
+        <p>
+          Revolt started in 2021 as a small project by a group of friends who
+          wanted to create a chat app that was truly built with the user in
+          mind. We wanted to create a space where people could come together,
+          chat, and build communities, in a way that was open, secure, and
+          customisable.
+        </p>
+      </Fragment>
+      <Fragment slot="b">
+        <img
+          src={Calendar2021.src}
+          alt="Clipart of a calendar with the year 2021 and a message bubble"
+          width="50%"
+          class="center about-image"
+        />
+      </Fragment>
+    </AboutLeftRightLayout>
+    <AboutLeftRightLayout title="Open-Source as a Core Value" reverse>
+      <Fragment slot="a">
+        <p>
+          From the very beginning, we knew that we wanted to make Revolt
+          open-source. We believe that open-source software is the best way to
+          build a community around a product, and we wanted to give our users
+          the ability to see exactly what we were doing with their data.
+        </p>
+      </Fragment>
+      <Fragment slot="b">
+        <img
+          src={FossLove.src}
+          alt="Clipart of the text FOSS followed by an ASCII heart, encased in curly braces"
+          width="50%"
+          class="center about-image"
+        />
+      </Fragment>
+    </AboutLeftRightLayout>
+    <AboutLeftRightLayout title="Here's the Plan">
+      <Fragment slot="a">
+        <p>
+          We believe that chat apps should be more than just a way to send
+          messages. They should be a place where people can come together, share
+          ideas, and build communities. We want to create a chat app that is
+          truly built with the user in mind.
+        </p>
+      </Fragment>
+      <Fragment slot="b">
+        <img
+          src={Mission.src}
+          alt="Clipart of a planet with a flag on it"
+          width="50%"
+          class="center about-image"
+        />
+      </Fragment>
+    </AboutLeftRightLayout>
+  </div>
+  <div class="spacer"></div>
+  <AboutQuote
+    title="Take it from the Founder"
+    quote="Is this thing working?"
+    author="Paul Makles"
+  />
+  <AboutStats />
+  <AboutConclusionSection />
+  <div class="spacer"></div>
+  <Footer />
+</MarketingLayout>
+
+<style>
+  .lr-pad {
+    max-width: min(130ch, 90vw);
+    margin: 0 auto;
+    display: grid;
+    gap: 4rem;
+  }
+
+  .spacer {
+    height: 6rem;
+  }
+
+  .center {
+    display: block;
+    margin: 0 auto;
+  }
+
+  .about-image {
+    pointer-events: none;
+    user-select: none;
+  }
+</style>

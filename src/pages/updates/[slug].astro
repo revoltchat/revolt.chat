@@ -1,0 +1,77 @@
+---
+import TechnicalContent from "../../components/blog/TechnicalContent.astro"
+import Layout from "../../layouts/BlogLayout.astro"
+import { getEntry } from "astro:content"
+
+const { slug } = Astro.params as { slug: string }
+const entryBlog = await getEntry("blog", slug)
+const entryChangelog = await getEntry("changelog", slug)
+
+if (!entryBlog && !entryChangelog) {
+    return Astro.rewrite("/404")
+}
+
+const { data, render } = (entryBlog || entryChangelog)!
+
+const { Content } = await render()
+---
+
+<Layout
+    title={data.title}
+    description={data.description}
+    backgroundColor="#120A24"
+    coverImageURL={(data as any).coverImage}
+    product={(data as any).product}
+>
+    <Fragment slot="meta">
+        <div class="meta-point">
+            <h3>Published</h3>
+            <p>
+                {
+                    new Date(data.date).toLocaleString("en-GB", {
+                        year: "numeric",
+                        month: "long",
+                        day: "numeric",
+                    })
+                }
+            </p>
+        </div>
+        <div class="meta-point">
+            <h3>Author</h3>
+            <p>{data.author}</p>
+        </div>
+        {
+            (data as any).product === "api" && (
+                <div class="meta-point">
+                    <TechnicalContent />
+                </div>
+            )
+        }
+    </Fragment>
+    <Content />
+</Layout>
+
+<style lang="scss">
+    .meta-point {
+        &:not(:last-child) {
+            margin-bottom: 1rem;
+        }
+
+        h3 {
+            font-size: 1rem;
+            font-weight: 700;
+            margin: 0;
+            padding: 0;
+            line-height: 1.2;
+        }
+
+        p {
+            font-size: 1rem;
+            line-height: 1.2;
+            font-weight: 400;
+            margin-bottom: 0;
+            margin-top: 0.4rem;
+            opacity: 0.7;
+        }
+    }
+</style>

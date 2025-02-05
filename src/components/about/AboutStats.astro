@@ -1,0 +1,67 @@
+---
+
+---
+
+<section>
+    <h2>Cold, hard numbers</h2>
+    <div class="statboxes">
+        <div class="statbox">
+            <h3>3,000+</h3>
+            <p>lines of code</p>
+        </div>
+        <div class="statbox">
+            <h3>500k+</h3>
+            <p>users</p>
+        </div>
+        <div class="statbox">
+            <h3>Nothing</h3>
+            <p>possible without you</p>
+        </div>
+    </div>
+</section>
+<style lang="scss">
+    section {
+        padding-top: 3rem;
+        max-width: min(130ch, 90vw);
+        margin: 0 auto;
+        display: grid;
+        gap: 2rem;
+    }
+
+    h2 {
+        font-size: 2.5rem;
+        font-weight: 700;
+        margin: 0;
+        line-height: 1.2;
+        text-align: center;
+    }
+
+    .statboxes {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+    }
+
+    .statbox {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color: #ffffff;
+        padding: 2rem;
+        gap: 1rem;
+        font-size: 1.8rem;
+        font-weight: 500;
+
+        h3,
+        p {
+            margin: 0;
+            padding: 0;
+        }
+
+        p {
+            font-size: 1.5rem;
+            font-weight: 500;
+            opacity: 0.8;
+        }
+    }
+</style>

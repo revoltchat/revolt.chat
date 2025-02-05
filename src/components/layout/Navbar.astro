@@ -1,0 +1,166 @@
+---
+import Wordmark from "../../assets/wordmark-w-only.svg"
+import NavLinks from "./NavLinks.astro"
+import MenuIcon from "../../assets/apache2/menu.svg"
+---
+
+<nav class="site-navbar">
+    <div class="nav-inner">
+        <a href="/">
+            <img src={Wordmark.src} alt="Revolt" />
+        </a>
+        <div class="links desktop">
+            <NavLinks />
+        </div>
+        <div class="mobile">
+            <button aria-label="Open mobile menu">
+                <img src={MenuIcon.src} alt="Menu" />
+            </button>
+        </div>
+    </div>
+    <div id="mobile-menu" class="mobile-menu links">
+        <NavLinks />
+    </div>
+</nav>
+
+<style lang="scss" is:global>
+    nav.site-navbar {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1000;
+
+        .nav-inner {
+            padding: 3rem 0;
+            display: flex;
+            gap: 4rem;
+            align-items: center;
+            overflow-x: hidden;
+            max-width: min(90vw, 1600px);
+            margin: 0 auto;
+        }
+
+        .links {
+            display: flex;
+            gap: 1.5rem;
+
+            a {
+                color: white;
+                text-decoration: none;
+                font-weight: 500;
+                font-size: 1.2rem;
+                transition: color 0.2s var(--easing);
+
+                &:hover {
+                    color: #ff247f;
+                }
+            }
+        }
+
+        .mobile > button {
+            background: none;
+            border: none;
+            padding: 0;
+            cursor: pointer;
+
+            img {
+                width: 2rem;
+                height: 2rem;
+                filter: invert(1);
+            }
+        }
+
+        .mobile-menu:not(.open) {
+            display: none;
+        }
+
+        @keyframes slide-down {
+            0% {
+                transform: translateY(-50vh);
+            }
+            100% {
+                transform: translateY(-100px);
+            }
+        }
+
+        .mobile-menu {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            background: #0c0c1f;
+            padding: 2rem 1.75rem;
+            padding-top: 8rem;
+            transform: translateY(-100px);
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            z-index: -1;
+            animation: slide-down 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+
+        @keyframes slide-up {
+            0% {
+                transform: translateY(-100px);
+            }
+            100% {
+                transform: translateY(-50vh);
+            }
+        }
+
+        .mobile-menu.animate-out {
+            animation: slide-up 0.5s cubic-bezier(0.64, 0, 0.78, 0) forwards;
+        }
+
+        @media (max-width: 768px) {
+            .nav-inner {
+                padding: 2rem 0;
+                gap: 2rem;
+                justify-content: space-between;
+            }
+
+            .desktop {
+                display: none;
+            }
+        }
+
+        @media (min-width: 769px) {
+            .mobile {
+                display: none;
+            }
+
+            .mobile-menu {
+                display: none;
+            }
+        }
+    }
+</style>
+
+<script>
+    document
+        .querySelector<HTMLElement>(".mobile > button")!
+        .addEventListener("click", () => {
+            if (
+                document
+                    .querySelector<HTMLElement>(".mobile-menu")!
+                    .classList.contains("open")
+            ) {
+                document
+                    .querySelector<HTMLElement>(".mobile-menu")!
+                    .classList.add("animate-out")
+                setTimeout(() => {
+                    document
+                        .querySelector<HTMLElement>(".mobile-menu")!
+                        .classList.remove("animate-out")
+                    document
+                        .querySelector<HTMLElement>(".mobile-menu")!
+                        .classList.remove("open")
+                }, 500)
+            } else {
+                document
+                    .querySelector<HTMLElement>(".mobile-menu")!
+                    .classList.add("open")
+            }
+        })
+</script>

@@ -1,0 +1,117 @@
+---
+import bgel from "../../assets/index/bgel/yours-bgel.png"
+import desel from "../../assets/index/desel/yours-desel.svg"
+---
+
+<section>
+    <div class="l">
+        <h2>Make it yours.</h2>
+        <p>
+            Revolt looks exactly how you want it to.<br />Also, free and
+            open-source. Really.
+        </p>
+    </div>
+    <div class="r">
+        <img src={desel.src} alt="" class="desel" aria-hidden="true" />
+    </div>
+    <img src={bgel.src} alt="" class="bgel" aria-hidden="true" />
+</section>
+<style lang="scss">
+    section {
+        max-width: 100vw;
+        overflow-x: hidden;
+        max-width: min(90vw, 1600px);
+        margin: 0 auto;
+        padding: 10rem 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+
+        @media (max-width: 768px) {
+            padding: 5rem 0;
+            max-width: 100%;
+            background: url("../../assets/index/bgel/yours-bgel.png") no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .l {
+            text-align: left;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            flex: 1;
+
+            @media (max-width: 768px) {
+                max-width: min(90vw, 1600px);
+                margin: 0 auto;
+            }
+
+            p {
+                font-size: 1.5rem;
+                line-height: 1.2;
+                font-weight: 500;
+                color: #ffffff;
+                opacity: 0.8;
+            }
+        }
+
+        .r {
+            text-align: right;
+
+            @media (max-width: 768px) {
+                max-width: min(90vw, 1600px);
+                margin: 0 auto;
+            }
+        }
+
+        @media (max-width: 768px) {
+            flex-direction: column-reverse;
+            gap: 2rem;
+
+            .l {
+                text-align: center;
+
+                h2 {
+                    font-size: 3rem;
+                    line-height: 1;
+                }
+            }
+
+            .r {
+                text-align: center;
+            }
+        }
+    }
+
+    .bgel {
+        position: absolute;
+        right: -700px;
+        z-index: -1;
+        user-select: none;
+        pointer-events: none;
+
+        @media (max-width: 768px) {
+            display: none;
+        }
+    }
+
+    .desel {
+        @media screen and (max-width: 768px) {
+            max-width: 100%;
+        }
+
+        @media (max-width: 1200px) {
+            max-width: 70%;
+        }
+    }
+
+    h2 {
+        font-size: 4rem;
+        font-weight: 750;
+        margin: 0;
+        line-height: 1;
+        color: #ffffff;
+    }
+</style>

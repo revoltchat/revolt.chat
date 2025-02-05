@@ -1,0 +1,114 @@
+---
+import Consts from "../../lib/consts"
+import CtaButton from "./CtaButton.astro"
+
+const uaString = Astro.request.headers.get("user-agent") || ""
+
+export const PLATFORM_LINKS = {
+    windows: {
+        store: "Microsoft Store",
+        href: Consts.MSSTORE_URL,
+    },
+    macOS: {
+        // TODO - When macOS app is ready, update this link to point to the App Store
+        store: "GitHub",
+        href: Consts.GITHUB_URL,
+    },
+    linux: {
+        store: "Flathub",
+        href: Consts.FLATHUB_URL,
+    },
+    android: {
+        store: "Google Play",
+        href: Consts.PLAYSTORE_URL,
+    },
+    ios: {
+        store: "TestFlight",
+        href: Consts.TESTFLIGHT_URL,
+    },
+    unknown: {
+        store: "",
+        href: "/download",
+    },
+}
+type PlaformLinksType = Record<string, { store: string; href: string }>
+
+let os: string
+if (uaString.includes("Windows")) {
+    os = "windows"
+} else if (uaString.includes("iPhone") || uaString.includes("iPad")) {
+    os = "ios"
+} else if (uaString.includes("Macintosh")) {
+    os = "macOS"
+} else if (uaString.includes("Android")) {
+    os = "android"
+} else if (uaString.includes("Linux")) {
+    os = "linux"
+} else {
+    os = "unknown"
+}
+
+const { store, href } = (PLATFORM_LINKS as PlaformLinksType)[os]
+
+interface Props {
+    isDownloadPage?: boolean
+}
+const { isDownloadPage = false } = Astro.props
+---
+
+<div class="cta">
+    {
+        // If we're on the download page, don't show the download button if the OS is unknown
+        // as it only leads to the download page
+        !(isDownloadPage && os === "unknown") && (
+            <div class="dl-button">
+                <CtaButton label="Download" href={href} primary />
+                {os !== "unknown" && (
+                    <span class="dl-button-label">
+                        Opens {store}
+                        {!isDownloadPage && (
+                            <Fragment>
+                                &middot; <a href="/download">Other Downloads</a>
+                            </Fragment>
+                        )}
+                    </span>
+                )}
+            </div>
+        )
+    }
+    <CtaButton label="Open Web App" href="https://revolt.chat/app" />
+</div>
+<style lang="scss">
+    .cta {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: flex-start;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+        gap: 2rem;
+
+        @media (max-width: 768px) {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+    .dl-button {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .dl-button-label {
+        font-size: 0.7em;
+        opacity: 0.4;
+        color: white;
+        text-align: center;
+
+        a {
+            color: white;
+            text-decoration: underline;
+        }
+    }
+</style>

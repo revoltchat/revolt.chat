@@ -1,0 +1,111 @@
+---
+
+---
+
+<div class="contentstyles">
+    <slot />
+</div>
+<style lang="scss" is:global>
+    .contentstyles {
+        p,
+        ul,
+        ol {
+            line-height: 1.7;
+            font-size: 1.1rem;
+        }
+
+        code,
+        kbd {
+            font-size: 1em;
+            font-family: var(--typeface-mono);
+        }
+
+        kbd {
+            background-color: var(--colour-ultra-pink);
+            color: var(--colour-white);
+            padding: 0.25rem 0.5rem;
+            border-radius: 0.25rem;
+            font-size: 0.9rem;
+        }
+
+        pre {
+            background-color: var(--colour-dark-grey);
+            color: var(--colour-white);
+            padding: 1rem;
+            border-radius: 0.5rem;
+            overflow-x: auto;
+            font-size: 1rem;
+        }
+
+        a:link,
+        a:visited {
+            color: var(--colour-ultra-pink);
+            text-decoration: underline;
+            text-underline-offset: 0.2rem;
+            text-decoration-color: transparentize(#ff005c, 0.5);
+
+            &:hover {
+                color: var(--colour-ultra-pink-light);
+            }
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        ol,
+        ul {
+            padding-left: 1.75rem;
+            margin-bottom: 1rem;
+
+            li {
+                line-height: 1.7;
+
+                &::marker {
+                    color: var(--colour-ultra-pink);
+                    font-family: var(--typeface-mono);
+                }
+            }
+        }
+
+        blockquote {
+            border-left: 0.25rem solid var(--colour-ultra-pink);
+            margin: 1rem 0;
+            padding: 0.1rem 1.5rem;
+            background-color: rgba(255, 0, 92, 0.1);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 1rem;
+
+            th,
+            td {
+                padding: 1rem;
+                text-align: left;
+            }
+
+            th {
+                border-bottom: 4px solid var(--colour-ultra-pink);
+                background-color: rgba(255, 0, 92, 0.1);
+            }
+
+            tr:nth-child(even) {
+                background-color: transparentize(white, 0.96);
+            }
+        }
+
+        img,
+        video {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+            max-height: 90vh;
+            border-radius: 0.5rem;
+        }
+    }
+</style>

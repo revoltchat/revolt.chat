@@ -1,0 +1,71 @@
+---
+interface Props {
+    href: string
+    big: boolean
+    title: string
+    description: string
+    publishedAt: Date
+}
+
+const { href, big, title, description, publishedAt } = Astro.props
+---
+
+<a class:list={["article", big && "big"]} href={href}>
+    <slot name="cover-image" />
+    <div class="below-image">
+        <slot name="badge" />
+        <small>
+            {
+                publishedAt.toLocaleDateString("en-GB", {
+                    year: "2-digit",
+                    month: "long",
+                    day: "numeric",
+                })
+            }
+        </small>
+        <h1>{title}</h1>
+        <p>{description}</p>
+    </div>
+</a>
+
+<style lang="scss">
+    .article {
+        color: var(--foreground-color, white);
+        text-decoration: none;
+        text-align: left;
+
+        .below-image {
+            padding-top: 1rem;
+            border-radius: 0.5rem;
+        }
+
+        h1 {
+            margin: 0;
+            padding: 0;
+            margin-top: 0.5rem;
+            line-height: 1;
+        }
+
+        p {
+            margin: 0;
+            padding: 0;
+            margin-top: 0.5rem;
+            line-height: 1.4;
+        }
+
+        small {
+            font-size: 0.9rem;
+            opacity: 0.7;
+            display: block;
+            letter-spacing: 0.03rem;
+        }
+
+        &.big {
+            grid-column: 1/-1; // span all columns
+
+            h1 {
+                font-size: 3rem;
+            }
+        }
+    }
+</style>

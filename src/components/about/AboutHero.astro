@@ -1,0 +1,52 @@
+---
+
+---
+
+<header>
+    <h1>Just <span>one team</span> and a <span>big dream</span>.</h1>
+    <p>Our mission &mdash; change the world of communication.</p>
+</header>
+
+<style lang="scss">
+    header {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 10rem;
+        padding-top: 13rem;
+
+        h1 {
+            font-size: 4rem;
+            font-weight: 750;
+            margin: 0;
+            line-height: 1.2;
+
+            @media (max-width: 768px) {
+                font-size: 3rem;
+                line-height: 1;
+            }
+
+            span {
+                color: var(--colour-ultra-pink);
+            }
+        }
+
+        p {
+            font-size: 1.5rem;
+            line-height: 1.2;
+            font-weight: 500;
+            color: #ffffff;
+            margin-bottom: 0;
+            margin-top: 0;
+        }
+
+        p:nth-of-type(1) {
+            font-size: 1.8rem;
+            opacity: 0.8;
+        }
+    }
+</style>

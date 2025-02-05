@@ -1,0 +1,51 @@
+---
+import type { Store } from "../../lib/decl"
+import DownloadButton from "./DownloadButton.astro"
+
+interface Props {
+    name: string
+    stores: Store[]
+}
+
+const { name, stores } = Astro.props
+---
+
+<div class="dl-tile">
+    <h2>{name}</h2>
+    <slot name="description" />
+    <div class="grow"></div>
+    <div class="cta">
+        {
+            stores.map((store) => (
+                <DownloadButton href={store.url} primary={store.primary}>
+                    {store.name}
+                </DownloadButton>
+            ))
+        }
+    </div>
+</div>
+<style lang="scss">
+    .dl-tile {
+        padding: 2rem;
+        border-radius: 1rem;
+        background-color: rgb(255 255 255 / 5%);
+        display: flex;
+        flex-direction: column;
+
+        .grow {
+            flex-grow: 1;
+        }
+
+        .cta {
+            padding-top: 1rem;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            font-weight: 530;
+            letter-spacing: 0.03em;
+            color: white;
+            margin: 0;
+        }
+    }
+</style>

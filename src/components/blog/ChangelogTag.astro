@@ -1,0 +1,67 @@
+---
+import type { ChangelogProduct } from "../../lib/decl.ts"
+
+interface Props {
+    product: ChangelogProduct
+    noMargin?: boolean
+    useLongName?: boolean
+}
+
+const { product, noMargin = false, useLongName = false } = Astro.props
+const backgroundColor = {
+    web: "#61dafb",
+    android: "#3ddc84",
+    ios: "#1b74f9",
+    api: "#505463",
+    all: "#ff005c",
+}[product]
+const foregroundColor = {
+    web: "black",
+    android: "black",
+    ios: "white",
+    api: "white",
+    all: "white",
+}[product]
+const productName = {
+    web: "Web and Desktop",
+    android: "Android",
+    ios: "iOS and iPadOS",
+    api: "API",
+    all: "All Platforms",
+}[product]
+const longProductName = {
+    web: "Web and Desktop",
+    android: "Android",
+    ios: "iOS and iPadOS",
+    api: "API",
+    all: "Affects All Platforms",
+}[product]
+---
+
+<div class:list={["changelog-tag", noMargin && "no-margin"]}>
+    <span class="label">{useLongName ? productName : longProductName}</span>
+</div>
+<style lang="scss" define:vars={{ backgroundColor, foregroundColor }}>
+    .changelog-tag {
+        font-size: 1rem;
+        display: inline-block;
+        padding: 0.25rem 0.5rem;
+        margin-bottom: 1rem;
+        border-radius: 9999px;
+        background-color: var(--backgroundColor);
+        color: var(--foregroundColor);
+        letter-spacing: 0.05em;
+        box-shadow: 0 10px 50px 0 black;
+        user-select: none;
+
+        &.no-margin {
+            margin-bottom: 0;
+        }
+    }
+
+    .link-tag {
+        text-decoration: none;
+        color: inherit;
+        display: block;
+    }
+</style>
