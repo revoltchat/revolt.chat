@@ -27,7 +27,7 @@ And for seasoned theme designers, you'll have even more control than ever over e
 
 ### Limited Demo Release
 
-You can try this out right now at [revolt.chat/app](https://revolt.chat/app).
+You can try this out right now at [beta.revolt.chat](https://beta.revolt.chat).
 
 This will give you access to play around with the new colour engine and try out the new client within the Revolt server. (we'll be releasing a more general alpha test soon so stay tuned!)
 
