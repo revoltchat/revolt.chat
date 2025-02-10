@@ -4,6 +4,7 @@
     "npm:@astrojs/check@~0.9.3": "0.9.4_typescript@5.7.3",
     "npm:@astrojs/mdx@^3.1.7": "3.1.9_astro@4.16.17__@babel+core@7.26.0__typescript@5.7.3__sass@1.83.4__vite@5.4.11___sass@1.83.4__zod@3.24.1_typescript@5.7.3_sass@1.83.4_acorn@8.14.0",
     "npm:@astrojs/node@^8.3.3": "8.3.4_astro@4.16.17__@babel+core@7.26.0__typescript@5.7.3__sass@1.83.4__vite@5.4.11___sass@1.83.4__zod@3.24.1_typescript@5.7.3_sass@1.83.4",
+    "npm:@astrojs/rss@^4.0.11": "4.0.11",
     "npm:@astrojs/solid-js@^4.4.1": "4.4.4_solid-js@1.9.4__seroval@1.2.1_sass@1.83.4_vite@5.4.11__sass@1.83.4",
     "npm:@fontsource/fragment-mono@^5.1.0": "5.1.1",
     "npm:astro@^4.14.5": "4.16.17_@babel+core@7.26.0_typescript@5.7.3_sass@1.83.4_vite@5.4.11__sass@1.83.4_zod@3.24.1",
@@ -116,6 +117,13 @@
       "integrity": "sha512-Z9IYjuXSArkAUx3N6xj6+Bnvx8OdUSHA8YoOgyepp3+zJmtVYJIl/I18GozdJVW1p5u/CNpl3Km7/gwTJK85cw==",
       "dependencies": [
         "prismjs"
+      ]
+    },
+    "@astrojs/rss@4.0.11": {
+      "integrity": "sha512-3e3H8i6kc97KGnn9iaZBJpIkdoQi8MmR5zH5R+dWsfCM44lLTszOqy1OBfGGxDt56mpQkYVtZJWoxMyWuUZBfw==",
+      "dependencies": [
+        "fast-xml-parser",
+        "kleur@4.1.5"
       ]
     },
     "@astrojs/solid-js@4.4.4_solid-js@1.9.4__seroval@1.2.1_sass@1.83.4_vite@5.4.11__sass@1.83.4": {
@@ -1521,6 +1529,12 @@
     },
     "fast-uri@3.0.3": {
       "integrity": "sha512-aLrHthzCjH5He4Z2H9YZ+v6Ujb9ocRuW6ZzkJQOrTxleEijANq4v1TsaPaVG1PZcuurEzrLcWRyYBYXD5cEiaw=="
+    },
+    "fast-xml-parser@4.5.1": {
+      "integrity": "sha512-y655CeyUQ+jj7KBbYMc4FG01V8ZQqjN+gDYGJ50RtfsUB8iG9AmwmwoAgeKLJdmueKKMrH1RJ7yXHTSoczdv5w==",
+      "dependencies": [
+        "strnum"
+      ]
     },
     "fastq@1.18.0": {
       "integrity": "sha512-QKHXPW0hD8g4UET03SdOdunzSouc9N4AuHdsX8XNcTsuz+yYFILVNIX4l9yHABMhiEI9Db0JTTIpu0wB+Y1QQw==",
@@ -3273,6 +3287,9 @@
     "strip-bom@3.0.0": {
       "integrity": "sha512-vavAMRXOgBVNF6nyEEmL3DBK19iRpDcoIwW+swQ+CbGiu7lju6t+JklA1MHweoWtadgt4ISVUsXLyDq34ddcwA=="
     },
+    "strnum@1.0.5": {
+      "integrity": "sha512-J8bbNyKKXl5qYcR36TIO8W3mVGVHrmmxsd5PAItGkmyzwJvybiw2IVq5nqd0i4LSNSkB/sx9VHllbfFdr9k1JA=="
+    },
     "style-to-object@0.4.4": {
       "integrity": "sha512-HYNoHZa2GorYNyqiCaBgsxvcJIn7OHq6inEga+E6Ke3m5JkoqpQbnFssk4jwe+K7AhGa2fcha4wSOf1Kn01dMg==",
       "dependencies": [
@@ -3728,6 +3745,7 @@
         "npm:@astrojs/check@~0.9.3",
         "npm:@astrojs/mdx@^3.1.7",
         "npm:@astrojs/node@^8.3.3",
+        "npm:@astrojs/rss@^4.0.11",
         "npm:@astrojs/solid-js@^4.4.1",
         "npm:@fontsource/fragment-mono@^5.1.0",
         "npm:astro@^4.14.5",
