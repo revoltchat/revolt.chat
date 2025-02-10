@@ -28,6 +28,8 @@ const { title, backgroundColor } = Astro.props
         <meta name="theme-color" content={COLOUR_ULTRA_PINK} />
         <meta name="viewport" content="width=device-width" />
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="alternate" type="application/rss+xml" title="RSS feed of Revolt blog posts." href="https://revolt.chat/updates/blog-feed.xml">
+		<link rel="alternate" type="application/rss+xml" title="RSS feed of Revolt changelogs." href="https://revolt.chat/updates/changelog-feed.xml">
         <meta name="generator" content={Astro.generator} />
         <title>{title}</title>
         <StyleConstants />

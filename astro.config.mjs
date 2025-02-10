@@ -6,6 +6,7 @@ import mdx from "@astrojs/mdx"
 
 // https://astro.build/config
 export default defineConfig({
+	site: "https://revolt.chat",
     output: "server",
     integrations: [solidJs(), mdx()],
     adapter: node({
@@ -43,6 +44,7 @@ export default defineConfig({
         },
         "/updates/100K-users": {
             // I! MEAN! IT!
+            // Okay, this one was on me, but you're the one who repeated my mistake in the 500K post Jen. - Vale
             status: 307,
             destination: "/updates/100k-users",
         },
