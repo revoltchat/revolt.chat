@@ -13,7 +13,7 @@ Well, we can't help with those things, but what we can help with is telling you 
 
 Here's a full-page screenshot, because the researchers at Revolt R&D have determined that those are 2.34 times cooler than regular screenshots:
 
-<a href="/content/blog/a-fresh-coat-of-paint/fullpage.jpg" target="_blank" style="color:white;text-decoration:none;font-weight:550">
+<a href="/content/blog/a-fresh-coat-of-paint/fullpage.jpg" style="color:white;text-decoration:none;font-weight:550">
 <img src="/content/blog/a-fresh-coat-of-paint/fullpage.jpg" alt="Full page screenshot of the new Revolt marketing website" /><br/>
 <div style="text-align:center">View full size</div>
 </a>
