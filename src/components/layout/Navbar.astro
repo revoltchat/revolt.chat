@@ -4,6 +4,7 @@ import NavLinks from "./NavLinks.astro"
 import MenuIcon from "../../assets/apache2/menu.svg"
 ---
 
+<div id="service-status"></div>
 <nav class="site-navbar">
     <div class="nav-inner">
         <a href="/">
@@ -24,11 +25,23 @@ import MenuIcon from "../../assets/apache2/menu.svg"
 </nav>
 
 <style lang="scss" is:global>
+	#service-status {
+		display: none; /*Set to block in JS*/
+		position: relative;
+		background: linear-gradient(180deg,#FF005C 0%,#9A0239 100%);
+		padding: 0.5rem 1rem;
+		text-align: center;
+		font-size: smaller;
+		z-index: 1001;
+
+		a {
+			color: white;
+		}
+	}
+
     nav.site-navbar {
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
+		position: absolute;
+		width: 100%;
         z-index: 1000;
 
         .nav-inner {
@@ -163,4 +176,23 @@ import MenuIcon from "../../assets/apache2/menu.svg"
                     .classList.add("open")
             }
         })
+</script>
+
+<script>
+async function checkStatus() {
+    try {
+		const response = await fetch("https://raw.githubusercontent.com/revolt-chat/status/refs/heads/master/history/summary.json");
+        const data = await response.json();
+        const hasIssues = data.some(service => service.status === "down" || service.status === "degraded");
+        
+        document.getElementById('service-status').style.display = hasIssues ? 'block' : 'none';
+        if (hasIssues) {
+            document.getElementById('service-status').innerHTML = 'Performance may currently be degraded. <a href="https://status.revolt.chat">Check status</a>.';
+        }
+    } catch (error) {
+        console.error("Error fetching service status:", error);
+    }
+}
+
+checkStatus();
 </script>
