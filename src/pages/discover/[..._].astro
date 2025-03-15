@@ -1,0 +1,45 @@
+---
+import DiscoverRoot from "../../components/discover/DiscoverRoot"
+import DiscoverLoading from "../../components/discover/DiscoverLoading.astro"
+import Navbar from "../../components/layout/Navbar.astro"
+import Footer from "../../components/layout/Footer.astro"
+import Layout from "../../layouts/MarketingLayout.astro"
+
+const isParameter = Astro.url.searchParams.get("is")
+const backgroundParameter = Astro.url.searchParams.get("background")
+const spinnerParameter = Astro.url.searchParams.get("spinner")
+const configParameter = Astro.url.searchParams.get("config")
+
+const isEmbedded = isParameter === "embedded"
+const isNotEmbedded = !isEmbedded
+
+const keepBackground = backgroundParameter === "keep"
+
+const darkSpinner = spinnerParameter === "dark"
+
+const siteBackground = isEmbedded && !keepBackground ? "transparent" : "#120A24"
+const spinner = darkSpinner ? "dark" : "light"
+---
+
+<Layout title="Discover - Revolt" backgroundColor={siteBackground}>
+    {
+        isNotEmbedded && (
+            <>
+                <Navbar />
+                <div class="spacer" />
+            </>
+        )
+    }
+    <DiscoverLoading spinner={spinner} />
+    <DiscoverRoot client:only="react" config={configParameter!} />
+    {isNotEmbedded && <Footer />}
+</Layout>
+<style lang="scss" is:global define:vars={{ backgroundColor: siteBackground }}>
+    .spacer {
+        height: 7.66rem;
+    }
+
+    body {
+        background-color: var(--backgroundColor) !important;
+    }
+</style>

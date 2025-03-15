@@ -1,0 +1,37 @@
+---
+interface Props {
+    spinner: "light" | "dark"
+}
+
+const { spinner } = Astro.props
+---
+
+<div data-discover-spinner class="spinner-outer">
+    <div class:list={["spinner-spinner", spinner === "dark" && "dark"]}></div>
+</div>
+<style lang="scss">
+    .spinner-outer {
+        display: grid;
+        place-items: center;
+        height: 60vh;
+    }
+
+    .spinner-spinner {
+        border: 4px solid transparent;
+        border-left-color: white;
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        animation: spin 1s linear infinite;
+
+        &.dark {
+            border-left-color: black;
+        }
+    }
+
+    @keyframes spin {
+        to {
+            transform: rotate(360deg);
+        }
+    }
+</style>

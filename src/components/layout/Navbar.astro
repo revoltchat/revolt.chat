@@ -139,8 +139,8 @@ import MenuIcon from "../../assets/apache2/menu.svg"
 
 <script>
     document
-        .querySelector<HTMLElement>(".mobile > button")!
-        .addEventListener("click", () => {
+        .querySelector<HTMLElement>(".mobile > button")
+        ?.addEventListener("click", () => {
             if (
                 document
                     .querySelector<HTMLElement>(".mobile-menu")!
