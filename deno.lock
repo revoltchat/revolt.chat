@@ -15,6 +15,7 @@
     "npm:dotenv@^16.4.5": "16.4.7",
     "npm:express@^4.19.2": "4.21.1",
     "npm:react-dom@19": "19.0.0_react@19.0.0",
+    "npm:react-helmet-async@^2.0.5": "2.0.5_react@18.3.1",
     "npm:react-router@^7.3.0": "7.3.0_react@19.0.0_react-dom@19.0.0__react@19.0.0",
     "npm:react@19": "19.0.0",
     "npm:sass@^1.77.8": "1.83.4",
@@ -131,7 +132,7 @@
         "@types/react",
         "@types/react-dom",
         "@vitejs/plugin-react",
-        "react",
+        "react@19.0.0",
         "react-dom",
         "ultrahtml",
         "vite@6.2.2_@types+node@22.13.10_sass@1.83.4"
@@ -2011,6 +2012,12 @@
     "inline-style-parser@0.2.4": {
       "integrity": "sha512-0aO8FkhNZlj/ZIbNi7Lxxr12obT7cL1moPfE4tg1LkX7LlLfC6DeX4l2ZEud1ukP9jNQyNnfzQVqwbwmAATY4Q=="
     },
+    "invariant@2.2.4": {
+      "integrity": "sha512-phJfQVBuaJM5raOpJjSfkiD6BpbCE4Ns//LaXl6wGYtUBY83nWS6Rf9tXm2e8VaK60JEjYldbPif/A2B1C2gNA==",
+      "dependencies": [
+        "loose-envify"
+      ]
+    },
     "ipaddr.js@1.9.1": {
       "integrity": "sha512-0KI/607xoxSToH7GjN1FfSbLoU0+btTicjsQSWQlh/hZykN8KpmMf7uYwPW3R+akZ6R/w18ZlXSHBYXiYUPO3g=="
     },
@@ -2145,6 +2152,12 @@
     },
     "longest-streak@3.1.0": {
       "integrity": "sha512-9Ri+o0JYgehTaVBBDoMqIl8GXtbWg711O3srftcHhZ0dqnETqLaoIK0x17fUw9rFSlK/0NlsKe0Ahhyl5pXE2g=="
+    },
+    "loose-envify@1.4.0": {
+      "integrity": "sha512-lyuxPGr/Wfhrlem2CL/UcnUc1zcqKAImBDzukY7Y5F/yQiNdko6+fRLevlw1HgMySw7f611UIY408EtxRSoK3Q==",
+      "dependencies": [
+        "js-tokens"
+      ]
     },
     "lru-cache@5.1.1": {
       "integrity": "sha512-KpNARQA3Iwv+jTA0utUVVbrh+Jlrr1Fv0e56GGzAFOXN7dk/FviaDW8LHmK52DlcH4WP2n6gI8vN1aesBFgo9w==",
@@ -2965,8 +2978,20 @@
     "react-dom@19.0.0_react@19.0.0": {
       "integrity": "sha512-4GV5sHFG0e/0AD4X+ySy6UJd3jVl1iNsNHdpad0qhABJ11twS3TTBnseqsKurKcsNqCEFeGL3uLpVChpIO3QfQ==",
       "dependencies": [
-        "react",
+        "react@19.0.0",
         "scheduler"
+      ]
+    },
+    "react-fast-compare@3.2.2": {
+      "integrity": "sha512-nsO+KSNgo1SbJqJEYRE9ERzo7YtYbou/OqjSQKxV7jcKox7+usiUVZOAC+XnDOABXggQTno0Y1CpVnuWEc1boQ=="
+    },
+    "react-helmet-async@2.0.5_react@18.3.1": {
+      "integrity": "sha512-rYUYHeus+i27MvFE+Jaa4WsyBKGkL6qVgbJvSBoX8mbsWoABJXdEO0bZyi0F6i+4f0NuIb8AvqPMj3iXFHkMwg==",
+      "dependencies": [
+        "invariant",
+        "react@18.3.1",
+        "react-fast-compare",
+        "shallowequal"
       ]
     },
     "react-refresh@0.14.2": {
@@ -2977,10 +3002,16 @@
       "dependencies": [
         "@types/cookie",
         "cookie@1.0.2",
-        "react",
+        "react@19.0.0",
         "react-dom",
         "set-cookie-parser",
         "turbo-stream"
+      ]
+    },
+    "react@18.3.1": {
+      "integrity": "sha512-wS+hAgJShR0KhEvPJArfuPVN1+Hz1t0Y6n5jLrGQbkb4urgPE/0Rve+1kMB1v/oWgHgm4WIcV+i7F2pTVj+2iQ==",
+      "dependencies": [
+        "loose-envify"
       ]
     },
     "react@19.0.0": {
@@ -3490,7 +3521,7 @@
         "css-to-react-native",
         "csstype",
         "postcss@8.4.49",
-        "react",
+        "react@19.0.0",
         "react-dom",
         "shallowequal",
         "stylis",
@@ -3961,6 +3992,7 @@
         "npm:dotenv@^16.4.5",
         "npm:express@^4.19.2",
         "npm:react-dom@19",
+        "npm:react-helmet-async@^2.0.5",
         "npm:react-router@^7.3.0",
         "npm:react@19",
         "npm:sass@^1.77.8",

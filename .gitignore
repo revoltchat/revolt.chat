@@ -25,6 +25,7 @@ pnpm-debug.log*
 
 # dummy data
 dummydata/
+processing.private.ts
 
 # font files
 *.woff2
