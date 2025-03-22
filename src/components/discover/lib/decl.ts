@@ -1,3 +1,9 @@
+export interface RevoltThemesCuratedCategory {
+    title: string
+    description: string
+    themes: RevoltTheme[]
+}
+
 export interface RevoltTheme {
     version: string
     slug: string
