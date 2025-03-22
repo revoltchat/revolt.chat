@@ -168,9 +168,17 @@ export class DummyDatasource implements Datasource {
 
     private async fetchAllIfEmpty() {
         if (this.revoltServersCache.length === 0) {
-            this.revoltServersCache = await fetch(
+            const response = await fetch(
                 "/dummydata/revolt.servers.json",
-            ).then((r) => r.json())
+            )
+            if (response.status === 404) {
+                alert(
+                    "Dummy data is not installed! Cannot use dummy datasource!",
+                )
+                location.assign("/")
+                return
+            }
+            this.revoltServersCache = await response.json()
         }
         if (this.revoltBotsCache.length === 0) {
             this.revoltBotsCache = await fetch(
