@@ -10,13 +10,13 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/check": "^0.9.3",
-    "@astrojs/mdx": "^3.1.7",
-    "@astrojs/node": "^8.3.3",
+    "@astrojs/check": "0.9.4",
+    "@astrojs/mdx": "4.2.5",
+    "@astrojs/node": "9.2.1",
     "@astrojs/rss": "^4.0.11",
-    "@astrojs/solid-js": "^4.4.1",
+    "@astrojs/solid-js": "5.0.9",
     "@fontsource/fragment-mono": "^5.1.0",
-    "astro": "^4.14.5",
+    "astro": "5.7.5",
     "cbor2": "^1.7.1",
     "dotenv": "^16.4.5",
     "express": "^4.19.2",
